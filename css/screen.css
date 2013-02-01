@@ -77,6 +77,7 @@ body { margin: 1em 0 0 0; }
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) {
+  body { width: 71em; }
   #header-wrap, #content-wrap, #footer-wrap, #nav { width: 67em; }
   #sidebar { display:block; }
   #footer .logos img { height: 4em; }
