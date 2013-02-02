@@ -113,11 +113,22 @@ body { margin: 0 0 0 0; padding: 1em 0 1em 0; }
 #nav-wrap     { width: 100%; }
 #content-wrap { min-height: 65%; }
 #sidebar-wrap { width:  17em; float:left; }
-#content      { width:  50em; float: right; margin-left: -20em; padding: 1em 1.5em;  margin-right: -1px;}
+#content      { width:  50em; float: right; margin-left: -20em; padding: 1em 1.5em;  margin-right: -1px; position: relative; overflow: hidden;}
 #footer       { padding: 2em 0.6em; width: 100%; }
 #nav.stuck    { margin: 0 auto; } /* matches body left margin */
 #nav          { }
 #header       { height: 8em; padding: 1.7em 1em 1em 1em; }
+
+#publication-switcher-wrapper {
+  width: 50em; 
+  position: relative;
+  overflow-x: hidden;
+  min-height: 45em;
+}
+#articles-wrapper, #conferences-wrapper, #books-wrapper { width: 46.9em; position: absolute; top:0; }
+#articles-wrapper { left:0; }
+#conferences-wrapper { left: 50em;}
+#books-wrapper  { left:100em; }
 
 /* ------------------------------------------------------------------------- *\
  * Custom font specification                                                 *
@@ -170,6 +181,11 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 }
 
 #header { background: #eee url('banner.jpg'); background-size: cover; }
+
+#title a, #nav a, h1, h2, h3, #breadcrumbs, .btn {
+  -moz-user-select: none; 
+  -webkit-user-select: none; 
+}
 
 #mitlogo { float: left; padding: 0.5em 0.5em 0.5em 1em; }
 #mitlogo img { width: 4.9em; height: 3.6em;}
@@ -321,43 +337,77 @@ code.block, pre.code, .article textarea.bibtex  {
   overflow: auto;
 }
 
+#publication-switcher {
+  background: #555; box-shadow: inset 0px 1.2em 60px -1.2em rgba(255,255,255,0.25);
+  margin-bottom: 1em;
+}
+
+#publication-switcher h3 {
+  height: 2.5em;
+  display: inline-block;
+  float: left;
+  padding: 0.7em;
+  min-width: 12%;
+  color: #eee;
+  font-size: 90%;
+  text-align: center;
+  border-right: 1px solid #777;
+  text-shadow: 0 -1px 0px rgba(0,0,0,0.5);
+  border-left: 1px solid #444;
+  font-weight: bold;
+  margin:0;
+  width: 33.3333%;
+  cursor: pointer;
+}
+#publication-switcher h3:hover { background: rgba(0,0,0,0.2); color: #fff; }
+#publication-switcher h3.active { 
+  background: #933;
+  box-shadow: inset 0px 1.2em 60px -1.2em rgba(0,0,0,1.0); 
+  color: #fff; 
+  border-left: 1px solid #522; 
+  border-right: 1px solid #522; 
+  text-shadow: 0px 2px 3px rgba(0,0,0,1.0);
+}
+#publication-switcher h3.active:hover { 
+  background: #8a2a2a;
+}
+
 #publications-form {
   padding-bottom: 0em;
 }
 
-#publications-form label {
-  margin: 0 0.2em 0 0.6em;
-  position: relative;
-  display: inline-block;
-  width: 5.6em;
-  top: -1.7em;
-  font-size: 80%;
-  margin-right: -6em;
-  color:#666;
+#publications-form table{
+  width: 100%;
 }
-#publications-form select {
+#publications-form table td {
+  padding-right: 0.5em;
+}
+#publications-form table td:last-child {
+  padding-right: 0;
+}
+#publications-form label {
+  display:none;
+}
+#publications-form select, #publications-form input {
   border-radius: 0;
   height: 2.0em;
   font-size: 90%;
    -webkit-appearance: none;
   border: 1px solid #ccc;
   padding: 0.3em 0.5em;
-}
-
-#publications-form select {
-  border: 1px solid #ccc;
-  -webkit-appearance: none;
   box-shadow: inset 5px 10px 1.2em -15px rgba(0,0,0,0.5);
   color: #333;
+  margin: 0;
+  width: 100%;
 }
 
 #publications-form .btn {
-  font-size: 75%;
-  margin-left: 0.5em;
+  font-size: 85%;
 } 
 
-#publications-form #select-author { width: 12em; }
-#publications-form #select-journal { width: 24em; }
+#publications-form #select-year { min-width: 3.6em; }
+#publications-form #select-author { min-width: 11em; }
+#publications-form #select-journal { min-width: 16em; max-width: 20em;}
 
 
 .research-area-figure-left, .research-area-figure-right {
@@ -383,6 +433,8 @@ code.block, pre.code, .article textarea.bibtex  {
   display: block; text-align: center;
   padding: 5em;
   font-weight: bold;
+  font-size: 150%;
+  color: #ccc;
 }
 .article { position: relative; overflow: hidden; min-height: 6.5em; }
 .article { border-bottom: 1px solid #ecc; }
@@ -460,8 +512,6 @@ code.block, pre.code, .article textarea.bibtex  {
   color: #b99;
   height: 2em;
 
-  -moz-user-select: none; 
-  -webkit-user-select: none; 
 }
 #content .article a.button i { margin-right: 0.1em; }
 .article a.button-top { top: 0.75em; }
