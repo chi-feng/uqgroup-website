@@ -9,44 +9,53 @@
 <h3 id="journal-publications">Journal Publications</h3>
 
 <form id="publications-form">
-  <label for="select-year">Year</label>
-    <select id="select-year">
-      <option value="">All</option>
-      <option value="2013">2013</option>
-      <option value="2012">2012</option>
-      <option value="2011">2011</option>
-      <option value="2010">2010</option>
-      <option value="2009">2009</option>
-      <option value="2008">2008</option>
-    </select>
-    <label for="select-author">Author</label>
-    <select id="select-author">
-      <option value="">Any</option>
-      <optgroup label='-'>
-      </optgroup>
-    </select>
-    <label for="select-year">Journal</label>
-    <select id="select-journal">
-      <option value="">Any</option>
-      <optgroup label='-'>
-      </optgroup>
-    </select>
   <!--
-    <select>
-      <option value="">Research area</option>
-      <option value="">Markov Chain Monte Carlo</option>
-      <option value="">Optimal Experiment Design</option>
-      <option value="">Polynomial Chaos Expansion</option>
-    </select>
+  <label for="select-year">Year</label>
   -->
-    <a class="btn" value="Go" onclick="alert('Not Implemented Yet');">Go</a>
-    <a class="btn" value="Reset">Reset</a>   
+  <select id="select-year">
+    <option value="">Year</option>
+    <optgroup label='-'>
+    </optgroup>
+    <option value="2013">2013</option>
+    <option value="2012">2012</option>
+    <option value="2011">2011</option>
+    <option value="2010">2010</option>
+    <option value="2009">2009</option>
+    <option value="2008">2008</option>
+  </select>
+  <!--
+  <label for="select-author">Author</label>
+  -->
+  <select id="select-author">
+    <option value="">Author</option>
+    <optgroup label='-'>
+    </optgroup>
+  </select>
+  <!--
+  <label for="select-journal">Journal</label>
+  -->
+  <select id="select-journal">
+    <option value="">Journal</option>
+    <optgroup label='-'>
+    </optgroup>
+  </select>
+  <!--
+  <select>
+    <option value="">Research area</option>
+    <option value="">Markov Chain Monte Carlo</option>
+    <option value="">Optimal Experiment Design</option>
+    <option value="">Polynomial Chaos Expansion</option>
+  </select>
+  -->
+  <a class="btn" onclick="resetFilters()">Reset</a>   
 </form>
 <br />
 
 <div id="articles">
-  
+  <p class="loading">Loading Articles</p>
 </div>
+
+<p id="notfound" style="display:none"><strong>No articles found matching filter.</strong></p>
 
 <h3 id="book-chapters">Book Chapters</h3>
 <ol>
@@ -126,12 +135,67 @@ function populateFilters(articles) {
   $('#select-journal').append(options);
 }
 
+function resetFilters() {
+  $('select').val('');
+  articleFilter();
+}
+
+function articleFilter() {
+  
+  var count = 0;
+  
+  var year = $('#select-year').val();
+  var author = $('#select-author').val();
+  var journal = $('#select-journal').val();
+  
+  $.each(articles, function(index, article) {
+    var selector = '#article-' + index;
+    
+    var allowed = true;
+    if (year != '' && article.year.indexOf(year) == -1) { 
+      allowed = false; 
+    }
+    if (author != '' && $.inArray(author, article.authors) == -1) {
+      allowed = false; 
+    }
+    if (journal != '' && article.journal.indexOf(journal) == -1) { 
+      allowed = false; 
+    }
+    
+    if (allowed) {
+      if (count == 0) {
+        $('#articles').show();
+        $('#notfound').hide();
+      }
+      $(selector).show();
+      count = count + 1;
+    } else {
+      $(selector).hide();
+    }
+    
+  });
+  
+  if (count == 0) {
+    $('#articles').hide();
+    $('#notfound').show();
+  }
+  
+}
+
+var articles = [];
+
 $(document).ready(function() {
   $.getJSON('json/publications.json', function(data) {
+    $('#articles .loading').hide();
     articles = data.articles; 
     $.each(articles, renderArticle);
     populateFilters(articles);
     articlesAttachHover();
+    
+    $("select").change(function () {
+      articleFilter();
+    });
+    
   });
 });
 

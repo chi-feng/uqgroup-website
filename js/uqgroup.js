@@ -39,6 +39,8 @@ $(function() {
 });
 
 function renderArticle(index, article) {
+
+  var article_id = 'article-' + index;
   
   var authors = []; 
   $.each(article.authors, function(key, val) {
@@ -66,9 +68,13 @@ function renderArticle(index, article) {
   var journal = '<div class="journal">' + article.journal + ' <strong>' + article.volume + '</strong>' + pages + ' ('+ article.year + ')</div>\n';
   var link = '<a href="' + article.fulltext + '" class="button button-top" target="_new"><i class="icon-external-link"></i> Fulltext</a>\n';  
   var zebra = (index % 2 == 0) ? 'even' : 'odd';   
-  var article = ['<div class="article ' + zebra + '">\n', link, showabstract, showbibtex, authors, title, journal, abstract, bibtex, '</div>\n'].join('');
+  var thumbnail_url = (article.thumbnail != undefined && article.thumbnail.length > 1) ? 'images/publications/' + article.thumbnail : 'images/publications/none.png';
+  var thumbnail_img = (thumbnail_url != '') ? '<img src="' + thumbnail_url + '" alt="thumbnail" />' : '';
+  var thumbnail = '<a class="thumbnail" href="'+article.fulltext+'" target="_new">' + thumbnail_img + '</a>';
+  var article = ['<div id="' + article_id +'" class="article ' + zebra + '">\n', thumbnail, link, showabstract, showbibtex, authors, title, journal, abstract, bibtex, '</div>\n'].join('');
   $('#articles').append(article);
 }
+
 
 function articlesAttachHover() {
 
