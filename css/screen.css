@@ -162,7 +162,7 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   background: #fff;
 }
 
-#nav a, .logos a, #articles a.button {
+#nav a, .logos a, #articles a.button, #publication-switcher h3 {
   -webkit-transition: all 0.15s ease-in-out; 
      -moz-transition: all 0.15s ease-in-out; 
           transition: all 0.15s ease-in-out; 
