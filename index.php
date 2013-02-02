@@ -121,10 +121,10 @@ echo $t['content'];
 <div id="footer-wrap">
 <div id="footer">
   <ul class="logos">
-    <li><a href="http://mit.edu" target="_new"><img src="images/mitlogo.png" height="40x" alt="mit" /></a></li>
-    <li><a href="http://aeroastro.mit.edu" target="_new"><img src="images/aeroastro.png" height="40x" alt="aeroastro" /></a></li>
-    <li><a href="http://acdl.mit.edu" style="opacity:0.5" target="_new"><img src="images/acdl.png" height="40px" alt="acdl"  /></a></li>
-    <li><a href="http://computationalengineering.mit.edu" target="_new"><img src="images/cce.png" alt="cce"  height="40px" /></a></li>
+    <li><a href="http://mit.edu" target="_new"><img src="images/mitlogo.png" alt="mit" /></a></li>
+    <li><a href="http://aeroastro.mit.edu" target="_new"><img src="images/aeroastro.png" alt="aeroastro" /></a></li>
+    <li><a href="http://acdl.mit.edu" style="opacity:0.5" target="_new"><img src="images/acdl.png" alt="acdl"  /></a></li>
+    <li><a href="http://computationalengineering.mit.edu" target="_new"><img src="images/cce.png" alt="cce" /></a></li>
   </ul>
   <br style="clear: both;" />
   <div class="designed-by">

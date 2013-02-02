@@ -12,31 +12,6 @@ $('a.sidebar-collapse-btn').click(function(event) {
     content.animate({height:"toggle",opacity:"toggle"}, 200);
     $(this).find('i').removeClass('icon-plus').addClass('icon-minus');
   }
-      
-});
-    
-$('a[href*="#"]').click(function(event){
-	event.preventDefault();
-	var parts = this.href.split("#");
-	var trgt = parts[1];
-	var target_offset = $("#"+trgt).offset();
-	var target_top = target_offset.top - 55;
-	$('html, body').animate({scrollTop:target_top}, 500);
-});
-
-$(window).resize(function() {
-  /*
-  if ($(window).width() < 1100) {
-    $('#header-wrap, #content-wrap, #footer-wrap, #nav').css({'width':'50em'}, 500);
-    $('.logos img').css({'height':'3em'});
-    $('#sidebar-wrap').css({'opacity': '0.0'});
-  }
-  else {
-    $('#header-wrap, #content-wrap, #footer-wrap, #nav').css({'width':'67em'}, 500);
-    $('.logos img').css({'height':'4em'});  
-    $('#sidebar-wrap').css({'opacity': '1.0'});
-  }
-  */
 });
 
 });
@@ -63,14 +38,50 @@ $(function() {
 	});	
 });
 
+function renderArticle(index, article) {
+  
+  var authors = []; 
+  $.each(article.authors, function(key, val) {
+    authors.push('<span class="author">' + val + '</span>');
+  });
+  authors = '<div class="authors">\n' + authors.join(', ') + '</div>\n';
+  
+  var bibtex_raw = '@article { \n\
+    author = "' + article.authors.join(' and ') + '", \n\
+    title = "' + article.title + '", \n\
+    journal = "' + article.journal + '", \n\
+    volume = "' + article.volume + '", \n\
+    number = "' + article.number + '", \n\
+    pages = "' + article.pages + '", \n\
+    doi = "' + article.doi + '", \n\
+    keywords = "' + article.keywords + '"\n}';
+  var bibtex = '<textarea class="bibtex">' + bibtex_raw + '</textarea>\n';
+  var showbibtex = '<a class="button button-bottom"><i class="icon-book"></i> BibTeX</a>\n';
+  var keywords = (article.keywords != undefined && article.keywords.length > 1) ? 
+    '\n<div class="keywords"><strong>Keywords:</strong> ' + article.keywords + '</div>' : '';
+  var abstract = '<div class="abstract hyphenate">\n' + article.abstract + keywords + '</div>\n';
+  var showabstract = '<a class="button button-abstract"><i class="icon-eye-open"></i> Abstract</a>\n';
+  var title = '<div class="title">' + article.title + '</div>\n';
+  var pages = (article.pages != undefined && article.pages.length > 1) ? ' pp. ' + article.pages : '';
+  var journal = '<div class="journal">' + article.journal + ' <strong>' + article.volume + '</strong>' + pages + ' ('+ article.year + ')</div>\n';
+  var link = '<a href="' + article.fulltext + '" class="button button-top" target="_new"><i class="icon-external-link"></i> Fulltext</a>\n';  
+  var zebra = (index % 2 == 0) ? 'even' : 'odd';   
+  var article = ['<div class="article ' + zebra + '">\n', link, showabstract, showbibtex, authors, title, journal, abstract, bibtex, '</div>\n'].join('');
+  $('#articles').append(article);
+}
+
 function articlesAttachHover() {
+
   $('textarea.bibtex').click(function() { $(this).select(); });
+
   $("#articles .article").hover(
     function () {
       $(this).find($("a.button")).addClass('active');
+      $(this).find($("a.thumbnail")).addClass('thumbnail-active');
     },
     function () {
       $(this).find($("a.button")).removeClass('active');
+      $(this).find($("a.thumbnail")).removeClass('thumbnail-active');
     }
   );
     

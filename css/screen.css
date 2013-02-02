@@ -1,17 +1,30 @@
 @charset "UTF-8";
 
-/* CLEAN */
+/* @import url('diagnostics.css'); */
 
-/* nuke default styles */
-*, *:before, *:after { margin: 0; padding: 0; border: 0; outline: 0; 
-  font-size: 100%; font-weight: normal; vertical-align: baseline; background: transparent; }
+/* ------------------------------------------------------------------------- *\
+ * Reset all styles                                                          *
+\* ------------------------------------------------------------------------- */
 
-/* border-box model */
+*, *:before, *:after { 
+  margin: 0; padding: 0; border: 0; outline: 0; 
+  font-size: 100%; font-weight: normal; vertical-align: baseline; 
+  background: transparent; 
+}
+
+/* ------------------------------------------------------------------------- *\
+ * Use border-box model for easier layout                                    *
+\* ------------------------------------------------------------------------- */
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box; 
   box-sizing: border-box; 
 }
+
+/* ------------------------------------------------------------------------- *\
+ * Fixes                                                                     *
+\* ------------------------------------------------------------------------- */
 
 html, body { height:100%; } 
 table { border-collapse:collapse; }
@@ -20,6 +33,10 @@ table { border-collapse:collapse; }
 .clearfix:after { clear: both; }
 a { text-decoration: none; }
 ul { list-style: none; }
+
+/* ------------------------------------------------------------------------- *\
+ * Default font settings                                                     *
+\* ------------------------------------------------------------------------- */
 
 html {
   font: 16px/1.25 Helvetica, Arial, sans-serif;
@@ -31,23 +48,31 @@ html {
   line-height: 1.18;
 }
 
-input, select, textarea { font: 100% Helvetica, Arial, sans-serif; font-weight: normal; }
+input, select, textarea { 
+  font: 100% Helvetica, Arial, sans-serif; 
+  font-weight: normal; 
+}
+
+code, pre { font-family: "Inconsolata", "Consolas", "Monaco", monospace; }
+
+/* ------------------------------------------------------------------------- *\
+ * Shortcut classes                                                          *
+\* ------------------------------------------------------------------------- */
 
 .float-left { display: inline-block; float: left; }
 .float-right { display: inline-block; float: right; }
 .larger { font-size: 110%; }
 
-/* END CLEAN */
+/* ------------------------------------------------------------------------- *\
+ * Responsive CSS media queries                                              *
+\* ------------------------------------------------------------------------- */
 
-body { font-size: 100%; }
+/* Responsive css media queries */
 
-/* layout */
-
-html, body { height: 100%; }
-body { margin: 1em 0 0 0; }
-
-#header-wrap, #nav-wrap, #content-wrap, #footer-wrap, #nav {
-  position: relative; margin: 0 auto;
+@media (max-width:1100px) { 
+  #header-wrap, #content-wrap, #footer-wrap, #nav { width: 50em;  }
+  #sidebar { display:none; }
+  #footer .logos img { height: 3em; }
 }
 
 @media (min-width:1100px) { 
@@ -66,32 +91,26 @@ body { margin: 1em 0 0 0; }
   #footer .logos img { height: 4em; }
 }
 
-@media (max-width:1100px) { 
-#header-wrap, #content-wrap, #footer-wrap, #nav { width: 50em;  }
-#sidebar { display:none; }
-#footer .logos img { height: 3em; }
-}
-
-/* iPads (landscape) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
+/* iPads (landscape) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
   #header-wrap, #content-wrap, #footer-wrap, #nav { width: 67em; }
   #sidebar { display:block; }
   #footer .logos img { height: 4em; }
 }
 
-/* iPads (portrait) ----------- */
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-}
+/* iPads (portrait) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { }
 
+/* ------------------------------------------------------------------------- *\
+ * Page Layout (Top Level)                                                   *
+\* ------------------------------------------------------------------------- */
 
-#nav-wrap {width: 100%; }
+html, body { height: 100%; }
+body { margin: 0 0 0 0; padding: 1em 0 1em 0; }
 
+#header-wrap, #nav-wrap, #content-wrap, #footer-wrap, #nav 
+              { position: relative; margin: 0 auto; }
+#nav-wrap     { width: 100%; }
 #content-wrap { min-height: 65%; }
 #sidebar-wrap { width:  17em; float:left; }
 #content      { width:  50em; float: right; margin-left: -20em; padding: 1em 1.5em;  margin-right: -1px;}
@@ -100,15 +119,18 @@ and (orientation : portrait) {
 #nav          { }
 #header       { height: 8em; padding: 1.7em 1em 1em 1em; }
 
-/* custom fonts */
+/* ------------------------------------------------------------------------- *\
+ * Custom font specification                                                 *
+\* ------------------------------------------------------------------------- */
 
 #content h2 { font-family: 'Titillium Web', sans-serif; }
 #content h3, #content h4 { font-weight: bold;  }
 #title h1 {font-family: 'Titillium Web', sans-serif; }
+textarea.bibtex { font-family: "Inconsolata", "Consolas", monospace; }
 
-code, pre { font-family: "Inconsolata", "Consolas", "Monaco", monospace; }
-
-/* borders on major elements */
+/* ------------------------------------------------------------------------- *\
+ * Borders (Top Level)                                                       *
+\* ------------------------------------------------------------------------- */
 
 #header, #nav, #content-wrap, #footer-wrap 
   { border-left: 1px solid #888; border-right: 1px solid #888; }
@@ -129,16 +151,10 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   background: #fff;
 }
 
-#nav a, #sidenav a, .logos a {
+#nav a, #sidenav a, .logos a, #articles a {
   -webkit-transition: all 0.15s ease-in-out; 
      -moz-transition: all 0.15s ease-in-out; 
           transition: all 0.15s ease-in-out; 
-}
-
-#articles a {
-  -webkit-transition: opacity 0.15s ease-in-out; 
-     -moz-transition: opacity 0.15s ease-in-out; 
-          transition: opacity 0.15s ease-in-out; 
 }
 
 #header-wrap, #nav-wrap, #content-wrap, #footer-wrap, #nav  { 
@@ -284,8 +300,8 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 .person .name { font-size: 130%; font-weight: bold; margin-bottom: 10px; }
 .person .name a { font-weight: bold; color: #000; }
 .person .name a:hover { color: #666; }
-.person .photo { float: left; margin-right: 1.2em; border-radius: 0.3em; padding: 1px 1px 0 1px; border: 1px solid #ddd; box-shadow: 0px 5px 1.2em -5px rgba(0,0,0,0.5); }
-.person .photo img { width: 7em; height: 9.7em; border-radius: 0.3em; margin-bottom:-3px; }
+.person .photo { float: left; margin-right: 1.2em; padding: 1px 1px 0 1px; border: 1px solid #ddd; box-shadow: 0px 5px 1.2em -5px rgba(0,0,0,0.5); }
+.person .photo img { width: 7em; height: 9.7em; margin-bottom:-3px; }
 .person .bio { font-size:95%; }
 
 code.block { display: block; }
@@ -299,6 +315,11 @@ code.block, pre.code, .article textarea.bibtex  {
   overflow: auto;
 }
 
+#publications-form {
+  padding-top: 1em;
+  padding-bottom: 0em;
+}
+
 #publications-form label {
   margin: 0 0.2em 0 0.6em;
   position: relative;
@@ -310,16 +331,12 @@ code.block, pre.code, .article textarea.bibtex  {
   color:#666;
 }
 #publications-form select {
+  border-radius: 0;
+  height: 2.0em;
   font-size: 90%;
    -webkit-appearance: none;
-  border-radius: 0.3em;
   border: 1px solid #ccc;
   padding: 0.3em 0.5em;
-}
-
-#publications-form {
-  padding-top: 1em;
-  padding-bottom: 0em;
 }
 
 #publications-form select {
@@ -356,11 +373,16 @@ code.block, pre.code, .article textarea.bibtex  {
 .even { background: #faeeee; }
 .odd { background: #ffffff; }
 
-#articles { margin-bottom: 1.5em; border: 1px solid #ccc; border-radius: 0.3em; }
+#articles { margin-bottom: 1.5em; border: 1px solid #dbb; }
 .article { padding: 1em; position: relative; overflow: hidden;}
-.article:first-child { border-top-left-radius: 0.3em; border-top-right-radius: 0.3em;}
-.article:last-child { border-bottom-left-radius: 0.3em; border-bottom-right-radius: 0.3em;}
-.article { border-bottom: 1px dotted #ecc;}
+.article:first-child { border-top-left-radius: 0.3em; }
+.article:last-child { border-bottom-left-radius: 0.3em; }
+.article { border-bottom: 1px dotted #aaa;}
+.article .thumbnail img { background: #aaa; height: 7em; width: 5em; }
+.article .thumbnail { border: 1px solid #666; float:left; height: 7em; margin: -0.5em 0.75em -0.5em -0.5em; overflow: hidden;
+filter: grayscale(100%) brightness(30%); -webkit-filter: grayscale(100%) brightness(30%); -moz-filter: grayscale(100%) brightness(30%); }
+.article .thumbnail-active { 
+filter: grayscale(0%) brightness(0%); -webkit-filter: grayscale(0%) brightness(0%); -moz-filter: grayscale(0%) brightness(0%); }
 .article .authors { margin-bottom: 0.8em;}
 .article .author { }
 .article .journal { }
@@ -369,9 +391,9 @@ code.block, pre.code, .article textarea.bibtex  {
 .article .bibtex { display: none; }
 .article textarea.bibtex {
   width: 60em;
-  height:16em;
+  height: 15.5em;
   font-size: 80%;
-  margin: 1em -2em -2em -2em;
+  margin: 1.5em -2em -2em -2em;
   padding: 1.2em 2em;  
   box-shadow: inset 0em 5em 10em -5em rgba(0,0,0,0.2);
   background: #eee;
@@ -399,16 +421,20 @@ code.block, pre.code, .article textarea.bibtex  {
 .article .keywords strong { font-weight: bold; }
 #content .article a.button { 
   position: absolute; 
-  padding: 0.5em;
+  padding: 0.35em 0.5em;
   cursor: pointer;
   font-size: 85%;
   right: 0.5em;
-  border-radius: 0.3em;
   width: 6.5em;
-  background:transparent;
+  background: transparent;
   border: 1px solid transparent;
   color: #b99;
+  height: 2em;
+
+  -moz-user-select: none; 
+  -webkit-user-select: none; 
 }
+#content .article a.button i { margin-right: 0.1em; }
 .article a.button-top { top: 0.5em; }
 .article a.button-abstract { top: 2.5em; }
 .article a.button-bottom { top: 4.5em; }
@@ -424,6 +450,11 @@ pre.bibtex { margin-bottom: 0; }
   background: #b77;
   color: #fff;
 }
+#content .article a.selected:hover {
+  background: #933;
+  color: #fff;
+}
+
 #content .article .abstract p {
   margin-bottom: 0;
 }
