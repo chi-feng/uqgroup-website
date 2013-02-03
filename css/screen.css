@@ -81,16 +81,6 @@ code, pre { font-family: "Inconsolata", "Consolas", "Monaco", monospace; }
   #footer .logos img { height: 4em; }
 }
 
-@media (min-width:1400px) { 
-  body { font-size: 120%; }
-  #footer .logos img { height: 4em; }
-}
-
-@media (min-width:1920px) { 
-  body { font-size: 140%; }
-  #footer .logos img { height: 4em; }
-}
-
 /* iPads (landscape) */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
   #header-wrap, #content-wrap, #footer-wrap, #nav { width: 67em; }
@@ -120,7 +110,7 @@ body { margin: 0 0 0 0; padding: 1em 0 1em 0; }
 #header       { height: 8em; padding: 1.7em 1em 1em 1em; }
 
 #publication-switcher-wrapper {
-  width: 47em; 
+  width: 50em; 
   position: relative;
   overflow-x: hidden;
   min-height: 45em;
@@ -162,16 +152,16 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   background: #fff;
 }
 
-#nav a, .logos a, #articles a.button, #publication-switcher h3 {
+#nav a, .logos a, #articles a.button, #publication-switcher h3, #articles .article {
   -webkit-transition: all 0.15s ease-in-out; 
      -moz-transition: all 0.15s ease-in-out; 
           transition: all 0.15s ease-in-out; 
 }
 
 #articles a.thumbnail {
-  -webkit-transition: opacity 0.2s ease-in-out; 
-     -moz-transition: opacity 0.2s ease-in-out; 
-          transition: opacity 0.2s ease-in-out; 
+  -webkit-transition: opacity 0.15s ease-in-out; 
+     -moz-transition: opacity 0.15s ease-in-out; 
+          transition: opacity 0.15s ease-in-out; 
 }
 
 #header-wrap, #nav-wrap, #content-wrap, #footer-wrap, #nav  { 
@@ -272,8 +262,8 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 }
 
 #content h2 { font-size: 225%; margin-bottom: 0.3em; }
-#content h3 { font-size: 140%; margin: 0 0 0.5em; }
-#content h4 { font-size: 125%; margin: 0 0 0.5em; }
+#content h3 { font-size: 125%; margin: 0 0 0.5em; }
+#content h4 { font-size: 110%; margin: 0 0 0.5em; }
 #content p strong, #content li strong { font-weight: bold; }
 #content p { margin-bottom: 15px; }
 #content p.centering { text-align: center; }
@@ -303,6 +293,10 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   background: #369;
   box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset;
   color: #eafaff;
+}
+
+#content a.smallbtn {
+  font-size: 60%;
 }
 
 #content #breadcrumbs { margin-bottom: 0.75em; font-size: 85%;  }
@@ -340,10 +334,9 @@ code.block, pre.code, .article textarea.bibtex  {
 #publication-switcher {
   background: #bbb; 
   box-shadow: inset 0px 1.2em 3em -1.2em rgba(255,255,255,1);
-  margin-bottom: 1em;
-  border-radius:0.4em;
+  margin-bottom: 0.6em;
+  border-radius:0.2em;
   border: 1px solid #999;
-  
 }
 
 #publication-switcher h3 {
@@ -365,14 +358,15 @@ code.block, pre.code, .article textarea.bibtex  {
 }
 
 #publication-switcher h3:first-child {
-  border-top-left-radius: 0.4em;
-  border-bottom-left-radius: 0.4em;
+  border-top-left-radius: 0.2em;
+  border-bottom-left-radius: 0.2em;
   border-left: 0;
 }
 
 #publication-switcher h3:last-child {
-  border-top-right-radius: 0.4em;
-  border-bottom-right-radius: 0.4em;
+  border-top-right-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+  border-right: 0;
 }
 
 #publication-switcher h3:hover { background: rgba(0,0,0,0.1); color:#000;}
@@ -388,8 +382,13 @@ code.block, pre.code, .article textarea.bibtex  {
   background: #47a;
 }
 
+#conferences, #books {
+  padding: 1em;
+}
+
 #publications-form {
   padding-bottom: 0em;
+  margin-bottom: 0.75em;
 }
 
 #publications-form table{
@@ -425,7 +424,6 @@ code.block, pre.code, .article textarea.bibtex  {
 #publications-form #select-author { min-width: 11em; }
 #publications-form #select-journal { min-width: 16em; max-width: 20em;}
 
-
 .research-area-figure-left, .research-area-figure-right {
   border: 1px solid #ccc;
   padding: 0.5em;
@@ -441,10 +439,17 @@ code.block, pre.code, .article textarea.bibtex  {
 .course .title { font-size: 110%; border-bottom: 1px dotted #aaa; padding-bottom: 0.6em; line-height: 1.3;}
 .course img { float: right; width: 30%; margin-left: -5em; }
 
-.even { background: #faf3f3; }
-.odd { background: #ffffff; }
+.even { background: #faf0f0; }
+.odd { background: #faf6f6; }
 
-#articles { margin-bottom: 1.5em; border: 1px solid #ecc; }
+.even { background: #f3f3f3; }
+.odd { background: #fcfcfc; }
+
+#articles { margin-bottom: 1.5em;}
+.article { border: 1px solid transparent; border-left: 0; border-bottom: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6;}
+.article:hover {border: 1px solid #ecc; border-left: 0; 
+background: #faf0f0; }
+
 #articles .loading {
   display: block; text-align: center;
   padding: 5em;
@@ -453,9 +458,8 @@ code.block, pre.code, .article textarea.bibtex  {
   color: #ccc;
 }
 .article { position: relative; overflow: hidden; min-height: 6.5em; }
-.article { border-bottom: 1px solid #ecc; }
 .article:first-child { }
-.article:last-child { border-bottom: none; }
+.article:last-child { }
 .article .thumbnail img { height: 100%; width: 100%; }
 .article .thumbnail {
   opacity: 0.4;
@@ -465,9 +469,9 @@ code.block, pre.code, .article textarea.bibtex  {
   width: 4.75em;
   margin-right: 0.75em ;
   overflow: hidden;
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
+  filter: grayscale(75%);
+  -webkit-filter: grayscale(75%);
+  -moz-filter: grayscale(75%);
 }
 .article .thumbnail-active {
   opacity: 1.0;
@@ -525,7 +529,7 @@ code.block, pre.code, .article textarea.bibtex  {
   width: 6.5em;
   background: transparent;
   border: 1px solid transparent;
-  color: #b99;
+  color: #bbb;
   height: 2em;
 
 }

@@ -103,7 +103,6 @@ function articlesAttachHover() {
     
 }
 
-
 function articleFilter() {
   
   var count = 0;

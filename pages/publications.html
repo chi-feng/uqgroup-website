@@ -56,8 +56,6 @@
   </table>
 </form>
 
-<br />
-
 <div id="publication-switcher-wrapper">
   
 <div id="articles-wrapper" class="clearfix">  
@@ -71,6 +69,7 @@
 
 <div id="conferences-wrapper">
 <div id="conferences">
+<h4 id="refereed">Refereed Conference Publications</h4>
 <ol>
   <li>Coles, T., Najm, H., Marzouk, Y.M. &ldquo;CSP simplification of chemical kinetic systems under uncertainty.&rdquo; International Workshop on Model Reduction in Reacting Flow/13th International Conference on Numerical Combustion. Corfu, Greece; 2011. [<a href="http://iwmrrf2011.ntua.gr/submission/iw013.pdf">link</a>]</li>
   <li>Lowry, N., Mangoubi, R., Desai, M., Marzouk, Y.M., Sammak, P. &ldquo;A unified approach to expectation maximization and level set segmentation applied to stem cell and brain MRI images.&rdquo; IEEE Symposium on Biomedical Imaging. Chicago, IL; 2011. [<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5872672&amp;tag=1">link</a>]</li>
@@ -163,12 +162,18 @@ function resetFilters() {
   articleFilter();
 }
 
-function switchPane(header, left1, left2, left3) {
+function switchPane(header, left1, left2, left3, maxheight) {
   $('#publication-switcher h3').removeClass('active');
   $(header).addClass('active');
-  $('#articles-wrapper').stop().animate({'left':left1}, 500);
-  $('#conferences-wrapper').stop().animate({'left':left2}, 500);
-  $('#books-wrapper').stop().animate({'left':left3}, 500);
+  $('#articles-wrapper').stop().animate({'left':left1}, 300);
+  $('#conferences-wrapper').stop().animate({'left':left2}, 300);
+  $('#books-wrapper').stop().animate({'left':left3}, 300);
+  $("#publication-switcher-wrapper").height(maxheight + 30);
+  if (left1 == '0em') {
+    $('#select-journal').removeAttr('disabled').removeClass('disabled');
+  } else {
+    $('#select-journal').attr('disabled', 'disabled').addClass('disabled');
+  }
 }
 
 var articles = [];
@@ -181,6 +186,8 @@ $(document).ready(function() {
     $.each(articles, renderArticle);
     populateFilters(articles);
     articlesAttachHover();
+    $("#publication-switcher-wrapper").height($('#articles').height() + 30);
+    
   });
     
   $("#publications-form select").change(function () {
@@ -200,16 +207,17 @@ $(document).ready(function() {
   });
   
   $("#journal-publications").click(function() {
-    switchPane($(this), '0em', '50em', '100em');
+    switchPane($(this), '0em', '50em', '100em', $('#articles').height());
   });
   
   $("#conference-publications").click(function() {
-    switchPane($(this), '-50em', '0em', '50em');
+    switchPane($(this), '-50em', '0em', '50em', $('#conferences').height());
   });
   
   $("#book-chapters").click(function() {
-    switchPane($(this), '-100em', '-50em', '0em');
+    switchPane($(this), '-100em', '-50em', '0em', $('#books').height());
   });
+  
   
 });
 

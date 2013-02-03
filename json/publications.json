@@ -3,23 +3,6 @@
 "articles": [
 
 {
-  "title" : "Bayesian inference with optimal maps",
-  "area" : "",
-  "authors" : [ "Moselhy, T.A.", "Marzouk, Y.M." ],
-  "journal" : "Journal of Computational Physics",
-  "thumbnail" : "jcp.png",
-  "volume" : "232",
-  "number" : "1",
-  "pages" : "288-317",
-  "volume" : "232",
-  "doi" : "10.1016/j.jcp.2012.08.013",
-  "year" : "2013",
-  "fulltext" : "http://arxiv.org/abs/1109.1516",
-  "abstract" : "<p>We present a new approach to Bayesian inference that entirely avoids Markov chain simulation, by constructing a map that pushes forward the prior measure to the posterior measure. Existence and uniqueness of a suitable measure-preserving map is established by formulating the problem in the context of optimal transport theory. We discuss various means of explicitly parameterizing the map and computing it efficiently through solution of an optimization problem, exploiting gradient information from the forward model when possible. The resulting algorithm overcomes many of the computational bottlenecks associated with Markov chain Monte Carlo. Advantages of a map-based representation of the posterior include analytical expressions for posterior moments and the ability to generate arbitrary numbers of independent posterior samples without additional likelihood evaluations or forward solves. The optimization approach also provides clear convergence criteria for posterior approximation and facilitates model selection through automatic evaluation of the marginal likelihood. We demonstrate the accuracy and efficiency of the approach on nonlinear inverse problems of varying dimension, involving the inference of parameters appearing in ordinary and partial differential equations.</p>",
-  "keywords" : "Bayesian inference; Optimal transport; Measure-preserving maps; Inverse problems; Polynomial chaos; Numerical optimization"
-},
-
-{
   "title" : "Simulation-based optimal Bayesian experimental design for nonlinear systems",
   "area" : "",
   "authors" : [ "Huan, X.", "Marzouk, Y.M." ],
@@ -37,14 +20,31 @@
 },
 
 {
+  "title" : "Bayesian inference with optimal maps",
+  "area" : "",
+  "authors" : [ "Moselhy, T.A.", "Marzouk, Y.M." ],
+  "journal" : "Journal of Computational Physics",
+  "thumbnail" : "jcp.png",
+  "volume" : "231",
+  "number" : "1",
+  "pages" : "7815-2850",
+  "volume" : "232",
+  "doi" : "10.1016/j.jcp.2012.08.013",
+  "year" : "2013",
+  "fulltext" : "http://arxiv.org/abs/1109.1516",
+  "abstract" : "<p>We present a new approach to Bayesian inference that entirely avoids Markov chain simulation, by constructing a map that pushes forward the prior measure to the posterior measure. Existence and uniqueness of a suitable measure-preserving map is established by formulating the problem in the context of optimal transport theory. We discuss various means of explicitly parameterizing the map and computing it efficiently through solution of an optimization problem, exploiting gradient information from the forward model when possible. The resulting algorithm overcomes many of the computational bottlenecks associated with Markov chain Monte Carlo. Advantages of a map-based representation of the posterior include analytical expressions for posterior moments and the ability to generate arbitrary numbers of independent posterior samples without additional likelihood evaluations or forward solves. The optimization approach also provides clear convergence criteria for posterior approximation and facilitates model selection through automatic evaluation of the marginal likelihood. We demonstrate the accuracy and efficiency of the approach on nonlinear inverse problems of varying dimension, involving the inference of parameters appearing in ordinary and partial differential equations.</p>",
+  "keywords" : "Bayesian inference; Optimal transport; Measure-preserving maps; Inverse problems; Polynomial chaos; Numerical optimization"
+},
+
+{
   "title" : "Bayesian inverse problems with Monte Carlo forward models.",
   "area" : "",
   "authors" : [ "Bal, G.", "Langmore, I.", "Marzouk, Y.M."  ],
-  "year" : "Submitted 2012",
+  "year" : "2013",
   "journal" : "Inverse Problems and Imaging",
   "thumbnail" : "ipi.png",
-  "volume" : "",
-  "number" : "",
+  "volume" : "7",
+  "number" : "1",
   "pages" : "",
   "month" : "",
   "abstract" : "<p>The full application of Bayesian inference to inverse problems requires exploration of a posterior distribution that typically does not possess a standard form. In this context, Markov chain Monte Carlo (MCMC) methods are often used. These methods require many evaluations of a computationally intensive forward model to produce the equivalent of one independent sample from the posterior. We consider applications in which approximate forward models at multiple resolution levels are available, each endowed with a probabilistic error estimate. These situations occur, for example, when the forward model involves Monte Carlo integration. We present a novel MCMC method called $MC^3$ that uses low-resolution forward models to approximate draws from a posterior distribution built with the high-resolution forward model. The acceptance ratio is estimated with some statistical error; then a confidence interval for the true acceptance ratio is found, and acceptance is performed correctly with some confidence. The high-resolution models are rarely run and a significant speed up is achieved.</p><p>Our multiple-resolution forward models themselves are built around a new importance sampling scheme that allows Monte Carlo forward models to be used efficiently in inverse problems. The method is used to solve an inverse transport problem that finds applications in atmospheric remote sensing. We present a path-recycling methodology to efficiently vary parameters in the transport equation. The forward transport equation is solved by a Monte Carlo method that is amenable to the use of $MC^3$ to solve the inverse transport problem using a Bayesian formalism.</p>",
