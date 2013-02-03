@@ -72,20 +72,20 @@ code, pre { font-family: "Inconsolata", "Consolas", "Monaco", monospace; }
 @media (max-width:1100px) { 
   #header-wrap, #content-wrap, #footer-wrap, #nav { width: 50em;  }
   #sidebar { display:none; }
-  #footer .logos img { height: 3em; }
+  .logos-wrapper { width: 17em; }
 }
 
 @media (min-width:1100px) { 
   #header-wrap, #content-wrap, #footer-wrap, #nav { width: 67em; }
   #sidebar { display:block; }
-  #footer .logos img { height: 4em; }
+  .logos-wrapper { width: 41em; }
 }
 
 /* iPads (landscape) */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
   #header-wrap, #content-wrap, #footer-wrap, #nav { width: 67em; }
   #sidebar { display:block; }
-  #footer .logos img { height: 4em; }
+  .logos-wrapper { width: 41em; }
 }
 
 /* iPads (portrait) */
@@ -101,18 +101,19 @@ body { margin: 0 0 0 0; padding: 1em 0 1em 0; }
 #header-wrap, #nav-wrap, #content-wrap, #footer-wrap, #nav 
               { position: relative; margin: 0 auto; }
 #nav-wrap     { width: 100%; }
-#content-wrap { min-height: 65%; }
+#content-wrap {  }
 #sidebar-wrap { width:  17em; float:left; }
-#content      { width:  50em; float: right; margin-left: -20em; padding: 1em 1.5em;  margin-right: -1px; position: relative; overflow: hidden;}
-#footer       { padding: 2em 0.6em; width: 100%; }
+#content      { width:  50em; float: right; margin-left: -20em; padding: 1.5em 1.5em;  margin-right: -1px; position: relative; overflow: hidden;}
+#footer       { padding: 1.5em 0.6em; width: 100%; }
 #nav.stuck    { margin: 0 auto; } /* matches body left margin */
 #nav          { }
 #header       { height: 8em; padding: 1.7em 1em 1em 1em; }
 
 #publication-switcher-wrapper {
-  width: 50em; 
+  width: 47em; 
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
   min-height: 45em;
 }
 #articles-wrapper, #conferences-wrapper, #books-wrapper { width: 46.9em; position: absolute; top:0; }
@@ -125,18 +126,20 @@ body { margin: 0 0 0 0; padding: 1em 0 1em 0; }
 \* ------------------------------------------------------------------------- */
 
 #content h2 { font-family: 'Titillium Web', sans-serif; }
-#content h3, #content h4 { font-weight: bold;  }
+#content h3, #content h4 { font-weight: bold; }
 #title h1 {font-family: 'Titillium Web', sans-serif; }
 textarea.bibtex { font-family: "Inconsolata", "Consolas", monospace; }
+#nav ul li a { font-weight: bold; }
 
 /* ------------------------------------------------------------------------- *\
  * Borders (Top Level)                                                       *
 \* ------------------------------------------------------------------------- */
 
-#header, #nav, #content-wrap, #footer-wrap 
-  { border-left: 1px solid #888; border-right: 1px solid #888; }
-#header { border-top: 1px solid #888; border-top-left-radius: 0.3em; border-top-right-radius: 0.3em;}
-#content { border-left: 1px solid #888; border-right: 1px solid #888;}
+#header, #content-wrap
+  { border-left: 1px solid #ccc; border-right: 1px solid #ccc; }
+#header { border-top: 1px solid #ccc; border-top-left-radius: 0.3em; border-top-right-radius: 0.3em;}
+#content-wrap { border-left: 1px solid #ccc; }
+#content { border-left: 1px solid #ccc; border-right: 1px solid #ccc;}
 
 /* Colors and backgrounds */
 
@@ -152,7 +155,7 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   background: #fff;
 }
 
-#nav a, .logos a, #articles a.button, #publication-switcher h3, #articles .article {
+#nav a, .logos a, #articles a.button, #publication-switcher h3, #articles .article, .see-all a {
   -webkit-transition: all 0.15s ease-in-out; 
      -moz-transition: all 0.15s ease-in-out; 
           transition: all 0.15s ease-in-out; 
@@ -172,7 +175,7 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 
 #header { background: #eee url('banner.jpg'); background-size: cover; }
 
-#title a, #nav a, h1, h2, h3, #breadcrumbs, .btn {
+#title a, #nav a, h1, h2, h3, #breadcrumbs, .btn, .button, #sidebar h2 * {
   -moz-user-select: none; 
   -webkit-user-select: none; 
 }
@@ -198,10 +201,9 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   color: #eee;
   font-size: 100%;
   text-align: center;
-  border-right: 1px solid #777;
+  border-right: 1px solid #666;
   text-shadow: 0 -1px 0px rgba(0,0,0,0.5);
   border-left: 1px solid #444;
-  font-weight: bold;
 }
 
 #nav ul li a:hover { background: rgba(0,0,0,0.2); color: #fff; }
@@ -234,11 +236,15 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 }
 
 
-#content-wrap { background: #fff; border-left: 1px solid #888; }
+#content-wrap { background: #fff; }
 
-#sidebar {background: #fff; width: 100%; padding-bottom: 8em;}
-#sidebar .sidebar-content { padding: 15px 15px; }
-#sidebar a.sidebar-collapse-btn { float: right; padding: 0.7em 1em; cursor: pointer; }
+#sidebar {background: #fff; width: 100%; }
+#sidebar .sidebar-content { padding: 0.8em; }
+#sidebar a.sidebar-collapse-btn { 
+  float: right; padding: 0.7em 1em; cursor: pointer; 
+  text-shadow: 0px -1px 1px #000;
+  color: #999;
+}
 #sidebar h2 {
   font-size: 100%;
   font-weight: bold;
@@ -261,7 +267,7 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   background: #fff;
 }
 
-#content h2 { font-size: 225%; margin-bottom: 0.3em; }
+#content h2 { font-size: 225%; margin-bottom: 0.3em; margin-top: -0.2em;}
 #content h3 { font-size: 125%; margin: 0 0 0.5em; }
 #content h4 { font-size: 110%; margin: 0 0 0.5em; }
 #content p strong, #content li strong { font-weight: bold; }
@@ -299,22 +305,54 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   font-size: 60%;
 }
 
-#content #breadcrumbs { margin-bottom: 0.75em; font-size: 85%;  }
+#content #breadcrumbs { margin-bottom: 0.75em; font-size: 85%;  display: none; }
 #content #breadcrumbs:hover { opacity: 1.0; }
 #content #breadcrumbs i { margin: 0px 5px; }
 
 #footer { font-size: 85%; background: #333; color: #aaa;  box-shadow: 0px 50px 100px -50px rgba(0,0,0,0.25); }
-#footer .copyright { float:right; padding: 0px 10px; }
-#footer .designed-by { float:left; padding: 0px 10px; }
+#footer .copyright { 
+  width: 34em; float:right; }
+#footer .designed-by { float:left; padding: 0px 1em; }
 #footer a { color: #ccc; }
-#footer .logos li { display: block; float:left; width: 24%; }
-#footer .logos a { display: block;float: left; filter: grayscale(100%); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); width: 100%; margin-bottom: 1.2em; text-align:center; }
-#footer .logos a:hover { opacity: 1.0; filter: grayscale(0%); -webkit-filter: grayscale(0%); -moz-filter: grayscale(0%); }
 
+#footer h4 {
+  font-size: 120%;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+#footer .contact {
+  width: 34em;
+  float: right;
+}
+
+#footer .youssef {
+  width: 20em;
+  float:left;
+}
+
+#footer .admin {
+  width: 13em;
+  float: left;
+}
+
+#footer p strong {
+  font-weight: bold;
+}
+
+#footer p {
+  margin-bottom: 0.5em;
+}
+
+.logos-wrapper { float:left; margin-left: 1em; }
+.logos li { display: inline-block; width: 20em;  }
+.logos img { height: 5em; width: 19em; }
+.logos a { display: block; filter: grayscale(100%); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); width: 100%; margin-bottom: 1.2em;}
+.logos a:hover { filter: grayscale(0%); -webkit-filter: grayscale(0%); -moz-filter: grayscale(0%); }
 
 .person { margin-bottom: 30px; }
-.person .name { font-size: 130%; font-weight: bold; margin-bottom: 10px; }
-.person .name a { font-weight: bold; color: #000; }
+.person .name { font-size: 125%; margin-bottom: 0.5em; }
+.person .name a { display: block; color: #000; }
 .person .name a:hover { color: #666; }
 .person .photo { float: left; margin-right: 1.2em; padding: 1px 1px 0 1px; border: 1px solid #ddd; box-shadow: 0px 5px 1.2em -5px rgba(0,0,0,0.5); }
 .person .photo img { width: 7em; height: 9.7em; margin-bottom:-3px; }
@@ -348,7 +386,7 @@ code.block, pre.code, .article textarea.bibtex  {
   color: #333;
   font-size: 90%;
   text-align: center;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #ccc;
   border-left: 1px solid #999;
   text-shadow: 0 1px 1px #fff;
   font-weight: bold;
@@ -369,7 +407,7 @@ code.block, pre.code, .article textarea.bibtex  {
   border-right: 0;
 }
 
-#publication-switcher h3:hover { background: rgba(0,0,0,0.1); color:#000;}
+#publication-switcher h3:hover { background: rgba(0,0,0,0.1); color:#000; }
 #publication-switcher h3.active { 
   background: #369;
   box-shadow: inset 0px 1.2em 60px -1.2em rgba(0,0,0,1.0); 
@@ -420,7 +458,7 @@ code.block, pre.code, .article textarea.bibtex  {
   font-size: 85%;
 } 
 
-#publications-form #select-year { min-width: 3.6em; }
+#publications-form #select-year { min-width: 4em; }
 #publications-form #select-author { min-width: 11em; }
 #publications-form #select-journal { min-width: 16em; max-width: 20em;}
 
@@ -439,16 +477,14 @@ code.block, pre.code, .article textarea.bibtex  {
 .course .title { font-size: 110%; border-bottom: 1px dotted #aaa; padding-bottom: 0.6em; line-height: 1.3;}
 .course img { float: right; width: 30%; margin-left: -5em; }
 
-.even { background: #faf0f0; }
-.odd { background: #faf6f6; }
-
 .even { background: #f3f3f3; }
 .odd { background: #fcfcfc; }
+.article:hover { background: #faf0f0; }
 
-#articles { margin-bottom: 1.5em;}
+#articles { margin-bottom: 0; }
 .article { border: 1px solid transparent; border-left: 0; border-bottom: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6;}
-.article:hover {border: 1px solid #ecc; border-left: 0; 
-background: #faf0f0; }
+.article:hover { border: 1px solid #ecc; border-left: 0; }
+#article-0 { border-top: 1px solid #e6e6e6; }
 
 #articles .loading {
   display: block; text-align: center;
@@ -457,9 +493,13 @@ background: #faf0f0; }
   font-size: 150%;
   color: #ccc;
 }
+
+#content .see-all {  }
+#content .see-all a { display: block; text-align: center; padding: 1em 0 0.2em; color: #ccc; font-weight: bold; }
+#content .see-all a:hover { color: #666; }
+
 .article { position: relative; overflow: hidden; min-height: 6.5em; }
-.article:first-child { }
-.article:last-child { }
+
 .article .thumbnail img { height: 100%; width: 100%; }
 .article .thumbnail {
   opacity: 0.4;

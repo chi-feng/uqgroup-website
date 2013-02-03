@@ -1,11 +1,4 @@
 
-<div id="breadcrumbs">
-  <a href="home">UQ Group</a> <i class="icon-angle-right"></i>
-  <a href="publications">Publications</a>
-</div>
-       
-<h2 id="publications" class="selected">Publications</h2>
-
 <div id="publication-switcher" class="clearfix">
   <h3 id="journal-publications" class="active">Journal Articles</h3>
   <h3 id="conference-publications">Conference Publications</h3>
@@ -20,22 +13,6 @@
           <option value="">Year</option>
           <optgroup label='-'>
           </optgroup>
-          <option value="2013">2013</option>
-          <option value="2012">2012</option>
-          <option value="2011">2011</option>
-          <option value="2010">2010</option>
-          <option value="2009">2009</option>
-          <option value="2008">2008</option>
-          <option value="2007">2007</option>
-          <option value="2006">2006</option>
-          <option value="2005">2005</option>
-          <option value="2004">2004</option>
-          <option value="2003">2003</option>
-          <option value="2002">2002</option>
-          <option value="2001">2001</option>
-          <option value="2000">2000</option>
-          <option value="1999">1999</option>
-          <option value="1998">1998</option>
         </select>
       </td>
       <td>
@@ -122,6 +99,14 @@ function copyToClipboard (selector) {
 }
 
 function populateFilters(articles) {
+  
+  var d = new Date();
+  var options = [];    
+  for (var year = d.getFullYear(); year >= 1998; year--) {
+    options.push('<option class="year" value="' + year + '">' + year + '</option>');
+  }
+  $('#select-year').append(options);
+  
   var hash = {};
   var authors = []; 
   $.each(articles, function(key, article) {
@@ -133,12 +118,11 @@ function populateFilters(articles) {
     });    
   });
   authors.sort();
-  var options = [];
+  options = [];
   $.each(authors, function(key, val) {
     options.push('<option class="author" value="' + val + '">' + val + '</option>');
   });
   $('#select-author').append(options);
-  
 
   hash = {};
   var journals = []; 
@@ -168,7 +152,7 @@ function switchPane(header, left1, left2, left3, maxheight) {
   $('#articles-wrapper').stop().animate({'left':left1}, 300);
   $('#conferences-wrapper').stop().animate({'left':left2}, 300);
   $('#books-wrapper').stop().animate({'left':left3}, 300);
-  $("#publication-switcher-wrapper").height(maxheight + 30);
+  $("#publication-switcher-wrapper").height(maxheight);
   if (left1 == '0em') {
     $('#select-journal').removeAttr('disabled').removeClass('disabled');
   } else {
