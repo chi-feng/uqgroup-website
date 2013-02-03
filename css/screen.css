@@ -120,7 +120,7 @@ body { margin: 0 0 0 0; padding: 1em 0 1em 0; }
 #header       { height: 8em; padding: 1.7em 1em 1em 1em; }
 
 #publication-switcher-wrapper {
-  width: 50em; 
+  width: 47em; 
   position: relative;
   overflow-x: hidden;
   min-height: 45em;
@@ -286,10 +286,10 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 
 #content a.btn {
   display: inline-block;
-  background: #593;
+  background: #258;
   box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset, 0 1px 3px rgba(0,0,0,0.4);
   color: #fff;
-  border: 1px solid #372;
+  border: 1px solid #237;
   border-radius: 0.2em;
   font-weight: bold;
   padding: 0.5em 1em;
@@ -300,9 +300,9 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 }
 
 #content a.btn:hover {
-  background: #6Cb53B;
+  background: #369;
   box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset;
-  color: #FFC;
+  color: #eafaff;
 }
 
 #content #breadcrumbs { margin-bottom: 0.75em; font-size: 85%;  }
@@ -338,8 +338,12 @@ code.block, pre.code, .article textarea.bibtex  {
 }
 
 #publication-switcher {
-  background: #555; box-shadow: inset 0px 1.2em 60px -1.2em rgba(255,255,255,0.25);
+  background: #bbb; 
+  box-shadow: inset 0px 1.2em 3em -1.2em rgba(255,255,255,1);
   margin-bottom: 1em;
+  border-radius:0.4em;
+  border: 1px solid #999;
+  
 }
 
 #publication-switcher h3 {
@@ -348,28 +352,40 @@ code.block, pre.code, .article textarea.bibtex  {
   float: left;
   padding: 0.7em;
   min-width: 12%;
-  color: #eee;
+  color: #333;
   font-size: 90%;
   text-align: center;
-  border-right: 1px solid #777;
-  text-shadow: 0 -1px 0px rgba(0,0,0,0.5);
-  border-left: 1px solid #444;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #999;
+  text-shadow: 0 1px 1px #fff;
   font-weight: bold;
   margin:0;
   width: 33.3333%;
   cursor: pointer;
 }
-#publication-switcher h3:hover { background: rgba(0,0,0,0.2); color: #fff; }
+
+#publication-switcher h3:first-child {
+  border-top-left-radius: 0.4em;
+  border-bottom-left-radius: 0.4em;
+  border-left: 0;
+}
+
+#publication-switcher h3:last-child {
+  border-top-right-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+}
+
+#publication-switcher h3:hover { background: rgba(0,0,0,0.1); color:#000;}
 #publication-switcher h3.active { 
-  background: #933;
+  background: #369;
   box-shadow: inset 0px 1.2em 60px -1.2em rgba(0,0,0,1.0); 
   color: #fff; 
-  border-left: 1px solid #522; 
-  border-right: 1px solid #522; 
+  border-left: 1px solid #225; 
+  border-right: 1px solid #225; 
   text-shadow: 0px 2px 3px rgba(0,0,0,1.0);
 }
 #publication-switcher h3.active:hover { 
-  background: #8a2a2a;
+  background: #47a;
 }
 
 #publications-form {
