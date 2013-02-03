@@ -24,22 +24,22 @@ if (file_exists($page)) {
   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
   <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css"  rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <?php
+  if ($use_mathjax) {
+    echo '<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>';
+  }
+  ?>
+  <script type="text/javascript" src="js/uqgroup.js"></script>
 </head>
 <body id="top">
 <div id="header-wrap">
   <div id="header" class="clearfix">
-    <!--
-    <div id="mitlogo">
-      <a href="http://mit.edu"><img src="images/mitlogo.png" alt="mitlogo" /></a>
-    </div>
-    -->
     <div id="title">
       <h1><a href="home">Uncertainty Quantification Group</a></h1>
       <h2><a href="http://mit.edu">Massuchusetts Institute of Technology</a></h2>
     </div>
-  </div> <!-- div#header -->
-</div> <!-- div#header-wrap -->
+  </div>
+</div>
 <div id="nav-wrap" class="clearfix">
   <div id="nav" class="clearfix">
     <ul id="navbar">
@@ -51,8 +51,7 @@ $tabs = array(
   'research' => 'Research',
   'publications' => 'Publications',
   'software' => 'Software',
-  'teaching' => 'Teaching',
-  'contact' => 'Contact');
+  'teaching' => 'Teaching');
 
 foreach ($tabs as $href => $text) {
   $active = ($p == $href) ? ' class="active"' : ''; 
@@ -60,18 +59,17 @@ foreach ($tabs as $href => $text) {
 }
 
 ?>
-    
     <a class="totop" onclick="$('html, body').animate({scrollTop:0}, 500);">
       <i class="icon-circle-arrow-up"></i>
     </a>
     </ul>
-  </div> <!-- div#nav -->
-</div> <!-- div#nav-wrap -->
+  </div>
+</div>
 <div id="content-wrap" class="clearfix">
   <div id="sidebar-wrap">
     <div id="sidebar">
+      
       <div class="sidebar-box">
-        <a class="sidebar-collapse-btn"><i class="icon-minus"></i></a>
         <h2>News</h2>
         <div class="sidebar-content">
           <p><strong>Jan. 31</strong>
@@ -80,8 +78,8 @@ foreach ($tabs as $href => $text) {
           Prof. Marzouk becomes the director of the Aerospace Computational Design Laboratory.</p>
         </div>
       </div>
+      
       <div class="sidebar-box">
-        <a class="sidebar-collapse-btn"><i class="icon-minus"></i></a>
         <h2>Upcoming Events</h2>
         <div class="sidebar-content">
           <p><strong>Feb 8, 2013</strong><br /> 
@@ -98,9 +96,9 @@ foreach ($tabs as $href => $text) {
           <a href="http://www.siam.org/meetings/uq12/" target="_new"><i class="icon-external-link"></i></a>
             </p>
         </div>
-      </div>    
+      </div>
+      
       <div class="sidebar-box">
-        <a class="sidebar-collapse-btn"><i class="icon-minus"></i></a>
         <h2>Links</h2>
         <div class="sidebar-content">
           <ul class="links">
@@ -109,8 +107,9 @@ foreach ($tabs as $href => $text) {
           </ul>
         </div>
       </div>    
-    </div> <!-- div#sidebar -->
-  </div> <!-- div#sidebar-wrap -->
+      
+    </div>
+  </div> 
 <div id="content" class="column">
 <?php
 echo $t['content'];
@@ -118,25 +117,55 @@ echo $t['content'];
 </div>
 </div>
 <div id="footer-wrap">
-<div id="footer">
+<div id="footer" class="clearfix">
+  
+  <div class="logos-wrapper">
   <ul class="logos">
-    <li><a href="http://mit.edu" target="_new"><img src="images/mitlogo.png" alt="mit" /></a></li>
-    <li><a href="http://aeroastro.mit.edu" target="_new"><img src="images/aeroastro.png" alt="aeroastro" /></a></li>
-    <li><a href="http://acdl.mit.edu" style="opacity:0.5" target="_new"><img src="images/acdl.png" alt="acdl"  /></a></li>
-    <li><a href="http://computationalengineering.mit.edu" target="_new"><img src="images/cce.png" alt="cce" /></a></li>
+    <li><a href="http://mit.edu" target="_new"><img src="images/mitlogo.png" alt="cce" width="200" /></a></li>
+    <li><a href="http://acdl.mit.edu" target="_new"><img src="images/acdl.png" alt="acdl" width="100" style="opacity: 0.4;" /></a></li>
+    <li><a href="http://computationalengineering.mit.edu" target="_new"><img src="images/cce.png" alt="cce" width="200" /></a></li>
+    <li><a href="http://aeroastro.mit.edu" target="_new"><img src="images/aeroastro.png" alt="aeroastro" width="180" /></a></li>
   </ul>
-  <br style="clear: both;" />
+  </div>
+  
+  <div class="contact">
+    <div class="youssef">
+      <h4>Contact</h4>
+      <p>Youssef Marzouk</p>
+      <p>Class of 1942 Associate Professor <br /> &nbsp; &nbsp;
+        of Aeronautics and Astronautics</p>
+      <p>ymarz (at) mit.edu <br />
+      (617) 253-1337
+      </p>
+      <p>77 Massachusetts Ave, Room 33-217 <br />
+      Cambridge, MA 02139 
+      </p>
+    </div>
+    <div class="admin">
+      <h4>Administrative Contact</h4>
+      <p>Sophia Hasenfus</p>
+      shasen (at) mit.edu <br />
+      (617) 252-1536
+      </p>
+    </div>
+  </div>
+  <br style="clear: both" />
   <div class="designed-by">
-    Site designed and maintained by <a href="http://chifeng.scripts.mit.edu">Chi Feng</a>
+    Design by <a href="http://chifeng.scripts.mit.edu/">Chi Feng</a>
   </div>
   <div class="copyright">
-    Copyright &copy;2013, MIT Uncertainty Quantification Group
+    Copyright &copy;2013, MIT Uncertainty Quantification Group.  
   </div>
 </div>
 </div>
+<?php
+if ($use_mathjax) {
+?>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
 </script>
-<script type="text/javascript" src="js/uqgroup.js"></script>
+<?php
+}
+?>
 </body>
 </html>
