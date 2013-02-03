@@ -51,7 +51,8 @@ $tabs = array(
   'research' => 'Research',
   'publications' => 'Publications',
   'software' => 'Software',
-  'teaching' => 'Teaching');
+  'teaching' => 'Teaching',
+  'activities' => 'Activities');
 
 foreach ($tabs as $href => $text) {
   $active = ($p == $href) ? ' class="active"' : ''; 
@@ -131,30 +132,32 @@ echo $t['content'];
   <div class="contact">
     <div class="youssef">
       <h4>Contact</h4>
-      <p>Youssef Marzouk</p>
+      <p><a href="http://web.mit.edu/aeroastro/people/marzouk.html" target="_new"><strong>Youssef Marzouk</strong></a></p>
       <p>Class of 1942 Associate Professor <br /> &nbsp; &nbsp;
         of Aeronautics and Astronautics</p>
-      <p>ymarz (at) mit.edu <br />
-      (617) 253-1337
+      <p><i class="icon-envelope"></i>&nbsp; ymarz (at) mit.edu</p>
+      <p><i class="icon-phone"></i>&nbsp; (617) 253-1337</p>
       </p>
-      <p>77 Massachusetts Ave, Room 33-217 <br />
-      Cambridge, MA 02139 
+      <p><a href="http://whereis.mit.edu/?go=33" target="_new"><i class="icon-map-marker"></i>&nbsp; 77 Massachusetts Ave, Room 33-217<br />
+       &nbsp; &nbsp; Cambridge, MA 02139 </a>
       </p>
     </div>
     <div class="admin">
       <h4>Administrative Contact</h4>
-      <p>Sophia Hasenfus</p>
-      shasen (at) mit.edu <br />
-      (617) 252-1536
+      <p><strong>Sophia Hasenfus</strong></p>
+      <p><i class="icon-envelope"></i>&nbsp; shasen (at) mit.edu</p>
+      <p><i class="icon-phone"></i>&nbsp; (617) 252-1536</p>
       </p>
     </div>
   </div>
   <br style="clear: both" />
-  <div class="designed-by">
-    Design by <a href="http://chifeng.scripts.mit.edu/">Chi Feng</a>
-  </div>
-  <div class="copyright">
-    Copyright &copy;2013, MIT Uncertainty Quantification Group.  
+  <div class="footer-bottom clearfix">
+    <div class="designed-by">
+      Design by <a href="http://chifeng.scripts.mit.edu/">Chi Feng</a>
+    </div>
+    <div class="copyright">
+      Copyright &copy;2013, MIT Uncertainty Quantification Group.  
+    </div>
   </div>
 </div>
 </div>

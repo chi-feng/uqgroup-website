@@ -104,7 +104,7 @@ body { margin: 0 0 0 0; padding: 1em 0 1em 0; }
 #content-wrap {  }
 #sidebar-wrap { width:  17em; float:left; }
 #content      { width:  50em; float: right; margin-left: -20em; padding: 1.5em 1.5em;  margin-right: -1px; position: relative; overflow: hidden;}
-#footer       { padding: 1.5em 0.6em; width: 100%; }
+#footer       { padding: 0; width: 100%; }
 #nav.stuck    { margin: 0 auto; } /* matches body left margin */
 #nav          { }
 #header       { height: 8em; padding: 1.7em 1em 1em 1em; }
@@ -158,18 +158,21 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 #nav a, .logos a, #articles a.button, #publication-switcher h3, #articles .article, .see-all a {
   -webkit-transition: all 0.15s ease-in-out; 
      -moz-transition: all 0.15s ease-in-out; 
+      -ms-transition: all 0.15s ease-in-out; 
           transition: all 0.15s ease-in-out; 
 }
 
 #articles a.thumbnail {
   -webkit-transition: opacity 0.15s ease-in-out; 
-     -moz-transition: opacity 0.15s ease-in-out; 
+     -moz-transition: opacity 0.15s ease-in-out;  
+      -ms-transition: opacity 0.15s ease-in-out;
           transition: opacity 0.15s ease-in-out; 
 }
 
 #header-wrap, #nav-wrap, #content-wrap, #footer-wrap, #nav  { 
   -webkit-transition: width 0.5s ease-in-out; 
      -moz-transition: width 0.5s ease-in-out; 
+      -ms-transition: width 0.5s ease-in-out; 
           transition: width 0.5s ease-in-out; 
 }
 
@@ -311,19 +314,21 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 
 #footer { font-size: 85%; background: #333; color: #aaa;  box-shadow: 0px 50px 100px -50px rgba(0,0,0,0.25); }
 #footer .copyright { 
-  width: 34em; float:right; }
+  width: 34em; float:right; text-align: right; }
 #footer .designed-by { float:left; padding: 0px 1em; }
 #footer a { color: #ccc; }
 
 #footer h4 {
-  font-size: 120%;
+  font-size: 125%;
   font-weight: bold;
   margin-bottom: 0.5em;
+  color: #ddd;
 }
 
 #footer .contact {
   width: 34em;
   float: right;
+  margin: 1.5em 1em 0 0;
 }
 
 #footer .youssef {
@@ -332,21 +337,29 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 }
 
 #footer .admin {
-  width: 13em;
+  width: 14em;
   float: left;
 }
 
 #footer p strong {
   font-weight: bold;
+  color: #ccc;
 }
 
 #footer p {
   margin-bottom: 0.5em;
 }
 
-.logos-wrapper { float:left; margin-left: 1em; }
-.logos li { display: inline-block; width: 20em;  }
-.logos img { height: 5em; width: 19em; }
+#footer .footer-bottom {
+  padding: 1em 1em 1em 0;
+  margin-top: 1em;
+  border-top: 1px solid #444;
+  background:#222;
+}
+
+.logos-wrapper { float:left; margin: 1.5em 0 0 2em; }
+.logos li { display: inline-block; width: 20em; padding: 1em 0 0 0em; }
+.logos img { height: 4em; width: 17em; }
 .logos a { display: block; filter: grayscale(100%); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); width: 100%; margin-bottom: 1.2em;}
 .logos a:hover { filter: grayscale(0%); -webkit-filter: grayscale(0%); -moz-filter: grayscale(0%); }
 
