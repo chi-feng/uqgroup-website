@@ -178,7 +178,7 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 
 #header { background: #eee url('banner.jpg'); background-size: cover; }
 
-#title a, #nav a, h1, h2, h3, #breadcrumbs, .btn, .button, #sidebar h2 * {
+#title a, #nav a, h1, h2, h3, #breadcrumbs, .btn, .button, #sidebar h2 *, i {
   -moz-user-select: none; 
   -webkit-user-select: none; 
 }
@@ -315,14 +315,17 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 #footer { font-size: 85%; background: #333; color: #aaa;  box-shadow: 0px 50px 100px -50px rgba(0,0,0,0.25); }
 #footer .copyright { 
   width: 34em; float:right; text-align: right; }
-#footer .designed-by { float:left; padding: 0px 1em; }
-#footer a { color: #ccc; }
+#footer .designed-by { float:left; padding: 0px 1.5em; }
+#footer .designed-by a { color: #ccc;}
+
+#footer p a { color: #aaa; border-bottom: 1px dotted #666; }
+#footer p a:hover { color: #ccc; border-bottom: 1px dotted #999; }
 
 #footer h4 {
   font-size: 125%;
   font-weight: bold;
   margin-bottom: 0.5em;
-  color: #ddd;
+  color: #bbb;
 }
 
 #footer .contact {
@@ -332,13 +335,17 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 }
 
 #footer .youssef {
-  width: 20em;
+  width: 22em;
   float:left;
 }
 
 #footer .admin {
-  width: 14em;
+  width: 12em;
   float: left;
+}
+
+#footer .contact i {
+  display:inline-block; width: 1.25em; text-align: center; margin-right: 0.2em;
 }
 
 #footer p strong {
@@ -351,13 +358,13 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 }
 
 #footer .footer-bottom {
-  padding: 1em 1em 1em 0;
+  padding: 1.5em 1em 1.5em 0;
   margin-top: 1em;
   border-top: 1px solid #444;
   background:#222;
 }
 
-.logos-wrapper { float:left; margin: 1.5em 0 0 2em; }
+.logos-wrapper { float:left; margin: 2em 0 0 2em; }
 .logos li { display: inline-block; width: 20em; padding: 1em 0 0 0em; }
 .logos img { height: 4em; width: 17em; }
 .logos a { display: block; filter: grayscale(100%); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); width: 100%; margin-bottom: 1.2em;}
