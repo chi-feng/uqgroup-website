@@ -63,16 +63,17 @@ function renderArticle(index, article) {
     '\n<div class="keywords"><strong>Keywords:</strong> ' + article.keywords + '</div>' : '';
   var abstract = '<div class="abstract hyphenate">\n' + article.abstract + keywords + '</div>\n';
   var showabstract = '<a class="button button-abstract"><i class="icon-eye-open"></i> Abstract</a>\n';
-  var title = '<div class="title">' + article.title + '</div>\n';
+  var title = '<div class="title"><a href="' + article.fulltext + '">' + article.title + '</a></div>\n';
   var pages = (article.pages != undefined && article.pages.length > 1) ? ' pp. ' + article.pages : '';
   var journal = '<div class="journal">' + article.journal + ' <strong>' + article.volume + '</strong>' + pages + ' ('+ article.year + ')</div>\n';
-  var link = '<a href="' + article.fulltext + '" class="button button-top" target="_new"><i class="icon-external-link"></i> Fulltext</a>\n';  
+  var linktext = (article.fulltext.toLowerCase().indexOf('arxiv') != -1) ? 'arXiv' : 'dx.doi';
+  var link = '<a href="' + article.fulltext + '" class="button button-top" target="_new"><i class="icon-external-link"></i> ' + linktext + '</a>\n';  
   var zebra = (index % 2 == 0) ? 'even' : 'odd';   
   var thumbnail_url = (article.thumbnail != undefined && article.thumbnail.length > 1) ? 'images/publications/' + article.thumbnail : 'images/publications/none.png';
   var thumbnail_img = (thumbnail_url != '') ? '<img src="' + thumbnail_url + '" alt="thumbnail" />' : '';
   var thumbnail = '<a class="thumbnail" href="'+article.fulltext+'" target="_new">' + thumbnail_img + '</a>';
   var article = ['<div id="' + article_id +'" class="article ' + zebra + '">\n', thumbnail, link, showabstract, showbibtex, authors, title, journal, abstract, bibtex, '</div>\n'].join('');
-  $('#articles').append(article);
+  $('.articles').append(article);
 }
 
 
@@ -80,7 +81,7 @@ function articlesAttachHover() {
 
   $('textarea.bibtex').click(function() { $(this).select(); });
 
-  $("#articles .article").hover(
+  $(".articles .article").hover(
     function () {
       $(this).find($("a.button")).addClass('active');
       $(this).find($("a.thumbnail")).addClass('thumbnail-active');
@@ -144,7 +145,7 @@ function articleFilter() {
     
     if (allowed) {
       if (count == 0) {
-        $('#articles').show();
+        $('.articles').show();
         $('#notfound').hide();
       }
       $(selector).show();
@@ -156,7 +157,7 @@ function articleFilter() {
   });
   
   if (count == 0) {
-    $('#articles').hide();
+    $('.articles').hide();
     $('#notfound').show();
   }
   

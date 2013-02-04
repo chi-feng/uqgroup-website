@@ -16,7 +16,7 @@
     
 <h3>Recent Publications</h3>
 
-<div id="articles">
+<div class="articles">
   <p class="loading">Loading Articles</p>
 </div>
 <div class="see-all"><a href="publications">Show all publications</a></div>
@@ -24,7 +24,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
   $.getJSON('json/publications.json', function(data) {
-    $('#articles .loading').hide();
+    $('.articles .loading').hide();
     $.each(data.articles, function (index, value) {
       if (index < 3) {
         renderArticle(index, value);

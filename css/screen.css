@@ -148,21 +148,21 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 #content a, #sidebar a 
   { color: #933; }
 #content a:hover, #sidebar a:hover 
-  { color: #666; }
+  { color: #633; }
 
 #header, #nav, #content-wrap, #footer-wrap {
   box-shadow: 0px 0px 5em 0px rgba(0,0,0,0.25);
   background: #fff;
 }
 
-#nav a, .logos a, #articles a.button, #publication-switcher h3, #articles .article, .see-all a {
+#nav a, .logos a, .articles a.button, #publication-switcher h3, .articles .article, .see-all a {
   -webkit-transition: all 0.15s ease-in-out; 
      -moz-transition: all 0.15s ease-in-out; 
       -ms-transition: all 0.15s ease-in-out; 
           transition: all 0.15s ease-in-out; 
 }
 
-#articles a.thumbnail {
+.articles a.thumbnail {
   -webkit-transition: opacity 0.15s ease-in-out; 
      -moz-transition: opacity 0.15s ease-in-out;  
       -ms-transition: opacity 0.15s ease-in-out;
@@ -367,8 +367,8 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 .logos-wrapper { float:left; margin: 2em 0 0 2em; }
 .logos li { display: inline-block; width: 20em; padding: 1em 0 0 0em; }
 .logos img { height: 4em; width: 17em; }
-.logos a { display: block; filter: grayscale(100%); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); width: 100%; margin-bottom: 1.2em;}
-.logos a:hover { filter: grayscale(0%); -webkit-filter: grayscale(0%); -moz-filter: grayscale(0%); }
+.logos a { display: block;width: 100%; margin-bottom: 1.2em;}
+.logos a:hover { }
 
 .person { margin-bottom: 30px; }
 .person .name { font-size: 125%; margin-bottom: 0.5em; }
@@ -492,21 +492,25 @@ code.block, pre.code, .article textarea.bibtex  {
 .research-area-figure-left { float: left; margin: 0em 1em 1em 0em;}
 .research-area-figure-left img, .research-area-figure-right img { width: 14em; }
 
-.course { font-size: 90%; }
-.course p { display: block; float: left; width: 68%; ;}
+.course { font-size: 95%; }
+.course p { display: block; float: left; width: 35em ;}
 .course .title { font-size: 110%; border-bottom: 1px dotted #aaa; padding-bottom: 0.6em; line-height: 1.3;}
-.course img { float: right; width: 30%; margin-left: -5em; }
+.course img { float: right; width: 13em; height: 16em; margin-left: -5em; }
 
 .even { background: #f3f3f3; }
 .odd { background: #fcfcfc; }
+/*
 .article:hover { background: #faf0f0; }
+*/
 
-#articles { margin-bottom: 0; }
+.articles { margin-bottom: 0; }
 .article { border: 1px solid transparent; border-left: 0; border-bottom: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6;}
+/*
 .article:hover { border: 1px solid #ecc; border-left: 0; }
+*/
 #article-0 { border-top: 1px solid #e6e6e6; }
 
-#articles .loading {
+.articles .loading {
   display: block; text-align: center;
   padding: 5em;
   font-weight: bold;
@@ -522,7 +526,7 @@ code.block, pre.code, .article textarea.bibtex  {
 
 .article .thumbnail img { height: 100%; width: 100%; }
 .article .thumbnail {
-  opacity: 0.4;
+  opacity: 1.0;
   background:#fff;
   float: left;
   height: 6.5em;
@@ -539,11 +543,12 @@ code.block, pre.code, .article textarea.bibtex  {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%); 
 }
-.article .authors { margin: 0.75em 0 0.4em 0; font-size: 87.5%; }
+.article .authors { margin: 0.75em 0 0.3em 0; font-size: 87.5%; }
 .article .author { }
 .article .journal { font-size: 90%; }
 .article .journal strong { font-weight: bold; }
-.article .title { font-size: 95%; font-weight: bold; font-style: italic; margin-bottom: 0.4em; padding-right: 8em; }
+.article .title { font-weight: bold; font-style: italic; margin-bottom: 0.4em; padding-right: 8em; }
+#content .article .title a { font-size: 95%; font-weight: bold; }
 .article .bibtex { display: none; }
 .article textarea.bibtex {
   width: 100%;
@@ -620,4 +625,29 @@ pre.bibtex { margin-bottom: 0; }
 #content .article .abstract p + p {
   text-indent: 1.5em;
   margin-top: 0;
+}
+
+.blurb { margin-bottom: 2em; }
+
+.blurb .caption { font-size: 85%; text-align: center; }
+
+.blurb .col-1-2, .blurb .col-2-2 {
+  width: 50%;
+  text-align: center;
+}
+
+.blurb .col-1-2 {
+  float:left;
+  margin-right: -1em;
+  padding: 0 1em;
+}
+
+.blurb .col-2-2 {
+  float:right;
+  margin-left: -1em;
+  padding: 0 0 0 1em;
+}
+
+#content h3.accord {
+  border-bottom: 1px solid #666;
 }
