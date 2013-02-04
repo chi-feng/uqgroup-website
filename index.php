@@ -18,8 +18,7 @@ if (file_exists($page)) {
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>UQGroup - <?=$t['title'];?></title>
-  <link rel="shortcut icon" href="favicon.ico" />   
+  <title>UQGroup - <?=$t['title'];?></title> 
   <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
   <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css"  rel="stylesheet" type="text/css" />
@@ -30,8 +29,13 @@ if (file_exists($page)) {
   }
   ?>
   <script type="text/javascript" src="js/uqgroup.js"></script>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="shortcut icon" href="favicon.ico" />  
 </head>
-<body id="top">
+<body>
 <div id="header-wrap">
   <div id="header" class="clearfix">
     <div id="title">
@@ -123,9 +127,9 @@ echo $t['content'];
   <div class="logos-wrapper">
   <ul class="logos">
     <li><a href="http://mit.edu" target="_new"><img src="images/mitlogo.png" alt="cce" width="200" /></a></li>
+    <li><a href="http://aeroastro.mit.edu" target="_new"><img src="images/aeroastro.png" alt="aeroastro" width="180" /></a></li>
     <li><a href="http://acdl.mit.edu" target="_new"><img src="images/acdl.png" alt="acdl" width="100" /></a></li>
     <li><a href="http://computationalengineering.mit.edu" target="_new"><img src="images/cce.png" alt="cce" width="200" /></a></li>
-    <li><a href="http://aeroastro.mit.edu" target="_new"><img src="images/aeroastro.png" alt="aeroastro" width="180" /></a></li>
   </ul>
   </div>
   

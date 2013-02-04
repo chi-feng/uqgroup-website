@@ -649,5 +649,6 @@ pre.bibtex { margin-bottom: 0; }
 }
 
 #content h3.accord {
+  padding-bottom: 0.4em;
   border-bottom: 1px solid #666;
 }
