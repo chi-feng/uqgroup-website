@@ -6,12 +6,14 @@
 
 <div class="people-browser clearfix">
   <div class="col-1-2">
-    <h3>Principle Investigator</h3>
+    <h3>Principal Investigator</h3>
     <a href="marzouk">Youssef Marzouk</a>
     <a href="">&nbsp;</a>
     <h3>Postdoctoral Associates</h3>
+    <a href="profiles#augustin">Florian Augustin</a>
     <a href="profiles#cui">Tiangang Cui</a>
     <a href="profiles#moselhy">Tarek El Moselhy</a>
+    <a href="profiles#tosatto">Luca Tosatto</a>
     <a href="">&nbsp;</a>
     <h3>Visiting Associates</h3>
     <a href="profiles#stavropoulou">Faidra Stavropoulou</a>
