@@ -3,22 +3,22 @@
 		{
 			"order": "20",
 			"title": "Simulation-based optimal Bayesian experimental design for nonlinear systems",
-			"area": "",
-			"authors": [
-				"Huan, X.",
-				"Marzouk, Y.M."
-			],
-			"year": "2013",
+			"fulltext": "http:\/\/arxiv.org\/abs\/1108.4146",
 			"journal": "Journal of Computational Physics",
-			"thumbnail": "jcp.png",
+			"year": "2013",
+			"month": "Jan",
 			"volume": "232",
 			"number": "1",
 			"pages": "288-317",
-			"month": "January",
-			"abstract": "<p>The optimal selection of experimental conditions is essential to maximizing the value of data for inference and prediction, particularly in situations where experiments are time-consuming and expensive to conduct. We propose a general mathematical framework and an algorithmic approach for optimal experimental design with nonlinear simulation-based models; in particular, we focus on finding sets of experiments that provide the most information about targeted sets of parameters.<\/p><p>Our framework employs a Bayesian statistical setting, which provides a foundation for inference from noisy, indirect, and incomplete data, and a natural mechanism for incorporating heterogeneous sources of information. An objective function is constructed from information theoretic measures, reflecting expected information gain from proposed combinations of experiments. Polynomial chaos approximations and a two-stage Monte Carlo sampling method are used to evaluate the expected information gain. Stochastic approximation algorithms are then used to make optimization feasible in computationally intensive and high-dimensional settings. These algorithms are demonstrated on model problems and on nonlinear parameter inference problems arising in detailed combustion kinetics.<\/p>",
-			"fulltext": "http:\/\/arxiv.org\/abs\/1108.4146",
+			"keywords": "Uncertainty quantification; Bayesian inference; Optimal experimental design; Nonlinear experimental design; Stochastic approximation; Shannon information; Chemical kinetics",
+			"thumbnail": "jcp.png",
 			"doi": "10.1016\/j.jcp.2012.08.013",
-			"keywords": "Uncertainty quantification; Bayesian inference; Optimal experimental design; Nonlinear experimental design; Stochastic approximation; Shannon information; Chemical kinetics"
+			"abstract": "<p>The optimal selection of experimental conditions is essential to maximizing the value of data for inference and prediction, particularly in situations where experiments are time-consuming and expensive to conduct. We propose a general mathematical framework and an algorithmic approach for optimal experimental design with nonlinear simulation-based models; in particular, we focus on finding sets of experiments that provide the most information about targeted sets of parameters.<\/p><p>Our framework employs a Bayesian statistical setting, which provides a foundation for inference from noisy, indirect, and incomplete data, and a natural mechanism for incorporating heterogeneous sources of information. An objective function is constructed from information theoretic measures, reflecting expected information gain from proposed combinations of experiments. Polynomial chaos approximations and a two-stage Monte Carlo sampling method are used to evaluate the expected information gain. Stochastic approximation algorithms are then used to make optimization feasible in computationally intensive and high-dimensional settings. These algorithms are demonstrated on model problems and on nonlinear parameter inference problems arising in detailed combustion kinetics.<\/p>",
+			"comments": "",
+			"authors": [
+				"Huan, X.",
+				"Marzouk, Y.M."
+			]
 		},
 		{
 			"order": "19",

@@ -2,21 +2,6 @@
 
 require_once('includes/json.php');
 
-function find_article() {
-  
-}
-
-function article_cmp($a, $b) {
-  $a_date = strtotime($a['month'] + ' ', $a['year']);
-  $b_date = strtotime($b['month'] + ' ', $b['year']);
-  return ($a_date < $b_date) ? -1 : 1;
-}
-
-function sort_articles() {
-  global $publications;
-  usort($publications['articles'], 'article_cmp');
-}
-
 function get_article_authors() {
   global $publications;
   $hashmap = array();

@@ -92,6 +92,10 @@ if (isset($_POST['login']) && !isset($_SESSION['logged_in'])) {
       new_article();
     } elseif (isset($_GET['edit_article'])) {
       edit_article();
+    } elseif (isset($_GET['sort_articles'])) {
+      sort_articles();
+    } elseif (isset($_POST['update_article'])) {
+      update_article();
     } else {
       
     }

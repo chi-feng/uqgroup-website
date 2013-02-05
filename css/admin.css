@@ -143,7 +143,25 @@ select, input, textarea {
   border-radius: 0;
   margin-bottom: 0.8em;
 }
-select:focus, input:focus, textarea:focus {
+
+#articles-forms select, #articles-forms input, #articles-forms textarea {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #666;
+  box-shadow: none;
+  background:#fff;
+}
+
+#articles-forms textarea {
+  border: 1px solid #666;
+}
+
+#articles-forms input.btn {
+  background: #258;
+  width: 26em; 
+  
+}
+
+select:focus, input:focus, textarea:focus, #articles-forms *:focus {
   background:#fafafa;
   border: 1px solid #999;
 }
@@ -221,9 +239,7 @@ div.status {
 }
 
 div.green {
-  border: 1px solid #3a3;
-  background:#393;
-  color:#fff;
+  color:#6c6;
   position: absolute;
   top:0;
   left:0;
@@ -257,7 +273,8 @@ div.green {
 }
 
 #articles .create-button a {
-  display: block;
+  display: inline-block;
+  width: 10em;
   color: #933;
   padding: 0.5em;
   text-align: center;
@@ -299,7 +316,7 @@ fieldset.articles {
   font-size: 80%;
   float: right;
   margin-top: 1.3em;
-  height: 50em;
+  height: 55em;
   overflow-y: scroll;
 }
 

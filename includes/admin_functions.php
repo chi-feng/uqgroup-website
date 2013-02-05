@@ -143,6 +143,50 @@ function get_sidebar_forms() {
   </div>';
 }
 
+function article_cmp($a, $b) {
+  return ($a['order'] > $b['order']) ? -1 : 1;
+}
+
+function sort_articles() {
+  global $publications;
+  usort($publications['articles'], 'article_cmp');
+}
+ 
+function update_article() {
+  global $publications;
+  $original_order = $_POST['original_order'];
+  // check that original publication exists 
+  $found = false;
+  foreach ($publications['articles'] as $idx => $original) {
+    if ($original['order'] == $original_order) {
+      $found = true; 
+      break;
+    }
+  }
+  if ($found) {
+    $article = array();
+    $fields = array('order','title','fulltext','journal','year','month','volume',
+      'number','pages','keywords','thumbnail','doi','abstract','comments');
+    foreach ($fields as $field) {
+      $article[$field] = $_POST[$field];
+    }
+    $authors = array();
+    for($i=1;$i<=8;$i++) {
+      $postvar = $_POST['author-'.strval($i)];
+      if (!empty($postvar))
+        $authors[] = $postvar;
+    }
+    $article['authors'] = $authors;
+    $publications['articles'][$idx] = $article;
+    save_publications();
+    echo '<div class="message">Article has been updated</div>';
+  } else {
+    global $errors;
+    $errors[] = "Could not find article with order '$original_order'";
+  }
+  
+}
+
 function get_articles_forms() {
   global $template, $publications;
   ?>
@@ -152,6 +196,7 @@ function get_articles_forms() {
   if ($template['edit_article']) {
     echo '<fieldset class="articles"><legend>Edit Article</legend>';
     echo '<input type="hidden" name="update_article" value="true"/>';
+    echo '<input type="hidden" name="original_order" value="'.$template['article']['order'].'"/>';
   } else {
     $template['article'] = array();
     $template['article']['month'] = date('M');
@@ -217,7 +262,10 @@ function get_articles_forms() {
   </fieldset>
   <div id="articles-container">
   <table id="articles"> 
-  <tr><td colspan="2" class="create-button"><a href="admin#article">Create article entry</a></td><td</td></tr>
+  <tr><td colspan="2" class="create-button">
+    <a href="admin#article">New Article</a>
+    <a href="sort-articles">Sort Articles</a>
+  </td><td</td></tr>
   <?php
   foreach ($publications['articles'] as $index => $article) {
     $authors = implode(', ', $article['authors']);
