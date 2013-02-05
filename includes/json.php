@@ -1,4 +1,4 @@
-<?php 
+<?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } 
 
 function prettyPrint( $json )
 {

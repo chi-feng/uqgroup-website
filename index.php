@@ -1,5 +1,7 @@
 <?php 
 
+define('INCLUDE_GUARD', true);
+
 date_default_timezone_set('America/New_York');
 
 require_once('includes/publications.php');
@@ -35,8 +37,8 @@ if (isset($pages[$page]) && file_exists("pages/$page.php")) {
     
 }
 
-include('header.php');
+include('includes/header.php');
 echo $t['content'];
-include('footer.php');
+include('includes/footer.php');
 
 ?>

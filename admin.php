@@ -146,12 +146,17 @@ ob_end_clean();
 <?php echo $template['content']; ?>  
 </div>
 
+
 <script type="text/javascript">
 
 $(document).ready(function() {
   $('div').addClass('clearfix');
   $('div.message').delay(1000).fadeOut(500);
 });
+
+<?php
+if (isset($_SESSION['logged_in'])) {
+?>
 
 // jquery ui autocomplete 
 var authors = [ <?php $authors = get_article_authors(); echo "'".implode("','",$authors)."'"; ?> ]; 
@@ -161,6 +166,10 @@ $(function() {
   $( "input.author" ).autocomplete({ source: authors });
 });
 
+<?php
+}
+?>
 </script>
+
 </body>
 </html>
