@@ -1,27 +1,7 @@
 {
 	"articles": [
 		{
-      "order": "21",
-			"title": "Adaptive Smolyak Pseudospectral Approximations",
-			"fulltext": "http:\/\/arxiv.org\/abs\/1209.1406",
-			"journal": "SIAM Journal on Scientific Computing",
-			"month": "Jan",
-			"year": "2013",
-			"volume": "",
-			"number": "",
-			"pages": "",
-			"keywords": "Smolyak, Psuedospectral approximation",
-			"thumbnail": "",
-			"doi": "arXiv:1209.1406",
-			"abstract": "Polynomial approximations of computationally intensive models are central to uncertainty quantification. This paper describes an adaptive method for non-intrusive pseudospectral approximation, based on Smolyak\\'s algorithm with generalized sparse grids. We rigorously develop and generalize the non-adaptive method proposed in [6], and compare it to a common alternative approach for using sparse grids to construct polynomial approximations, direct quadrature. Analysis of direct quadrature shows that O(1) errors are an intrinsic property of some configurations of the method, as a consequence of internal aliasing. We provide precise conditions, based on the chosen polynomial basis and quadrature rules, under which this aliasing error occurs. We then establish theoretical results on the accuracy of Smolyak pseudospectral approximation, and show that the Smolyak approximation avoids internal aliasing and makes far more effective use of sparse function evaluations. These results are applicable to broad choices of quadrature rule and generalized sparse grids. Exploiting this flexibility, we introduce a greedy heuristic for adaptive refinement of the pseudospectral approximation. We numerically demonstrate convergence of the algorithm on the Genz test functions, and illustrate the accuracy and efficiency of the adaptive approach on a realistic chemical kinetics problem.",
-			"comments": "Submitted to SIAM Journal on Scientific Computing",
-			"authors": [
-				"Conrad, P.",
-				"Marzouk, Y.M."
-			]
-		},
-		{
-      "order": "20",
+			"order": "20",
 			"title": "Simulation-based optimal Bayesian experimental design for nonlinear systems",
 			"area": "",
 			"authors": [
@@ -41,7 +21,7 @@
 			"keywords": "Uncertainty quantification; Bayesian inference; Optimal experimental design; Nonlinear experimental design; Stochastic approximation; Shannon information; Chemical kinetics"
 		},
 		{
-      "order": "19",
+			"order": "19",
 			"title": "Bayesian inference with optimal maps",
 			"area": "",
 			"authors": [
@@ -60,7 +40,7 @@
 			"keywords": "Bayesian inference; Optimal transport; Measure-preserving maps; Inverse problems; Polynomial chaos; Numerical optimization"
 		},
 		{
-      "order": "18",
+			"order": "18",
 			"title": "Bayesian inverse problems with Monte Carlo forward models.",
 			"area": "",
 			"authors": [
@@ -81,7 +61,7 @@
 			"keywords": "linear transport; perturbation Monte Carlo; Bayesian; importance sampling; inverse problems; Markov chain Monte Carlo"
 		},
 		{
-      "order": "17",
+			"order": "17",
 			"title": "Data-free inference of the joint distribution of uncertain model parameters.",
 			"area": "",
 			"authors": [
@@ -104,7 +84,7 @@
 			"keywords": "Uncertainty quantification; Bayesian statistics; Missing information"
 		},
 		{
-      "order": "16",
+			"order": "16",
 			"title": "\u201cComputational singular perturbation with non-parametric tabulation of slow manifolds for time integration of stiff chemical kinetics",
 			"area": "",
 			"authors": [
@@ -128,7 +108,7 @@
 			"keywords": "chemical kinetics, computational singular perturbation, slow manifold, non-parametric regression, nearest neighbors, kd-trees"
 		},
 		{
-      "order": "15",
+			"order": "15",
 			"title": "Truncated multiGaussian fields and effective conductance of binary media",
 			"area": "",
 			"authors": [
@@ -150,7 +130,7 @@
 			"keywords": "Upscaling; Binary media; Effective conductivity"
 		},
 		{
-      "order": "14",
+			"order": "14",
 			"title": "Contributions of the wall boundary layer to the formation of the counter-rotating vortex pair in transverse jets.",
 			"area": "",
 			"authors": [
@@ -172,7 +152,7 @@
 			"keywords": "jets; vortex flows"
 		},
 		{
-      "order": "13",
+			"order": "13",
 			"title": "Bayesian inference of atomic diffusivity in a binary Ni\/Al system based on molecular dynamics",
 			"area": "",
 			"authors": [
@@ -197,7 +177,7 @@
 			"doi": "10.1137\/10080590X"
 		},
 		{
-      "order": "12",
+			"order": "12",
 			"title": "A Bayesian approach for estimating bioterror attacks from patient data",
 			"area": "",
 			"authors": [
@@ -218,7 +198,7 @@
 			"keywords": "Bayesian inference;anthrax;Sverdlovsk outbreak;bioterrorism"
 		},
 		{
-      "order": "11",
+			"order": "11",
 			"title": "Convergence Characteristics and Computational Cost of Two Algebraic Kernels in Vortex Methods with a Tree-Code Algorithm",
 			"area": "",
 			"authors": [
@@ -239,7 +219,7 @@
 			"doi": "10.1137\/080726872"
 		},
 		{
-      "order": "10",
+			"order": "10",
 			"title": "Dimensionality reduction and polynomial chaos acceleration of Bayesian inference in inverse problems",
 			"area": "",
 			"authors": [
@@ -259,7 +239,7 @@
 			"keywords": "Inverse problems; Bayesian inference; Dimensionality reduction; Polynomial chaos; Markov chain Monte Carlo; Galerkin projection; Gaussian processes; Karhunen\u2013Lo\u00e8ve expansion; RKHS"
 		},
 		{
-      "order": "9",
+			"order": "9",
 			"title": "A stochastic collocation approach to Bayesian inference in inverse problems",
 			"area": "",
 			"authors": [
@@ -278,7 +258,7 @@
 			"doi": "DOI:prism\/16"
 		},
 		{
-      "order": "8",
+			"order": "8",
 			"title": "Uncertainty quantification in chemical systems",
 			"area": "",
 			"authors": [
@@ -301,7 +281,7 @@
 			"keywords": "uncertainty quantification;polynomial chaos;multiwavelet;chemistry;ignition"
 		},
 		{
-      "order": "7",
+			"order": "7",
 			"title": "Bayesian Inference of Spectral Expansions for Predictability Assessment in Stochastic Reaction Networks",
 			"area": "",
 			"authors": [
@@ -323,7 +303,7 @@
 			"keywords": "uncertainty quantification; bayesian inference; polynomial chaos; stochastic reaction networks; domain decomposition; predictability"
 		},
 		{
-      "order": "6",
+			"order": "6",
 			"title": "Stochastic spectral methods for efficient Bayesian solution of inverse problems",
 			"area": "",
 			"authors": [
@@ -344,7 +324,7 @@
 			"doi": "10.1016\/j.jcp.2006.10.010"
 		},
 		{
-      "order": "5",
+			"order": "5",
 			"title": "Vorticity structure and evolution in a transverse jet",
 			"area": "",
 			"authors": [
@@ -363,7 +343,7 @@
 			"doi": "10.1017\/S0022112006004411"
 		},
 		{
-      "order": "4",
+			"order": "4",
 			"title": "K-means clustering for optimal partitioning and dynamic load balancing of parallel hierarchical N-body simulations",
 			"area": "",
 			"authors": [
@@ -383,7 +363,7 @@
 			"keywords": "k-means clustering; Treecode; N-body problems; Hierarchical methods; Parallel processing; Load balancing; Particle methods; Vortex methods; Three-dimensional flow; Transverse jet"
 		},
 		{
-      "order": "3",
+			"order": "3",
 			"title": "Toward a flame embedding model for turbulent combustion simulation",
 			"area": "",
 			"authors": [
@@ -404,7 +384,7 @@
 			"keywords": "Two dimensional model; One dimensional model; Premixed flame; Finite difference method; Numerical simulation; Flame structure; Turbulent flame; Combustion"
 		},
 		{
-      "order": "2",
+			"order": "2",
 			"title": "Dynamic response of strained premixed flames to equivalence ratio gradients",
 			"area": "",
 			"authors": [
@@ -424,7 +404,7 @@
 			"doi": "10.1016\/S0082-0784(00)80589-5"
 		},
 		{
-      "order": "1",
+			"order": "1",
 			"title": "Asymmetric autocorrelation function to resolve directional ambiguity in PIV images",
 			"area": "",
 			"authors": [

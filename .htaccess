@@ -1,6 +1,6 @@
 RewriteEngine On
-# RewriteBase /~feng/uqgroup/
-RewriteBase /uqgroup/
+RewriteBase /~feng/uqgroup/
+#RewriteBase /uqgroup/
 
 RewriteRule ^logout?$ admin.php?logout [NC,L]
 RewriteRule ^admin?$ admin.php [NC,L]
