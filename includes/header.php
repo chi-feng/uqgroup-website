@@ -46,25 +46,31 @@ foreach ($tabs as $key => $value) {
   <div id="sidebar-wrap">
     <div id="sidebar">
       <div class="sidebar-box">
-        <h2>News</h2>
+        <h2>Announcements</h2>
         <div class="sidebar-content">
 <?php
 foreach ($announcements as $index => $announcement) {
-  printf("          <p><strong>%s</strong><br />%s</p>\n",
-    $announcement['date'], $announcement['content']);
+  if ($index < 5) {
+    printf("          <p><strong>%s</strong><br />%s</p>\n",
+      $announcement['date'], $announcement['content']);
+  }
 }
 ?>      
+        <p><a href="archive">More</a></p>
         </div>
       </div>
       <div class="sidebar-box">
         <h2>Upcoming Events</h2>
         <div class="sidebar-content">
 <?php
-foreach ($events as $event) {
-  printf("          <p><strong>%s</strong><br />%s</p>\n",
-    $event['date'], $event['content']);
+foreach ($events as $index => $event) {
+  if ($index < 5) {
+    printf("          <p><strong>%s</strong><br />%s</p>\n",
+      $event['date'], $event['content']);
+  }
 }
 ?>      
+        <p><a href="archive">More</a></p>
         </div>
       </div>
       <div class="sidebar-box">

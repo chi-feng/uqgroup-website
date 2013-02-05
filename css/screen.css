@@ -194,8 +194,7 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 
 #nav-wrap { z-index: 999999; }
 #nav { 
-  background: #222; box-shadow: inset 0px 1.2em 60px -1.2em rgba(255,255,255,0.1); 
-
+  background: #252525; box-shadow: inset 0px 1.2em 60px -1.2em rgba(255,255,255,0.15); 
 }
 
 #nav ul { font-size: 90%; }
@@ -209,7 +208,7 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   font-size: 100%;
   text-align: center;
   border-right: 1px solid rgba(255,255,255,0.1);
-  border-left: 1px solid rgba(0,0,0,0.4);
+  border-left: 1px solid rgba(0,0,0,0.6);
   text-shadow: 0 -1px 0px rgba(0,0,0,0.5);
 }
 
@@ -260,9 +259,9 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   box-shadow: inset 0px -1.2em 3em -1.2em rgba(0,0,0,0.25);
   padding: 10px 15px;
 }
-#sidebar strong { font-weight: bold; }
-#sidebar p { margin-bottom: 10px; font-size: 95%; }
-#sidebar ul.links li { margin-bottom: 5px; }
+#sidebar strong { font-weight: bold; display:inline-block; margin-bottom: 0.4em;}
+#sidebar p { margin-bottom: 0.5em; font-size: 95%; }
+#sidebar ul.links li { margin-bottom:0.2em }
 #sidebar ul.links li i { color: #888; }
 #sidebar .sidebar-box { }
 #sidebar .icon-external-link { display: block; float: right; }
@@ -311,7 +310,7 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   font-size: 60%;
 }
 
-#content #breadcrumbs { margin-bottom: 0.75em; font-size: 85%;  display: none; }
+#content #breadcrumbs { margin-bottom: 0.75em; font-size: 85%; }
 #content #breadcrumbs:hover { opacity: 1.0; }
 #content #breadcrumbs i { margin: 0px 5px; }
 
@@ -682,6 +681,16 @@ pre.bibtex { margin-bottom: 0; }
 #divtext h1 {
   
 }
+
 #divtext h6 {
+  
+}
+
+.group-photo {
+  margin: -1em;
+  margin-bottom: 1em;
+}
+
+.group-photo img {
   
 }

@@ -1,8 +1,7 @@
 <?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
 
-<div id="breadcrumbs">
-  <a href="home">UQ Group</a> <i class="icon-angle-right"></i>
-  <a href="home">People</a>
+<div class="group-photo">
+  <img src="images/people/group.png" width="100%" />
 </div>
 
 <div class="people-browser clearfix">

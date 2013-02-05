@@ -1,8 +1,11 @@
 <?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
 
 <div id="breadcrumbs">
-  <a href="home">UQ Group</a> <i class="icon-angle-right"></i>
-  <a href="home">People</a>
+  <a href="people">Home</a>
+  <i class="icon-angle-right"></i>
+  <a href="people">People</a>
+  <i class="icon-angle-right"></i>
+  <a href="profiles">Profiles</a>
 </div>
     
 <h3 id="pi">Principle Investigator</h3>
@@ -15,7 +18,7 @@
 
 <h3 id="postdocs">Postdoctoral Associates</h3>
 
-<div class="person clearfix">
+<div id="cui" class="person clearfix">
   <div class="photo"><img src="images/people/tc.png" alt="profile" /></div>
   <div class="name">
     <a href="">Tiangang Cui</a>

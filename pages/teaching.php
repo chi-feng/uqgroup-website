@@ -1,8 +1,11 @@
 <?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
+
+<!--
 <div id="breadcrumbs">
   <a href="home">UQ Group</a> <i class="icon-angle-right"></i>
   <a href="teaching">Teaching</a>
 </div>
+-->
 
 <h2>Teaching</h2>
 
