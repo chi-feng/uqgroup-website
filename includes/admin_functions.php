@@ -66,7 +66,6 @@ function new_event() {
   echo '<div class="message">Saved new event</div>';
 }
 
-
 function save_announcements() {
   global $announcements;
   $json = prettyPrint(json_encode($announcements));
