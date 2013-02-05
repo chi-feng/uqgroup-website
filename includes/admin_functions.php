@@ -66,6 +66,23 @@ function new_event() {
   echo '<div class="message">Saved new event</div>';
 }
 
+
+function save_events() {
+  global $events;
+  $json = prettyPrint(json_encode($events));
+  file_put_contents('json/events.json', $json);
+}
+
+function new_announcement() {
+  global $announcements;
+  $announcement = array();
+  $announcement['date'] = $_POST['date'];
+  $announcement['content'] = $_POST['content'];
+  array_unshift($announcements, $announcement);
+  save_announcements();
+  echo '<div class="message">Saved new announcement</div>';
+}
+
 function edit_article() {
   global $publications, $template;
   $order = $_GET['order'];
