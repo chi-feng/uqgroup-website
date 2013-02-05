@@ -176,7 +176,7 @@ body { background: #ccc url('noisy_grid.png') fixed; }
           transition: width 0.5s ease-in-out; 
 }
 
-#header { background: #eee url('banner.jpg'); background-size: cover; }
+#header { background: #310606 url('banner.jpg'); background-size: cover; }
 
 #title a, #nav a, h1, h2, h3, #breadcrumbs, .btn, .button, #sidebar h2 *, i {
   -moz-user-select: none; 
