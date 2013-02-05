@@ -1,3 +1,4 @@
+<?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
 
 <div id="publication-switcher" class="clearfix">
   <h3 id="journal-publications" class="active">Journal Articles</h3>

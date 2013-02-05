@@ -4,6 +4,7 @@ session_start();
 
 date_default_timezone_set('America/New_York');
 
+define('INCLUDE_GUARD', true);
 define('TIMEOUT', 6000);
 define('EOL', "\n");
 
@@ -146,12 +147,17 @@ ob_end_clean();
 <?php echo $template['content']; ?>  
 </div>
 
+
 <script type="text/javascript">
 
 $(document).ready(function() {
   $('div').addClass('clearfix');
   $('div.message').delay(1000).fadeOut(500);
 });
+
+<?php
+if (isset($_SESSION['logged_in'])) {
+?>
 
 // jquery ui autocomplete 
 var authors = [ <?php $authors = get_article_authors(); echo "'".implode("','",$authors)."'"; ?> ]; 
@@ -161,6 +167,10 @@ $(function() {
   $( "input.author" ).autocomplete({ source: authors });
 });
 
+<?php
+}
+?>
 </script>
+
 </body>
 </html>
