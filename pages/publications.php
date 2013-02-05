@@ -38,7 +38,13 @@
 <div id="articles-wrapper" class="clearfix">  
   
 <div id="articles" class="articles">
-  <p class="loading">Loading Articles</p>
+<?php
+  
+foreach ($publications['articles'] as $index => $article) {
+  echo render_article($index, $article);
+}
+    
+?>
   <p id="notfound" style="display:none"><strong>No articles found matching filter.</strong></p>
 </div>
 
@@ -165,13 +171,10 @@ var articles = [];
 $(document).ready(function() {
   
   $.getJSON('json/publications.json', function(data) {
-    $('#articles .loading').hide();
     articles = data.articles; 
-    $.each(articles, renderArticle);
     populateFilters(articles);
     articlesAttachHover();
     $("#publication-switcher-wrapper").height($('#articles').height() + 30);
-    
   });
     
   $("#publications-form select").change(function () {

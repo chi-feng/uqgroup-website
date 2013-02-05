@@ -312,20 +312,20 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 #content #breadcrumbs:hover { opacity: 1.0; }
 #content #breadcrumbs i { margin: 0px 5px; }
 
-#footer { font-size: 85%; background: #333; color: #aaa;  box-shadow: 0px 50px 100px -50px rgba(0,0,0,0.25); }
-#footer .copyright { 
+#footer { font-size: 85%; background: #333; color: #888;  box-shadow: 0px 50px 100px -50px rgba(0,0,0,0.25); }
+#footer .copyright { color: #666;
   width: 34em; float:right; text-align: right; }
-#footer .designed-by { float:left; padding: 0px 1.5em; }
-#footer .designed-by a { color: #ccc;}
+#footer .designed-by { color: #666; float:left; padding: 0px 1.5em; }
+#footer .designed-by a { color: #888;}
 
-#footer p a { color: #aaa; border-bottom: 1px dotted #666; }
-#footer p a:hover { color: #ccc; border-bottom: 1px dotted #999; }
+#footer p a { color: #888; border-bottom: 1px dotted #666; }
+#footer p a:hover { color: #aaa; border-bottom: 1px dotted #999; }
 
 #footer h4 {
   font-size: 125%;
   font-weight: bold;
   margin-bottom: 0.5em;
-  color: #bbb;
+  color: #aaa;
 }
 
 #footer .contact {
@@ -334,28 +334,16 @@ body { background: #ccc url('noisy_grid.png') fixed; }
   margin: 1.5em 1em 0 0;
 }
 
-#footer .youssef {
-  width: 22em;
-  float:left;
-}
-
-#footer .admin {
-  width: 12em;
-  float: left;
-}
+#footer .youssef { float:left; width: 22em; }
+#footer .admin { float: left; width: 12em; }
 
 #footer .contact i {
   display:inline-block; width: 1.25em; text-align: center; margin-right: 0.2em;
 }
 
-#footer p strong {
-  font-weight: bold;
-  color: #ccc;
-}
+#footer p strong { font-weight: bold; color: #ccc; }
 
-#footer p {
-  margin-bottom: 0.5em;
-}
+#footer p { margin-bottom: 0.5em; }
 
 #footer .footer-bottom {
   padding: 1.5em 1em 1.5em 0;
@@ -367,8 +355,8 @@ body { background: #ccc url('noisy_grid.png') fixed; }
 .logos-wrapper { float:left; margin: 2em 0 0 2em; }
 .logos li { display: inline-block; width: 20em; padding: 1em 0 0 0em; }
 .logos img { height: 4em; width: 17em; }
-.logos a { display: block;width: 100%; margin-bottom: 1.2em;}
-.logos a:hover { }
+.logos a { opacity: 0.5; display: block;width: 100%; margin-bottom: 1.2em;}
+.logos a:hover { opacity: 1.0; }
 
 .person { margin-bottom: 30px; }
 .person .name { font-size: 125%; margin-bottom: 0.5em; }

@@ -1,18 +1,9 @@
 
 $(document).ready(function() {
   
-$('a.sidebar-collapse-btn').click(function(event) {
-  var content = $(this).parent().find('.sidebar-content');
-  if (content.is(":visible")) {
-    content.stop(true, true);
-    content.animate({height:"toggle",opacity:"toggle"}, 200);
-    $(this).find('i').removeClass('icon-minus').addClass('icon-plus');
-  } else {
-    content.stop(true, true);
-    content.animate({height:"toggle",opacity:"toggle"}, 200);
-    $(this).find('i').removeClass('icon-plus').addClass('icon-minus');
+  if ($('#content').height() < $('#sidebar').height()) {
+    $('#content').height($('#sidebar').height());
   }
-});
 
 });
   
@@ -94,12 +85,12 @@ function articlesAttachHover() {
     
   $('.button-abstract').click(function() {
     $(this).toggleClass('selected');
-    $(this).parent().find('.abstract').slideToggle();
+    $(this).parent().parent().find('.abstract').slideToggle();
   });
     
   $('.button-bottom').click(function() {
     $(this).toggleClass('selected');
-    $(this).parent().find('.bibtex').slideToggle();
+    $(this).parent().parent().find('.bibtex').slideToggle();
   });
     
 }

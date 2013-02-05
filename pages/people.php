@@ -119,8 +119,6 @@ My research aims to extend the Bayesian optimal design framework to cases where 
 My interests include statistical inference, data assimilation, experimental design, and stochastic modeling. I am presently working on particle filtering techniques for inference in chaotic dynamical systems. I am seeking my master's degree in the Computation for Design and Optimization program. I received a bachelor's degree in mechanical engineering with a minor in management science from the Indian Institute of Technology Madras. During my free time, I like playing tennis and soccer and traveling.</div>
 </div>
 
-
-
 <h3>Uundergraduates, SB &amp; UROP</h3>
 <ul class="list">
 <li><strong>George Hansel</strong> (MIT physics)</li>

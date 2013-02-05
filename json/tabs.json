@@ -1,0 +1,20 @@
+{
+    "home": {
+        "name": "<i class=\"icon-home\"></i>"
+    }, 
+    "people": {
+        "name": "People"
+    }, 
+    "publications": {
+        "name": "Publications"
+    }, 
+    "research": {
+        "name": "Research"
+    }, 
+    "software": {
+        "name": "Software"
+    }, 
+    "teaching": {
+        "name": "Teaching"
+    }
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Lab Wiki ", 
+        "href": "https://wikis.mit.edu/confluence/display/uqlab/Home"
+    }, 
+    {
+        "name": "Reading Group Wiki", 
+        "href": "https://wikis.mit.edu/confluence/display/uqgroup/Home"
+    },
+    {
+        "name": "Website Administration <i class=\"icon-lock\"></i>", 
+        "href": "admin"
+    }
+]

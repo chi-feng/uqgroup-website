@@ -1,0 +1,26 @@
+{
+    "home": {
+        "tab": "home", 
+        "title": "Home"
+    }, 
+    "people": {
+        "tab": "people", 
+        "title": "People"
+    }, 
+    "publications": {
+        "tab": "publications", 
+        "title": "Publications"
+    }, 
+    "research": {
+        "tab": "research", 
+        "title": "Research"
+    }, 
+    "software": {
+        "tab": "software", 
+        "title": "Software"
+    }, 
+    "teaching": {
+        "tab": "teaching", 
+        "title": "Teaching"
+    }
+}
