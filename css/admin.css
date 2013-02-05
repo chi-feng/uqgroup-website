@@ -151,6 +151,11 @@ select, input, textarea {
   background:#fff;
 }
 
+#articles-forms select, #articles-forms input {
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+}
+
 #articles-forms textarea {
   border: 1px solid #666;
 }
