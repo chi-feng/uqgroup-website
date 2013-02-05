@@ -7,6 +7,14 @@
         "tab": "people", 
         "title": "People"
     }, 
+    "profiles": {
+        "tab": "people", 
+        "title": "Profiles"
+    }, 
+    "marzouk": {
+        "tab": "people", 
+        "title": "Professor Youssef M. Marzouk"
+    }, 
     "publications": {
         "tab": "publications", 
         "title": "Publications"

@@ -34,7 +34,7 @@
     <ul id="navbar">
 <?php
 foreach ($tabs as $key => $value) {
-  $active = ($page == $key) ? ' class="active"' : ''; 
+  $active = ($pages[$page]['tab'] == $key) ? ' class="active"' : ''; 
   printf("      <li><a href=\"%s\"%s>%s</a></li>\n", $key, $active, $value['name']);
 }
 ?>
