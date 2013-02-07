@@ -8,6 +8,7 @@
   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
   <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css"  rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
   <?php
   if ($t['mathjax']) {
     echo '<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>';
@@ -43,49 +44,4 @@ foreach ($tabs as $key => $value) {
   </div>
 </div>
 <div id="content-wrap" class="clearfix">
-  <div id="sidebar-wrap">
-    <div id="sidebar">
-      <div class="sidebar-box">
-        <h2>Announcements</h2>
-        <div class="sidebar-content">
-<?php
-foreach ($announcements as $index => $announcement) {
-  if ($index < 5) {
-    printf("          <p><strong>%s</strong><br />%s</p>\n",
-      $announcement['date'], $announcement['content']);
-  }
-}
-?>      
-        <p><a href="archive">More</a></p>
-        </div>
-      </div>
-      <div class="sidebar-box">
-        <h2>Upcoming Events</h2>
-        <div class="sidebar-content">
-<?php
-foreach ($events as $index => $event) {
-  if ($index < 5) {
-    printf("          <p><strong>%s</strong><br />%s</p>\n",
-      $event['date'], $event['content']);
-  }
-}
-?>      
-        <p><a href="archive">More</a></p>
-        </div>
-      </div>
-      <div class="sidebar-box">
-        <h2>Links</h2>
-        <div class="sidebar-content">
-          <ul class="links">
-<?php
-foreach ($links as $link) {
-  printf("            <li><a href=\"%s\">%s</a></li>\n",
-    $link['href'], $link['name']);
-}
-?>
-          </ul>
-        </div>
-      </div>    
-    </div>
-  </div> 
 <div id="content" class="column">

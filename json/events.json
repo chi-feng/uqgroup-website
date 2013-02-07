@@ -1,14 +1,22 @@
 [
 	{
-		"content": "UQ Reading Group @ 5pm in 33-319",
-		"date": "Feb 8, 2013"
+		"id": "0",
+		"start_date": "Feb 8, 2013",
+		"end_date": "Feb 8, 2013",
+		"start_time": "5:00pm",
+		"end_time": "6:30pm",
+		"name": "UQ Reading Group",
+		"location": "33-319",
+		"content": "This is a test"
 	},
 	{
-		"content": "SIAM CSE Conference, Boston",
-		"date": "Feb 25 - Mar 1"
-	},
-	{
-		"content": "SIAM UQ Conference, Raleigh",
-		"date": "Apr 2 - Apr 5"
+		"id": "1",
+		"start_date": "Feb 25, 2013",
+		"end_date": "Mar 1, 2013",
+		"start_time": "",
+		"end_time": "",
+		"name": "SIAM CSE Conference, Boston",
+		"location": "The Westin Boston Waterfront",
+		"content": "http:\/\/www.siam.org\/meetings\/cse13\/"
 	}
 ]

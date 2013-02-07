@@ -1,13 +1,14 @@
 <?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } 
 
-function display_login_form($message='') {
+function login_form($message='') {
   global $key, $iv;
   $client_ip = bcrypt_encrypt($_SERVER['REMOTE_ADDR'], $key, $iv);
   $hidden_fields = sprintf('<input type="hidden" name="a" value="%s">', $client_ip);
+  $return = '';
   if (!empty($message)) {
-    echo '<div class="message">' . $message .'</div>';
+    $return .= '<div class="message">' . $message .'</div>';
   }
-  echo '<form action="admin" method="post" class="centered">
+  $return .= '<form action="admin" method="post" class="centered">
   <fieldset>
   <legend>Login</legend>
   <label for="username">Username</label><input type="text" name="username" autocomplete="off" /><br />
@@ -15,6 +16,7 @@ function display_login_form($message='') {
   ' . $hidden_fields . '<input type="hidden" name="login" value="true" />
   <label></label> <input type="submit" value="Login" class="btn" />
   </form>';
+  return $return;
 }
 
 function logout($message) {
@@ -39,7 +41,7 @@ function new_article() {
       $authors[] = $postvar;
   }
   $article['authors'] = $authors;
-  array_unshift($publications['articles'], $article);
+  array_unshift($publications, $article);
   save_publications();
   echo '<div class="message">Saved new article</div>';
 }
@@ -66,26 +68,26 @@ function new_event() {
   echo '<div class="message">Saved new event</div>';
 }
 
-function save_announcements() {
-  global $announcements;
-  $json = prettyPrint(json_encode($announcements));
-  file_put_contents('json/announcements.json', $json);
+function save_articles() {
+  global $articles;
+  $json = prettyPrint(json_encode($articles));
+  file_put_contents('json/articles.json', $json);
 }
 
-function new_announcement() {
-  global $announcements;
-  $announcement = array();
-  $announcement['date'] = $_POST['date'];
-  $announcement['content'] = $_POST['content'];
-  array_unshift($announcements, $announcement);
-  save_announcements();
-  echo '<div class="message">Saved new announcement</div>';
+function new_article() {
+  global $articles;
+  $article = array();
+  $article['date'] = $_POST['date'];
+  $article['content'] = $_POST['content'];
+  array_unshift($articles, $article);
+  save_articles();
+  echo '<div class="message">Saved new article</div>';
 }
 
 function edit_article() {
   global $publications, $template;
   $order = $_GET['order'];
-  foreach ($publications['articles'] as $idx => $article) {
+  foreach ($publications as $idx => $article) {
     if ($article['order'] == $order) {
       $template['article'] = $article;
       $template['edit_article'] = true;
@@ -98,7 +100,7 @@ function check_permissions() {
   
   global $errors, $wranings;
   
-  $files = array('json', 'json/events.json', 'json/announcements.json', 
+  $files = array('json', 'json/events.json', 'json/articles.json', 
     'json/links.json', 'json/pages.json', 'json/publications.json', 
     'json/tabs.json');
     
@@ -138,7 +140,7 @@ function get_sidebar_forms() {
   <label for="content">Content</label>
   <textarea name="content">
   </textarea><br />
-  <input type="hidden" name="new_announcement" value="true" />
+  <input type="hidden" name="new_article" value="true" />
   <label></label>
   <input type="submit" value="Create" class="btn" />
   </fieldset>
@@ -165,7 +167,7 @@ function article_cmp($a, $b) {
 
 function sort_articles() {
   global $publications;
-  usort($publications['articles'], 'article_cmp');
+  usort($publications, 'article_cmp');
 }
  
 function update_article() {
@@ -173,7 +175,7 @@ function update_article() {
   $original_order = $_POST['original_order'];
   // check that original publication exists 
   $found = false;
-  foreach ($publications['articles'] as $idx => $original) {
+  foreach ($publications as $idx => $original) {
     if ($original['order'] == $original_order) {
       $found = true; 
       break;
@@ -193,7 +195,7 @@ function update_article() {
         $authors[] = $postvar;
     }
     $article['authors'] = $authors;
-    $publications['articles'][$idx] = $article;
+    $publications[$idx] = $article;
     save_publications();
     echo '<div class="message">Article has been updated</div>';
   } else {
@@ -217,7 +219,7 @@ function get_articles_forms() {
     $template['article'] = array();
     $template['article']['month'] = date('M');
     $template['article']['year'] = date('Y');
-    $template['article']['order'] = intval($publications['articles'][0]['order']) + 1;
+    $template['article']['order'] = intval($publications[0]['order']) + 1;
     echo '<fieldset class="articles"><legend>Create Article</legend>';
     echo '<input type="hidden" name="new_article" value="true"/>';
   }
@@ -237,7 +239,7 @@ function get_articles_forms() {
   <input type="text" autocomplete="off" name="author-8" value="<?=$template['article']['authors'][7];?>" class="author" style="margin-bottom:0.8em" />
   <br />
   <label for="journal">Journal</label>
-  <input type="text" autocomplete="off" name="journal" id="journal-textbox" value="<?=$template['article']['journal'];?>" class="w24" /><br />
+  <input type="text" autocomplete="off" name="journal" class="journal" value="<?=$template['article']['journal'];?>" class="w24" /><br />
   <label for="month">mon. yr. vol. num.</label>
   <select name="month" class="month">
   <?php
@@ -283,7 +285,7 @@ function get_articles_forms() {
     <a href="sort-articles">Sort Articles</a>
   </td><td</td></tr>
   <?php
-  foreach ($publications['articles'] as $index => $article) {
+  foreach ($publications as $index => $article) {
     $authors = implode(', ', $article['authors']);
     $authors = substr($authors, 0, 50) . ((strlen($authors) > 50) ? '...' : '');
     $title = substr($article['title'], 0, 50) . '...';

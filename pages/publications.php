@@ -41,7 +41,7 @@
 <div id="articles" class="articles">
 <?php
   
-foreach ($publications['articles'] as $index => $article) {
+foreach ($publications as $index => $article) {
   echo render_article($index, $article);
 }
     
@@ -171,8 +171,8 @@ var articles = [];
 
 $(document).ready(function() {
   
-  $.getJSON('json/publications.json', function(data) {
-    articles = data.articles; 
+  $.getJSON('json/articles.json', function(data) {
+    articles = data;
     populateFilters(articles);
     articlesAttachHover();
     $("#publication-switcher-wrapper").height($('#articles').height() + 30);

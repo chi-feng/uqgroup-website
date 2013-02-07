@@ -1,7 +1,76 @@
 <?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
 
-</div>
-</div>
+</div> <!-- content -->
+
+<div id="sidebar-wrap">
+  <div id="sidebar">
+    <div class="sidebar-box">
+      <h2>Announcements</h2>
+      <div class="sidebar-content">
+<?php
+foreach ($announcements as $index => $announcement) {
+  if ($index < 5) {
+    printf("          <p><strong>%s</strong><br />%s</p>\n",
+      $announcement['date'], $announcement['content']);
+  }
+}
+?>
+      <p><a href="archive">More</a></p>
+      </div>
+    </div>
+    <div class="sidebar-box">
+      <h2>Upcoming Events</h2>
+      <div class="sidebar-content">
+<?php
+foreach ($events as $index => $event) {
+  if ($index < 5) {
+    $start = '';
+    $end = '';
+    $trp = 'false';
+    if (!empty($event['start_time']) && !empty($event['end_time'])) {
+      $start_time = strtotime($event['start_date'].' '.$event['start_time']);
+      $end_time = strtotime($event['end_date'].' '.$event['end_time']);
+      $start = gmdate("Ymd\THis\Z", $start_time);
+      $end = gmdate("Ymd\THis\Z", $end_time);
+      $trp = 'true';
+    } else if (!empty($event['start_date']) && !empty($event['end_date'])) {
+      $start_time = strtotime($event['start_date']);
+      $end_time = strtotime($event['end_date']) + 24*3600;
+      $start = gmdate("Ymd", $start_time);
+      $end = gmdate("Ymd", $end_time);
+    } else {
+      $start_time = strtotime($event['start_date']);
+      $end_time = strtotime($event['start_date']) + 24*3600;
+      $start = gmdate("Ymd", $start_time);
+      $end = gmdate("Ymd", $end_time);
+    }
+    $link = '<a target="_blank" href="http://www.google.com/calendar/event?action=TEMPLATE&text='.urlencode($event['name']).'&dates='.$start.'/'.$end.'&location='.urlencode($event['location']).'&details='.urlencode($event['content']).'&trp='.$trp.'"><i class="icon-calendar"></i></a>';
+    $daterange = (!empty($event['end_date']) && $event['end_date'] != $event['start_date']) ? $event['start_date'].' - '.$event['end_date'] : $event['start_date'];
+    printf("          <p><strong>%s</strong><br />%s %s</p>\n",
+      $daterange, $event['name'], $link);
+  }
+}
+?>      
+      <p><a href="archive">More</a></p>
+      </div>
+    </div>
+    <div class="sidebar-box">
+      <h2>Links</h2>
+      <div class="sidebar-content">
+        <ul class="links">
+<?php
+foreach ($links as $link) {
+printf("            <li><a href=\"%s\">%s</a></li>\n",
+  $link['href'], $link['name']);
+}
+?>
+        </ul>
+      </div>
+    </div>    
+  </div>
+</div> 
+
+</div> <!-- content-wrap -->
 <div id="footer-wrap">
 <div id="footer" class="clearfix">
   
@@ -55,5 +124,20 @@ MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
 <?php
 }
 ?>
+<!-- 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38300402-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+-->
 </body>
 </html>

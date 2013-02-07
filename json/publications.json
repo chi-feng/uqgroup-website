@@ -1,6 +1,6 @@
-{
-	"articles": [
+[
 		{
+    "id":"19",
 			"order": "20",
 			"title": "Simulation-based optimal Bayesian experimental design for nonlinear systems",
 			"fulltext": "http:\/\/arxiv.org\/abs\/1108.4146",
@@ -21,6 +21,7 @@
 			]
 		},
 		{
+    "id":"18",
 			"order": "19",
 			"title": "Bayesian inference with optimal maps",
 			"area": "",
@@ -40,6 +41,7 @@
 			"keywords": "Bayesian inference; Optimal transport; Measure-preserving maps; Inverse problems; Polynomial chaos; Numerical optimization"
 		},
 		{
+    "id":"17",
 			"order": "18",
 			"title": "Bayesian inverse problems with Monte Carlo forward models.",
 			"area": "",
@@ -61,6 +63,7 @@
 			"keywords": "linear transport; perturbation Monte Carlo; Bayesian; importance sampling; inverse problems; Markov chain Monte Carlo"
 		},
 		{
+    "id":"16",
 			"order": "17",
 			"title": "Data-free inference of the joint distribution of uncertain model parameters.",
 			"area": "",
@@ -84,6 +87,7 @@
 			"keywords": "Uncertainty quantification; Bayesian statistics; Missing information"
 		},
 		{
+    "id":"15",
 			"order": "16",
 			"title": "\u201cComputational singular perturbation with non-parametric tabulation of slow manifolds for time integration of stiff chemical kinetics",
 			"area": "",
@@ -108,6 +112,7 @@
 			"keywords": "chemical kinetics, computational singular perturbation, slow manifold, non-parametric regression, nearest neighbors, kd-trees"
 		},
 		{
+    "id":"14",
 			"order": "15",
 			"title": "Truncated multiGaussian fields and effective conductance of binary media",
 			"area": "",
@@ -130,6 +135,7 @@
 			"keywords": "Upscaling; Binary media; Effective conductivity"
 		},
 		{
+    "id":"13",
 			"order": "14",
 			"title": "Contributions of the wall boundary layer to the formation of the counter-rotating vortex pair in transverse jets.",
 			"area": "",
@@ -152,6 +158,7 @@
 			"keywords": "jets; vortex flows"
 		},
 		{
+    "id":"12",
 			"order": "13",
 			"title": "Bayesian inference of atomic diffusivity in a binary Ni\/Al system based on molecular dynamics",
 			"area": "",
@@ -177,6 +184,7 @@
 			"doi": "10.1137\/10080590X"
 		},
 		{
+    "id":"11",
 			"order": "12",
 			"title": "A Bayesian approach for estimating bioterror attacks from patient data",
 			"area": "",
@@ -198,6 +206,7 @@
 			"keywords": "Bayesian inference;anthrax;Sverdlovsk outbreak;bioterrorism"
 		},
 		{
+    "id":"10",
 			"order": "11",
 			"title": "Convergence Characteristics and Computational Cost of Two Algebraic Kernels in Vortex Methods with a Tree-Code Algorithm",
 			"area": "",
@@ -219,6 +228,7 @@
 			"doi": "10.1137\/080726872"
 		},
 		{
+    "id":"9",
 			"order": "10",
 			"title": "Dimensionality reduction and polynomial chaos acceleration of Bayesian inference in inverse problems",
 			"area": "",
@@ -239,6 +249,7 @@
 			"keywords": "Inverse problems; Bayesian inference; Dimensionality reduction; Polynomial chaos; Markov chain Monte Carlo; Galerkin projection; Gaussian processes; Karhunen\u2013Lo\u00e8ve expansion; RKHS"
 		},
 		{
+    "id":"8",
 			"order": "9",
 			"title": "A stochastic collocation approach to Bayesian inference in inverse problems",
 			"area": "",
@@ -258,6 +269,7 @@
 			"doi": "DOI:prism\/16"
 		},
 		{
+    "id":"7",
 			"order": "8",
 			"title": "Uncertainty quantification in chemical systems",
 			"area": "",
@@ -281,6 +293,7 @@
 			"keywords": "uncertainty quantification;polynomial chaos;multiwavelet;chemistry;ignition"
 		},
 		{
+    "id":"6",
 			"order": "7",
 			"title": "Bayesian Inference of Spectral Expansions for Predictability Assessment in Stochastic Reaction Networks",
 			"area": "",
@@ -303,6 +316,7 @@
 			"keywords": "uncertainty quantification; bayesian inference; polynomial chaos; stochastic reaction networks; domain decomposition; predictability"
 		},
 		{
+    "id":"5",
 			"order": "6",
 			"title": "Stochastic spectral methods for efficient Bayesian solution of inverse problems",
 			"area": "",
@@ -324,6 +338,7 @@
 			"doi": "10.1016\/j.jcp.2006.10.010"
 		},
 		{
+    "id":"4",
 			"order": "5",
 			"title": "Vorticity structure and evolution in a transverse jet",
 			"area": "",
@@ -343,6 +358,7 @@
 			"doi": "10.1017\/S0022112006004411"
 		},
 		{
+    "id":"3",
 			"order": "4",
 			"title": "K-means clustering for optimal partitioning and dynamic load balancing of parallel hierarchical N-body simulations",
 			"area": "",
@@ -363,6 +379,7 @@
 			"keywords": "k-means clustering; Treecode; N-body problems; Hierarchical methods; Parallel processing; Load balancing; Particle methods; Vortex methods; Three-dimensional flow; Transverse jet"
 		},
 		{
+    "id":"2",
 			"order": "3",
 			"title": "Toward a flame embedding model for turbulent combustion simulation",
 			"area": "",
@@ -384,6 +401,7 @@
 			"keywords": "Two dimensional model; One dimensional model; Premixed flame; Finite difference method; Numerical simulation; Flame structure; Turbulent flame; Combustion"
 		},
 		{
+    "id":"1",
 			"order": "2",
 			"title": "Dynamic response of strained premixed flames to equivalence ratio gradients",
 			"area": "",
@@ -404,6 +422,7 @@
 			"doi": "10.1016\/S0082-0784(00)80589-5"
 		},
 		{
+    "id":"0",
 			"order": "1",
 			"title": "Asymmetric autocorrelation function to resolve directional ambiguity in PIV images",
 			"area": "",
@@ -424,4 +443,3 @@
 			"doi": "10.1007\/s003480050247"
 		}
 	]
-}

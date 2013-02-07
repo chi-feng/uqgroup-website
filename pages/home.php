@@ -9,7 +9,8 @@
 <p>Our research focuses on advancing fundamental computational methodology for uncertainty quantification and statistical inference in complex physical systems, and using these tools to address challenges in modeling energy conversion and environmental applications.</p>
 
 <p>We tackle a broad range of projects, but most involve aspects of a few core questions:</p>
-<ul>
+
+<ul class="bullets">
   <li>How to quantify confidence in computational predictions?</li> 
   <li>How to build or refine models of complex physical processes from indirect and limited observations?</li>
   <li>What information is needed to drive inference, design, and control?</li>
@@ -18,15 +19,9 @@
 <h3>Recent Publications</h3>
 
 <div class="articles">
-
-<?php
-foreach ($publications['articles'] as $index => $article) {
-  if ($index < 3)
-    echo render_article($index, $article);
-}
-?>
-
+<?php show_articles(array(20, 19, 18)); ?>
 </div>
+
 <div class="see-all">
   <a href="publications">Show all publications</a>
 </div>

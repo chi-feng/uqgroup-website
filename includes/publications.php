@@ -2,11 +2,21 @@
 
 require_once('includes/json.php');
 
+function show_articles($arr) {
+  global $publications;
+  $index = 0;
+  foreach ($publications as $article) {
+    if (in_array(intval($article['order']), $arr)) {
+      echo render_article($index++, $article);
+    }
+  }
+}
+
 function get_article_authors() {
   global $publications;
   $hashmap = array();
   $authors = array();
-  foreach ($publications['articles'] as $index => $article) {
+  foreach ($publications as $index => $article) {
     foreach ($article['authors'] as $author) {
       if (!isset($hashmap[$author])) {
         $hashmap[$author] = true;
@@ -22,7 +32,7 @@ function get_article_journals() {
   global $publications;
   $hashmap = array();
   $journals = array();
-  foreach ($publications['articles'] as $index => $article) {
+  foreach ($publications as $index => $article) {
     if (!isset($hashmap[$article['journal']])) {
       $hashmap[$article['journal']] = 0;
       $journals[] = $article['journal'];
@@ -60,7 +70,7 @@ function render_article($index, $article) {
   
   $buttons = implode("\n", array(
     '<a href="' . $article['fulltext'] . '" class="button button-top" target="_new"><i class="icon-external-link"></i> Fulltext</a>',
-    '<a class="button button-bottom"><i class="icon-book"></i> BibTeX</a>',
+    '<a class="button button-bibtex"><i class="icon-book"></i> BibTeX</a>',
     '<a class="button button-abstract"><i class="icon-eye-open"></i> Abstract</a>'
   ));
   $buttons = "<div class=\"article-buttons\">\n$buttons\n</div>\n";
