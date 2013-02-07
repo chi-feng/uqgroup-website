@@ -138,7 +138,7 @@ $(document).ready(function() {
   if (hash.length > 0) {
     var target = $('#'+hash).offset().top - 50;
     console.log(target);
-    $('html, body').animate({scrollTop:target}, 500, 'easeInSine');
+    $('html, body').animate({scrollTop:target}, 100);
   }
 });
 </script>

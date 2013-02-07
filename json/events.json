@@ -10,6 +10,16 @@
 		"content": "This is a test"
 	},
 	{
+		"id": "2",
+		"start_date": "Feb 12, 2013",
+		"end_date": "Feb 12, 2013",
+		"start_time": "4:00pm",
+		"end_time": "6:00pm",
+		"name": "UQ Group Meeting",
+		"location": "33-319",
+		"content": ""
+	},
+	{
 		"id": "1",
 		"start_date": "Feb 25, 2013",
 		"end_date": "Mar 1, 2013",

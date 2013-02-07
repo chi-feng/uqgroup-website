@@ -193,7 +193,7 @@ class Object {
   }
   
   public function edit() {
-    $return = '<h2>Editing '.$this->name.'</h2>';
+    $return = '<h2>Editing '.$this->name.'<a class="btn quick-add" href="admin.php?view_'.$this->name.'s"><icon class="icon-add"></i> Go Back</i></a></h2>';
     $return .= '<form class="edit-'.$this->name.'" action="admin.php?" method="post">';
     $return .= '<fieldset><legend>Edit '.$this->name.'</legend>';
     $return .= $this->formfields();
@@ -205,7 +205,7 @@ class Object {
   }
   
   public function create() {
-    $return = '<h2>Create '.$this->name.'</h2>';
+    $return = '<h2>Create '.$this->name.'<a class="btn quick-add" href="admin.php?view_'.$this->name.'s"><icon class="icon-add"></i> Go Back</i></a></h2>';
     $return .= '<form class="create-'.$this->name.'" action="admin.php?" method="post">';
     $return .= '<fieldset><legend>Create '.$this->name.'</legend>';
     $return .= $this->formfields();
@@ -253,7 +253,7 @@ class Object {
   }
   
   public function viewall() {
-    $return = '<h2>Viewing all '.$this->name.'s</h2>';
+    $return = '<h2>Viewing all '.$this->name.'s <a class="btn quick-add" href="admin.php?create_'.$this->name.'"><icon class="icon-add"></i> Create New</i></a></h2>';
     $return .= '<table class="list list-'. $this->name.'">';
     $arr = json_decode(file_get_contents($this->json_path), true);
     foreach ($arr as $idx => $val) {
@@ -363,38 +363,28 @@ class Conference extends Object {
     $this->json_path = 'json/conferences.json';
     $this->fields = array(
       'id' => array('label' => 'ID', 'type' => 'hidden'),  
-      'order' => array('label' => 'Order', 'type' => 'text'),  
       'title' => array('label' => 'Title', 'type' => 'text'),  
       'authors' => array('label' => 'Authors', 'type' => 'array'),  
+      'order' => array('label' => 'Order', 'type' => 'text'),  
       'conference' => array('label' => 'Conference', 'type' => 'text'),  
-      'publication' => array('label' => 'Publication', 'type' => 'text'),  
       'year' => array('label' => 'Year', 'type' => 'text'),  
-      'location' => array('label' => 'Location', 'type' => 'text'),  
-      'url' => array('label' => 'url', 'type' => 'text'),
-      'keywords' => array('label' => 'Keywords', 'type' => 'text'),  
-      'comments' => array('label' => 'Comments', 'type' => 'text'),  
-      'thumbnail' => array('label' => 'Thumbnail', 'type' => 'text')
+      'publication' => array('label' => 'Publication', 'type' => 'text'),  
+      'url' => array('label' => 'URL', 'type' => 'text'),
     );
     $this->sort_by = 'order';
-    $this->list_field = array('title');
+    $this->list_field = array('order', 'title');
     parent::__construct($arg1, $arg2);
   }  
+  public function get_max_order() {
+    $arr = json_decode(file_get_contents($this->json_path), true);
+    $max_index = 0;
+    foreach ($arr as $key => $item) {
+      if (intval($item['order']) > $max_index) {
+        $max_index = intval($item['order']);
+      }
+    }
+    return $max_index;
+  }
 }
-
-class Link extends Object {
-  public function __construct($arg1, $arg2 = '') {
-    $this->name = 'link';
-    $this->json_path = 'json/links.json';
-    $this->fields = array(
-      'id' => array('label' => 'ID', 'type' => 'hidden'), 
-      'name' => array('label' => 'Name', 'type' => 'text'), 
-      'href' => array('label' => 'URL', 'type' => 'text')
-    );
-    $this->sort_by = 'id';
-    $this->list_field = array('name');
-    parent::__construct($arg1, $arg2);
-  }  
-}
-
 
 ?>

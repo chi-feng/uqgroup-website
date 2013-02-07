@@ -141,6 +141,45 @@ if (isset($_REQUEST['sort_articles'])) {
 }
 
 
+if (isset($_GET['view_conferences'])) {
+  $conference = new Conference(array());
+  $t['content'] .= $conference->viewall();
+  finish();
+}
+if (isset($_GET['create_conference'])) {
+  $conference = new Conference(array());
+  $conference->set('order', $conference->get_max_order()+1);
+  $t['content'] .= $conference->create();
+  finish();
+}
+if (isset($_GET['edit_conference'])) {
+  $conference = new Conference('id', $_REQUEST['id']);
+  $t['content'] .= $conference->edit();
+  finish();
+}
+if (isset($_POST['update_conference'])) {
+  $conference = new Conference('post');
+  $conference->update('id', $_REQUEST['id']);
+  header('Location: admin.php?view_conferences');
+  die();
+}
+if (isset($_POST['insert_conference'])) {
+  $conference = new Conference('post');
+  $conference->insert_front();
+  header('Location: admin.php?view_conferences');
+}
+if (isset($_REQUEST['delete_conference'])) {
+  $conference = new Conference(array());
+  $conference->delete('id', $_REQUEST['id']);
+  header('Location: admin.php?view_conferences');
+}
+if (isset($_REQUEST['sort_conferences'])) { 
+  $conference = new Conference(array());
+  $conference->sort('descending');
+  header('Location: admin.php?view_conferences');
+}
+
+
 if (isset($_GET['view_events'])) {
   $event = new Event(array());
   $t['content'] .= $event->viewall();

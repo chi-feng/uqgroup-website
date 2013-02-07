@@ -5,9 +5,11 @@ function get_upcoming_events($limit = 0) {
   $return = '';
   $event_count = 0;
   foreach ($events as $index => $event) {
-    if (strtotime($event['start_date'] . ' ' . $event['start_time']) > time()) {
+    if ($limit == -1 || strtotime($event['start_date'] . ' ' . $event['start_time']) > time()) {
       if ($limit > 0 && $event_count < $limit) {
         $event_count++;
+      } else if ($limit == -1) {
+        
       } else {
         break;
       }
@@ -38,6 +40,24 @@ function get_upcoming_events($limit = 0) {
     }
   }
   return $return;
+}
+
+function render_conference($idx, $conference) {
+  $return = array();
+  $return[] = '<div class="conference">';
+  $return[] = '<span class="conference-order">'. $conference['order'] .'.</span>';
+  $return[] = '<span class="conference-authors">'. implode(', ', $conference['authors']) .',</span>';
+  $return[] = '<span class="conference-title">&ldquo;'. $conference['title'] .'.&rdquo;</span>';
+  $return[] = '<span class="conference-conference">'. $conference['conference'] .'</span>';
+  if (strlen($conference['publication'])) {
+    $return[] = '<span class="conference-publication">'. $conference['publication'] .'</span>';
+  }
+  $return[] = '<span class="conference-year">('. $conference['year'] .')</span>';
+  if (strlen($conference['url'])) {
+    $return[] = '<span class="conference-url">[<a href="'. $conference['url'] .'">Link</a>]</span>';
+  }
+  $return[] = '</div>';
+  return implode("\n", $return);
 }
 
 ?>

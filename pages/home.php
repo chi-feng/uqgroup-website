@@ -16,7 +16,7 @@
   <li>What information is needed to drive inference, design, and control?</li>
 </ul>
     
-<h3>Recent Publications</h3>
+<h3 class="noline">Recent Publications</h3>
 
 <div class="articles">
 <?php show_articles(array(20, 19, 18)); ?>

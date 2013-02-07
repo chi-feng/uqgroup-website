@@ -21,9 +21,7 @@ foreach ($announcements as $index => $announcement) {
     <div class="sidebar-box">
       <h2>Upcoming Events</h2>
       <div class="sidebar-content">
-<?php
-      echo get_upcoming_events(4);
-?>
+<?php echo get_upcoming_events(4); ?>
       <p><a href="archive">More</a></p>
       </div>
     </div>

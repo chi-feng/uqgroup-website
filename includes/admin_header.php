@@ -52,15 +52,13 @@
     <li><a class="confirm" href="admin.php?sort_articles">Sort Articles by Order ID</a></li>
     </ul>
   </li>
-  <!--
-  <li><a>Conferences</a>
+  <li><a href="admin.php?view_conferences">Conferences</a>
     <ul>
     <li><a href="admin.php?view_conferences">View Conferences</a></li>
-    <li><a href="admin.php?create_conferences">Create Conference</a></li>
-    <li><a class="confirm" href="admin.php?sort_conferences">Sort Conferences</a></li>
+    <li><a href="admin.php?create_conference">Create Conference</a></li>
+    <li><a class="confirm" href="admin.php?sort_conferences">Sort Conferences by Order ID</a></li>
     </ul>
   </li>
-  -->
   </ul>
   </div>
   <?php } ?>

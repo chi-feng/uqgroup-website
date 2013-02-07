@@ -52,6 +52,7 @@ select:focus,input:focus,textarea:focus,#articles-forms *:focus{background:#fafa
 form textarea{height:8em;vertical-align:top;}
 input.btn:focus{background:#369;}
 
+a.quick-add { float:right; display: inline-block; font-size: 40%; font-weight: bold; margin-top: 0.4em;}
 
 input.input-title { width:53em; }
 input.input-keywords { width:53em; }
@@ -76,7 +77,7 @@ textarea.auto-populate { width: 53em; height: 4em; margin-bottom: 1em; }
 
 table.status{width:100%;border: 1px solid #ddd; margin: 1em 0; }
 table.status td {border:1px solid #ddd;}
-table.status tr.even{background:#f3f3f3;}
+table.status tr.even{background:#f0f0f0;}
 table.status tr.odd{background:#fafafa;}
 table.status tr:first-child {background:#333; color:#fff;border: 1px solid #333;}
 table.status td, table.status th  {padding:0.5em 0.5em; text-align: left;}

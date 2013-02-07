@@ -1,0 +1,276 @@
+[
+	{
+		"id": "18",
+		"title": "CSP simplification of chemical kinetic systems under uncertainty",
+		"authors": [
+			"Coles, T.",
+			"Najm, H.",
+			"Marzouk, Y.M."
+		],
+		"order": "19",
+		"conference": "International Workshop on Model Reduction in Reacting Flow\/13th International Conference on Numerical Combustion. Corfu, Greece",
+		"year": "2011",
+		"publication": "",
+		"url": "http:\/\/iwmrrf2011.ntua.gr\/submission\/iw013.pdf"
+	},
+	{
+		"id": "17",
+		"title": "A unified approach to expectation maximization and level set segmentation applied to stem cell and brain MRI images",
+		"authors": [
+			"Lowry, N.",
+			"Mangoubi, R.",
+			"Desai, M.",
+			"Marzouk, Y.M.",
+			"Sammak, P."
+		],
+		"order": "18",
+		"conference": "IEEE Symposium on Biomedical Imaging. Chicago, IL",
+		"year": "2011",
+		"publication": "",
+		"url": "http:\/\/ieeexplore.ieee.org\/xpls\/abs_all.jsp?arnumber=5872672&tag=1"
+	},
+	{
+		"id": "16",
+		"title": "Optimal Bayesian experimental design for combustion kinetics.",
+		"authors": [
+			"Huan, X.",
+			"Marzouk, Y.M."
+		],
+		"order": "17",
+		"conference": "49th AIAA Aerospace Sciences Meeting. Orlando, FL",
+		"year": "2011",
+		"publication": "AIAA paper 2011\u20130513. ",
+		"url": "http:\/\/www.aiaa.org\/content.cfm?pageid=413"
+	},
+	{
+		"id": "15",
+		"title": "Time integration of chemical kinetics with computational singular perturbation and tabulation",
+		"authors": [
+			"Debusschere, B.",
+			"Rhoads, B.",
+			"Najm, H.",
+			"Marzouk, Y.M.",
+			"Goussis, D.",
+			"Valorani, M.",
+			"Frenklach, M."
+		],
+		"order": "16",
+		"conference": "Western States Section of the Combustion Institute, Fall Meeting, Irvine, CA",
+		"year": "2009",
+		"publication": "",
+		"url": ""
+	},
+	{
+		"id": "14",
+		"title": "Time integration of reacting flows with CSP tabulation",
+		"authors": [
+			"Marzouk, Y.M.",
+			"Debusschere, B.",
+			"Najm, H.",
+			"Goussis, D.",
+			"Valorani, M.",
+			"Frenklach, M."
+		],
+		"order": "15",
+		"conference": "econd International Workshop on Model Reduction in Reacting Flows, Notre Dame, IN",
+		"year": "2009",
+		"publication": "",
+		"url": ""
+	},
+	{
+		"id": "13",
+		"title": "High-order AMR computations of reacting flow with adaptive reduction of chemical stiffness",
+		"authors": [
+			"Najm, H.N.",
+			"Safta, C.",
+			"Marzouk, Y.M.",
+			"Ray, J.",
+			"Valorani, M.",
+			"Goussis, D."
+		],
+		"order": "14",
+		"conference": "SciDAC 2008, Seattle, WA.",
+		"year": "2008",
+		"publication": "Journal of Physics: Conference Series 125",
+		"url": "http:\/\/iopscience.iop.org\/1742-6596\/125\/1\/012032"
+	},
+	{
+		"id": "12",
+		"title": "A Bayesian method for inferring transmission chains in a partially observed epidemic",
+		"authors": [
+			"Ray, J.",
+			"Marzouk, Y.M."
+		],
+		"order": "13",
+		"conference": "Proceedings of the 2008 Joint Statistical Meetings; Denver, CO.",
+		"year": "2008",
+		"publication": "American Statistical Association",
+		"url": ""
+	},
+	{
+		"id": "11",
+		"title": "Estimating bioterror attacks from patient data: a Bayesian approach",
+		"authors": [
+			"Ray, J.",
+			"Marzouk, Y.M.",
+			"Najm, H.N.",
+			"Kraus, M.",
+			"Fast, P."
+		],
+		"order": "12",
+		"conference": "RAND\/ASA Conference on Quantitative Methods & Statistical Applications in Defense and National Security. Santa Monica, CA.",
+		"year": "2006",
+		"publication": "Proceedings of the American Statistical Association.",
+		"url": ""
+	},
+	{
+		"id": "10",
+		"title": "Actuating transverse jets via nozzle-edge vortical perturbations",
+		"authors": [
+			"Marzouk, Y.M.",
+			"Ghoniem, A.F."
+		],
+		"order": "11",
+		"conference": "AIAA paper 2006-1492",
+		"year": "2006",
+		"publication": "",
+		"url": "http:\/\/www.aiaa.org\/content.cfm?pageid=413"
+	},
+	{
+		"id": "9",
+		"title": "Stochastic spectral methods for efficient Bayesian solution of inverse problems",
+		"authors": [
+			"Marzouk, Y.M.",
+			"Najm, H.N.",
+			"Rahn, L.A."
+		],
+		"order": "10",
+		"conference": "Bayesian Inference and Maximum Entropy Methods in Science and Engineering",
+		"year": "2005",
+		"publication": "San Jose, CA. American Institute of Physics, CP803: 104\u2013110",
+		"url": "http:\/\/link.aip.org\/link\/?APCPCS\/803\/104\/1"
+	},
+	{
+		"id": "8",
+		"title": "A quasi-one-dimensional unsteady laminar flame formulation with independent strain rate and curvature",
+		"authors": [
+			"Speth, R.L.",
+			"Marzouk, Y.M.",
+			"Ghoniem, A.F."
+		],
+		"order": "9",
+		"conference": "Third MIT Conference on Computational Fluid and Solid Mechanics",
+		"year": "2005",
+		"publication": "K.J. Bathe, ed., Elsevier",
+		"url": ""
+	},
+	{
+		"id": "7",
+		"title": "Simulations of high Reynolds number transverse jets and analysis of the underlying vortical structures",
+		"authors": [
+			"Marzouk, Y.M.",
+			"Ghoniem, A.F."
+		],
+		"order": "8",
+		"conference": "AIAA paper 2005-0308",
+		"year": "2005",
+		"publication": "Invited session",
+		"url": ""
+	},
+	{
+		"id": "6",
+		"title": "Lagrangian simulation of a jet in crossflow at finite Reynolds number",
+		"authors": [
+			"Wee, D.H.",
+			"Marzouk, Y.M.",
+			"Ghoniem, A.F."
+		],
+		"order": "7",
+		"conference": "AIAA paper 2005-0291",
+		"year": "2005",
+		"publication": "",
+		"url": "http:\/\/www.aiaa.org\/content.cfm?pageid=413"
+	},
+	{
+		"id": "5",
+		"title": "Impact of hydrogen addition on flame response to stretch and curvature",
+		"authors": [
+			"Speth, R.L.",
+			"Marzouk, Y.M.",
+			"Ghoniem, A.F."
+		],
+		"order": "6",
+		"conference": "AIAA paper 2005-0143",
+		"year": "2005",
+		"publication": "",
+		"url": "http:\/\/www.aiaa.org\/content.cfm?pageid=413"
+	},
+	{
+		"id": "4",
+		"title": "Vorticity formulation for an actuated jet in crossflow",
+		"authors": [
+			"Marzouk, Y.M.",
+			"Ghoniem, A.F."
+		],
+		"order": "5",
+		"conference": "AIAA paper 2004-0094",
+		"year": "2004",
+		"publication": "",
+		"url": "http:\/\/www.aiaa.org\/content.cfm?pageid=413"
+	},
+	{
+		"id": "3",
+		"title": "Vorticity generation mechanisms and correct boundary conditions for transverse jet simulation",
+		"authors": [
+			"Marzouk, Y.M.",
+			"Ghoniem, A.F."
+		],
+		"order": "4",
+		"conference": "Proceedings of the Second MIT Conference on Computational Fluid and Solid Mechanics",
+		"year": "2003",
+		"publication": "K. J. Bathe, ed., Elsevier",
+		"url": ""
+	},
+	{
+		"id": "2",
+		"title": "Mechanism of streamwise vorticity formation in a transverse jet",
+		"authors": [
+			"Marzouk, Y.M.",
+			"Ghoniem, A.F.",
+			"Najm, H.N."
+		],
+		"order": "3",
+		"conference": "AIAA paper 2002-1063",
+		"year": "2002",
+		"publication": "",
+		"url": "http:\/\/www.aiaa.org\/content.cfm?pageid=413"
+	},
+	{
+		"id": "1",
+		"title": "Can a one-dimensional strained flame model flame-vortex interactions?",
+		"authors": [
+			"Marzouk, Y.M.",
+			"Ghoniem, A.F.",
+			"Najm, H.N."
+		],
+		"order": "2",
+		"conference": "Proceedings of the Second Mediterranean Combustion Symposium: 372\u2013383",
+		"year": "2002",
+		"publication": "",
+		"url": ""
+	},
+	{
+		"id": "0",
+		"order": "1",
+		"title": "A flame embedding model for turbulent combustion simulation",
+		"authors": [
+			"Marzouk, Y.M.",
+			"Ghoniem, A.F.",
+			"Najm, H.N."
+		],
+		"conference": "AIAA paper 2000-0866",
+		"publication": "",
+		"year": "2000",
+		"url": "http:\/\/www.aiaa.org\/content.cfm?pageid=413"
+	}
+]
