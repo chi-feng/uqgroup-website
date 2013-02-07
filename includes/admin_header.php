@@ -42,6 +42,7 @@
     <ul>
     <li><a href="admin.php?view_events">View Events</a></li>
     <li><a href="admin.php?create_event">Create Event</a></li>
+    <li><a class="confirm" href="admin.php?sort_events">Sort Events</a></li>
     </ul>
   </li>
   <li><a>Articles</a>

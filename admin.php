@@ -175,7 +175,7 @@ if (isset($_REQUEST['delete_event'])) {
 }
 if (isset($_REQUEST['sort_events'])) { 
   $event = new Event(array());
-  $event->sort('descending');
+  $event->sort('ascending');
   header('Location: admin.php?view_events');
 }
 

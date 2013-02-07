@@ -125,10 +125,16 @@ class Object {
   }
   
   public function sort_function_asc($a, $b) {
+    if (strpos($this->sort_by, 'date')) {
+      return strtotime($a[$this->sort_by]) > strtotime($b[$this->sort_by]);
+    }
     return $a[$this->sort_by] > $b[$this->sort_by];
   }
   
   public function sort_function_desc($a, $b) {
+    if (strpos($this->sort_by, 'date')) {
+      return strtotime($a[$this->sort_by]) < strtotime($b[$this->sort_by]);
+    }
     return $a[$this->sort_by] < $b[$this->sort_by];
   }
   
@@ -303,7 +309,7 @@ class Event extends Object {
       'location' => array('label' => 'Location', 'type' => 'text'), 
       'content' => array('label' => 'Content', 'type' => 'textarea')
     );
-    $this->sort_by = 'id';
+    $this->sort_by = 'start_date';
     $this->list_field = array('name', 'start_date', 'end_date');
     parent::__construct($arg1, $arg2);
   }  
