@@ -3,9 +3,9 @@
 require_once('includes/json.php');
 
 function show_articles($arr) {
-  global $publications;
+  global $articles;
   $index = 0;
-  foreach ($publications as $article) {
+  foreach ($articles as $article) {
     if (in_array(intval($article['order']), $arr)) {
       echo render_article($index++, $article);
     }
@@ -13,10 +13,10 @@ function show_articles($arr) {
 }
 
 function get_article_authors() {
-  global $publications;
+  global $articles;
   $hashmap = array();
   $authors = array();
-  foreach ($publications as $index => $article) {
+  foreach ($articles as $index => $article) {
     foreach ($article['authors'] as $author) {
       if (!isset($hashmap[$author])) {
         $hashmap[$author] = true;
@@ -29,10 +29,10 @@ function get_article_authors() {
 }
 
 function get_article_journals() {
-  global $publications;
+  global $articles;
   $hashmap = array();
   $journals = array();
-  foreach ($publications as $index => $article) {
+  foreach ($articles as $index => $article) {
     if (!isset($hashmap[$article['journal']])) {
       $hashmap[$article['journal']] = 0;
       $journals[] = $article['journal'];

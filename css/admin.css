@@ -75,28 +75,28 @@ textarea.auto-populate { width: 53em; height: 4em; margin-bottom: 1em; }
 .recurse table{margin:0em;}
 
 table.status{width:100%;border: 1px solid #ddd; margin: 1em 0; }
-table.status tr{border-bottom:1px solid #ddd;}
+table.status td {border:1px solid #ddd;}
 table.status tr.even{background:#f3f3f3;}
 table.status tr.odd{background:#fafafa;}
-table.status tr:first-child {background:#333; color:#fff;}
+table.status tr:first-child {background:#333; color:#fff;border: 1px solid #333;}
 table.status td, table.status th  {padding:0.5em 0.5em; text-align: left;}
 table.status td:first-child, table.json-status th:first-child {text-align: left; }
 table.json-status td, table.json-status th  { text-align: center; }
 table.page-status td:last-child, table.json-status th:last-child {text-align: center; }
+table.status td.green, table.status td.green {}
+table.status td.green { color:#382;}
+table.status td.red {  color:#832;}
 
-table.status .green, table.status .green {}
-table.status .green { color: #393;}
-table.status .red { color: #933;}
 table.list{width:100%;border: 1px solid #ddd;}
-table.list tr{border-bottom:1px solid #ddd;}
+table.list tr{ border-bottom:1px solid #ddd; }
 table.list tr.even{background:#f3f3f3;}
 table.list tr.odd{background:#fafafa;}
 table.list tr:hover{background:#ffa;}
-table.list td{padding:0.5em 1em;}
+table.list td{padding:0.5em 1em; }
 table.list tr:last-child{border-bottom:none;}
-table.list .icon-trash,table.list .icon-pencil{font-size:120%;display:block;text-align:center;padding:0 1em ;}
+table.list .icon-trash,table.list .icon-edit{ font-size:120%;display:block;text-align:center;padding:0 1em;}
 table.list td.delete-button,table.list td.edit-button{max-width:3em;width:3em;padding:0;}
-table.list a .icon-pencil{color:#000;}
+table.list a .icon-edit{color:#000;}
 table.list a .icon-trash{color:#c33;}
 table.list td.value{}
 
@@ -115,6 +115,9 @@ table.list td.value{}
 #nav ul ul li a:hover{background:#369;}
 #nav ul ul ul{position:absolute;left:100%;top:0;}
 
+
+ul.links { }
+ul.links li a { display: block; padding-bottom: 0.5em; color: #333; }
 
 /* jquery ui autocomplete stuff */
 .ui-helper-hidden-accessible{display:none;}

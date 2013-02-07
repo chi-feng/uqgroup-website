@@ -25,31 +25,31 @@
   <?php if (isset($_SESSION['logged_in'])) { ?>
   <div id="nav"> 
   <ul>
-  <li><a><i class="icon-cog"></i></a>
+  <li><a href="admin.php"><i class="icon-cog"></i></a>
     <ul>
     <li><a href="admin.php">Dashboard</a></li>
     <li><a href="home">Home</a></li>
     <li><a href="admin.php?logout">Logout</a></li>
     </ul>
   </li>
-  <li><a>Announcements</a>
+  <li><a href="admin.php?view_announcements">Announcements</a>
     <ul>
     <li><a href="admin.php?view_announcements">View Announcements</a></li>
     <li><a href="admin.php?create_announcement">Create Announcement</a></li>
     </ul>
   </li>
-  <li><a>Events</a>
+  <li><a href="admin.php?view_events">Events</a>
     <ul>
     <li><a href="admin.php?view_events">View Events</a></li>
     <li><a href="admin.php?create_event">Create Event</a></li>
-    <li><a class="confirm" href="admin.php?sort_events">Sort Events</a></li>
+    <li><a class="confirm" href="admin.php?sort_events">Sort Events by Date</a></li>
     </ul>
   </li>
-  <li><a>Articles</a>
+  <li><a href="admin.php?view_articles">Articles</a>
     <ul>
     <li><a href="admin.php?view_articles">View Articles</a></li>
     <li><a href="admin.php?create_article">Create Article</a></li>
-    <li><a class="confirm" href="admin.php?sort_articles">Sort Articles</a></li>
+    <li><a class="confirm" href="admin.php?sort_articles">Sort Articles by Order ID</a></li>
     </ul>
   </li>
   <!--

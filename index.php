@@ -5,8 +5,9 @@ define('INCLUDE_GUARD', true);
 date_default_timezone_set('America/New_York');
 
 require_once('includes/publications.php');
+require_once('includes/common.php');
 
-$publications  = json_decode(file_get_contents('json/articles.json'), true);
+$articles      = json_decode(file_get_contents('json/articles.json'), true);
 $pages         = json_decode(file_get_contents('json/pages.json'),        true);
 $tabs          = json_decode(file_get_contents('json/tabs.json'),         true);
 $announcements = json_decode(file_get_contents('json/announcements.json'),true);

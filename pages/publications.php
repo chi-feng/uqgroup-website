@@ -41,7 +41,7 @@
 <div id="articles" class="articles">
 <?php
   
-foreach ($publications as $index => $article) {
+foreach ($articles as $index => $article) {
   echo render_article($index, $article);
 }
     

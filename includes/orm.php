@@ -259,7 +259,7 @@ class Object {
     foreach ($arr as $idx => $val) {
       $return .= '<tr>';
       $return .= '<td class="edit-button">';
-      $return .= '<a class="edit-button" href="admin.php?edit_'.$this->name.'&id='.$val['id'].'"><i class="icon-pencil"></i></a>';
+      $return .= '<a class="edit-button" href="admin.php?edit_'.$this->name.'&id='.$val['id'].'"><i class="icon-edit"></i></a>';
       $return .= '</td>';
       foreach($this->list_field as $field_name) {
         $value = truncate($val[$field_name], 100);
@@ -325,7 +325,7 @@ class Article extends Object {
       'keywords' => array('label' => 'Keywords', 'type' => 'text'),  
       'authors' => array('label' => 'Authors', 'type' => 'array'), 
       'abstract' => array('label' => 'Abstract', 'type' => 'textarea'),  
-      'order' => array('label' => 'Order', 'type' => 'text'),   
+      'order' => array('label' => 'Order ID', 'type' => 'text'),   
       'fulltext' => array('label' => 'Fulltext URL', 'type' => 'text'),  
       'journal' => array('label' => 'Journal', 'type' => 'text'),  
       'doi' => array('label' => 'DOI', 'type' => 'text'),  

@@ -57,7 +57,7 @@ function logout($msg) {
 }
 
 if (isset($_GET['logout'])) {
-  logout();
+  logout('');
 }
 
 if ($_SERVER['REMOTE_ADDR'] != $_SESSION['ip']) {
@@ -190,10 +190,15 @@ function dashboard() {
   $t['content'] .= '<table class="status json-status">';
   $t['content'] .= '<tr><th>File</th><th>Perms</th><th>Read</th><th>Write</th></tr>';
   foreach (glob('json/*.json') as $file) {
-    $readable = (is_readable($file)) ? '<span class="green" />OK</span>' : '<span class="red">FAIL</span>';
-    $writable = (is_writable($file)) ? '<span class="green" />OK</span>' : '<span class="red">FAIL</span>';
+    $readable = (is_readable($file)) ? '<td class="green"><i class="icon-ok"></i></td>' : '<td class="red"><i class="icon-remove"></i></td>';
+    $writable = (is_writable($file)) ? '<td class="green"><i class="icon-ok"></i></td>' : '<td class="red"><i class="icon-remove"></i></td>';
     $perms = substr(sprintf('%o', fileperms($file)), -4);
-    $t['content'] .= sprintf('<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>',
+    if ($perms != '0777') {
+      $perms = '<td class="red"><i class="icon-warning-sign"></i> '.$perms.'</td>';
+    } else {
+      $perms = '<td class="green">'.$perms.'</td>';
+    }
+    $t['content'] .= sprintf('<tr><td>%s</td>%s%s%s</tr>',
       $file, $perms,$readable, $writable);
   }
   $t['content'] .= '</table>';
@@ -205,15 +210,15 @@ function dashboard() {
   foreach (json_decode(file_get_contents('json/pages.json'), true) as $page => $details) {
     $file = "pages/$page.php";
     $title = $details['title'];
-    $exists = file_exists("pages/$page.php") ? '<span class="green" />OK</span>' : '<span class="red">FAIL</span>';
-    $t['content'] .= sprintf('<tr><td>%s</td><td>%s</td><td>%s</td></tr>',
+    $exists = file_exists("pages/$page.php") ? '<td class="green"><i class="icon-ok"></i></td>' : '<td class="red"><i class="icon-remove"></i></td>';
+    $t['content'] .= sprintf('<tr><td>%s</td><td>%s</td>%s</tr>',
       $file, $title, $exists);
   }
   $t['content'] .= '</table>';
   $t['content'] .= '</div><br style="clear: both;" />';
   $t['content'] .= '<h3>Quick Links</h3>';
-  $t['content'] .= '<ul><li><a href="https://www.google.com/analytics/web/?hl=en&pli=1#report/visitors-overview/a38300402w66904103p68823002/">Google Analytics</a></li>';
-  $t['content'] .= '<ul><li><a href="https://github.com/chi-feng/uqgroup-website">GitHub Repository</a></li>';
+  $t['content'] .= '<ul class="links"><li><a href="https://www.google.com/analytics/web/?hl=en&pli=1#report/visitors-overview/a38300402w66904103p68823002/">Google Analytics</a></li>';
+  $t['content'] .= '<li><a href="https://github.com/chi-feng/uqgroup-website">GitHub Repository</a></li></ul>';
 }
 
 function finish() {
