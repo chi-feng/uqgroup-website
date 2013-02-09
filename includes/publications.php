@@ -69,7 +69,7 @@ function render_article($index, $article) {
   $bibtex = "<textarea class=\"bibtex\">$bibtex_raw</textarea>\n";
   
   $buttons = implode("\n", array(
-    '<a href="' . $article['fulltext'] . '" class="button button-fulltext" target="_new"><span>Fulltext</span><i class="icon-external-link"></i></a>',
+    '<a href="' . $article['fulltext'] . '" class="button button-fulltext" target="_blank"><span>Fulltext</span><i class="icon-external-link"></i></a>',
     '<a class="button button-bibtex"><span>BibTeX</span><i class="icon-book"></i> </a>',
     '<a class="button button-abstract"><span>Abstract</span><i class="icon-eye-open"></i></a>'
   ));

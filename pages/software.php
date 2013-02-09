@@ -13,7 +13,7 @@
 MIT Uncertainty Quantification (MUQ) Library
 </h3>
 
-<p><a class="btn" href="https://bitbucket.org/mituq/muq" target="_new">
+<p><a class="btn" href="https://bitbucket.org/mituq/muq" target="_blank">
   BitBucket Repository &nbsp; <i class="icon-external-link"></i> </a></p>
 
 <p>
