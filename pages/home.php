@@ -26,6 +26,7 @@
   <a href="publications">Show all publications</a>
 </div>
 
+<script type="text/javascript" src="js/jquery.simplemodal.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
     articlesAttachHover();

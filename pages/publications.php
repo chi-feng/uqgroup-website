@@ -84,6 +84,7 @@ foreach ($conferences as $index => $conference) {
 <div id="other">
 </div>
 
+<script type="text/javascript" src="js/jquery.simplemodal.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 

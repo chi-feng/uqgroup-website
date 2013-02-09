@@ -16,7 +16,10 @@ $events        = json_decode(file_get_contents('json/events.json'),       true);
 $links         = json_decode(file_get_contents('json/links.json'),        true);
 
 // get the requested page
-$page = (isset($_GET['p']) && !empty($_GET['p'])) ? $_GET['p'] : 'home';
+$page = 'home';
+if (isset($_GET['p']) && !empty($_GET['p'])) {
+  $page = $_GET['p'];
+}
 
 // template variables
 $t = array(); 
@@ -35,12 +38,10 @@ if (isset($pages[$page]) && file_exists("pages/$page.php")) {
 } else {
   
   header('HTTP/1.0 404 Not Found');
-  die('<h1>Error 404: Page Not Found</h1>' . $page);
+  $t['content'] = '<h2>Error 404: Page Not Found.</h2>';
     
 }
 
-include('includes/header.php');
-echo $t['content'];
-include('includes/footer.php');
+include('includes/template.php');
 
 ?>

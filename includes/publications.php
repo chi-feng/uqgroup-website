@@ -69,9 +69,9 @@ function render_article($index, $article) {
   $bibtex = "<textarea class=\"bibtex\">$bibtex_raw</textarea>\n";
   
   $buttons = implode("\n", array(
-    '<a href="' . $article['fulltext'] . '" class="button button-top" target="_new"><i class="icon-external-link"></i> Fulltext</a>',
-    '<a class="button button-bibtex"><i class="icon-book"></i> BibTeX</a>',
-    '<a class="button button-abstract"><i class="icon-eye-open"></i> Abstract</a>'
+    '<a href="' . $article['fulltext'] . '" class="button button-fulltext" target="_new"><span class="caption">Fulltext</span><i class="icon-external-link"></i></a>',
+    '<a class="button button-bibtex"><span class="caption">BibTeX</span><i class="icon-book"></i> </a>',
+    '<a class="button button-abstract"><span class="caption">Abstract</span><i class="icon-eye-open"></i></a>'
   ));
   $buttons = "<div class=\"article-buttons\">\n$buttons\n</div>\n";
   
@@ -80,11 +80,18 @@ function render_article($index, $article) {
   $thumbnail = '<a href="' . $article['fulltext'] . '"><img class="thumbnail" src="'. $thumbnail_src .'" /></a>' . "\n";
 
   $abstract = '<div class="abstract">'.$article['abstract']."</div>\n";
-
+  
+  $fulltext = "<div class=\"fulltext\"><h4>View Options</h4>\n";
+  if (isset($article['arxiv']) && !empty($article['arxiv'])) {
+    $fulltext .= '<a class="btn" href="http://arxiv.org/abs/'.$article['arxiv'].'">View on arXiv</a>';
+  }
+  $fulltext .= '<a class="btn" href="'.$article['fulltext'].'">View using DOI</a>';
+  $fulltext .= '</div>'."\n";
+  
   $zebra = ($index % 2 == 0) ? 'even' : 'odd';
   
   $div = implode('', array('<div id="'.$article_id.'" class="article '.$zebra.'">',
-    $thumbnail, $buttons, $authors, $title, $journal, $abstract, $bibtex,
+    $thumbnail, $buttons, $authors, $title, $journal, $fulltext, $abstract, $bibtex,
     "</div>\n"));
   
   return $div;

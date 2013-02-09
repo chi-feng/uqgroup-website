@@ -1,12 +1,12 @@
-{
-	"2": {
+[
+	{
 		"id": "1",
 		"date": "Jan 2013",
 		"content": "Congratulations to Alessio, Andrew, and Naveen for passing their PhD qualifying exams!"
 	},
-	"3": {
+	{
 		"id": "2",
 		"date": "Dec. 2012",
 		"content": "Prof. Marzouk becomes the director of the Aerospace Computational Design Laboratory."
 	}
-}
+]

@@ -53,7 +53,11 @@ function articlesAttachHover() {
     $(this).toggleClass('selected');
     $(this).parent().parent().find('.bibtex').slideToggle();
   });
-    
+  
+	$('.button-fulltext').click(function (e) {
+    $(this).parent().parent().find('.fulltext').modal();
+		return false;
+	});
 }
 
 function articleFilter() {
