@@ -12,12 +12,12 @@ $(function() {
 	var sticky_navigation = function(){
 		var scroll_top = $(window).scrollTop();
 		if (scroll_top > sticky_navigation_offset_top) { 
-			$('#nav-wrap').css({ 'position': 'fixed', 'top':0 });
+			$('#nav-wrap').css({ 'position': 'fixed', 'z-index':3 });
       $('#nav').addClass('stuck');   
-      $('#sidebar-wrap, #content').css({'margin-top':'2.5em'});   
+      $('#sidebar-wrap, #content').css({'margin-top':'2.25em'});   
       $('#nav .totop').css({'opacity':'1'});   
 		} else {
-			$('#nav-wrap').css({ 'position': 'relative' }); 
+			$('#nav-wrap').css({ 'position': 'relative', 'z-index':0 }); 
       $('#nav').removeClass('stuck');
       $('#sidebar-wrap, #content').css({'margin-top':'0'});
       $('#nav .totop').css({'opacity':'0'});   

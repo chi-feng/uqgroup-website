@@ -9,25 +9,9 @@
 <form id="publications-form">
   <table>
     <tr>
-      <td>
-        <select id="select-year">
-          <option value="">Year</option>
-          <optgroup label='-'>
-          </optgroup>
-        </select>
-      </td>
-      <td>
-        <select id="select-author">
-          <option value="">Author</option>
-          <optgroup label='-'></optgroup>
-        </select>
-      </td>
-      <td>
-        <select id="select-journal">
-          <option value="">Journal</option>
-          <optgroup label='-'></optgroup>
-        </select>
-      </td>
+      <td><select id="select-year"><option value="">Year</option><optgroup label='-'></optgroup></select></td>
+      <td><select id="select-author"><option value="">Author</option><optgroup label='-'></optgroup></select></td>
+      <td><select id="select-journal"><option value="">Journal</option><optgroup label='-'></optgroup></select></td>
       <td><input type="text" id="input-keyword" value="Keyword" /></td>
       <td><a class="btn" onclick="resetFilters()">Reset</a></td>
     </tr>
@@ -35,9 +19,7 @@
 </form>
 
 <div id="publication-switcher-wrapper">
-  
 <div id="articles-wrapper" class="clearfix">  
-  
 <div id="articles" class="articles">
 <?php
   
@@ -48,9 +30,7 @@ foreach ($articles as $index => $article) {
 ?>
   <p id="notfound" style="display:none"><strong>No articles found matching filter.</strong></p>
 </div>
-
 </div>
-
 <div id="conferences-wrapper">
 <div id="conferences">
 <h4 id="refereed">Refereed Conference Publications</h4>
@@ -63,24 +43,23 @@ foreach ($conferences as $index => $conference) {
 ?>
 </div>
 </div>
-
-
 <div id="books-wrapper">
 <div id="books">
+
 <h4 id="books-and-chapters">Books and Book Chapters</h4>
 <ol>
   <li>Frangos, M., Marzouk, Y.M., Willcox, K.E., van Bloemen Waanders, B. “Surrogate and reduced-order models for statistical inverse problems.” Chapter in Biegler, Biros, Ghattas, Heinkenschloss, Keyes, Mallick, Marzouk, Tenorio, van Bloemen Waanders, &amp; Willcox (eds.), Computational Methods for Large Scale Inverse Problems and Uncertainty Quantification, Wiley (2010).</li>
   <li>L. Biegler, G. Biros, O. Ghattas, M. Heinkenschloss, D. Keyes, B. Mallick, Y. Marzouk, L. Tenorio, B. van Bloemen Waanders, and K. Willcox, editors. <em>Computational Methods for Large Scale Inverse Problems and Uncertainty Quantification</em><em>. </em>Wiley (2010). </li>
 </ol>
+
 <h4 id="other-publications">Magazine Articles and Other Press</h4>
 <ol>
   <li>Marzouk, Y.M., Willcox, K.E.,  &quot;Confronting energy and environment's toughest challenges with computational engineering.&quot; AeroAstro Magazine No. 7, 2009–2010. [<a href="http://web.mit.edu/aeroastro/news/magazine/aeroastro7/compu-engineering.html">link</a>]</li>
 </ol>
-</div>
-</div>
 
 </div>
-
+</div>
+</div>
 <div id="other">
 </div>
 

@@ -69,9 +69,9 @@ function render_article($index, $article) {
   $bibtex = "<textarea class=\"bibtex\">$bibtex_raw</textarea>\n";
   
   $buttons = implode("\n", array(
-    '<a href="' . $article['fulltext'] . '" class="button button-fulltext" target="_new"><span class="caption">Fulltext</span><i class="icon-external-link"></i></a>',
-    '<a class="button button-bibtex"><span class="caption">BibTeX</span><i class="icon-book"></i> </a>',
-    '<a class="button button-abstract"><span class="caption">Abstract</span><i class="icon-eye-open"></i></a>'
+    '<a href="' . $article['fulltext'] . '" class="button button-fulltext" target="_new"><span>Fulltext</span><i class="icon-external-link"></i></a>',
+    '<a class="button button-bibtex"><span>BibTeX</span><i class="icon-book"></i> </a>',
+    '<a class="button button-abstract"><span>Abstract</span><i class="icon-eye-open"></i></a>'
   ));
   $buttons = "<div class=\"article-buttons\">\n$buttons\n</div>\n";
   
@@ -81,11 +81,16 @@ function render_article($index, $article) {
 
   $abstract = '<div class="abstract">'.$article['abstract']."</div>\n";
   
-  $fulltext = "<div class=\"fulltext\"><h4>View Options</h4>\n";
+  $fulltext = "<div class=\"fulltext\"><h4>Fulltext Options</h4>\n";
+  $fulltext .= '<a class="btn external" href="'.$article['fulltext'].'">View on External Site <i class="icon-external-link"></i> </a>';
+  $fulltext .= '<code class="block">'.htmlspecialchars($article['fulltext']).'</code><br />';
   if (isset($article['arxiv']) && !empty($article['arxiv'])) {
-    $fulltext .= '<a class="btn" href="http://arxiv.org/abs/'.$article['arxiv'].'">View on arXiv</a>';
+    $link = $article['arxiv'];
+    if (strpos($article['arxiv'], 'http') === false) {
+      $link = 'http://arxiv.org/abs/' . $article['arxiv'];
+    }
+    $fulltext .= '<a class="btn" href="'.$link.'">View on arXiv.org <img class="float-right" src="images/open-access.png" height="20" alt="open-access" /></a>';
   }
-  $fulltext .= '<a class="btn" href="'.$article['fulltext'].'">View using DOI</a>';
   $fulltext .= '</div>'."\n";
   
   $zebra = ($index % 2 == 0) ? 'even' : 'odd';
