@@ -18,7 +18,8 @@ code,pre{font-family:"Inconsolata","Consolas","Monaco",monospace;}
 @media (max-width:70em) { 
   #header-wrap, #content-wrap, #footer-wrap, #nav { width: 50em;  }
   #sidebar { width: 50em; float:right; }
-  .sidebar-box { width:33.3333%; float: left; }
+  .sidebar-box { width:33.3333%; float: left; border-right: 1px solid #ccc; min-height: 15em;}
+  .sidebar-box:last-child {border-right: none;}
   .logos-wrapper { width: 17em; }
 }
 
@@ -70,7 +71,7 @@ code.block, pre.code, .article textarea.bibtex  { font-size: 85%; background: #f
 /* Colors and backgrounds */
 a { color: #933; }
 a:hover { color: #c33; }
-body { background: #ccc url('noisy_grid.png') fixed; }
+body { background: #ccc url('noisy_grid2.png') fixed; }
 #header { background: #310606 url('banner.jpg'); background-size: cover; }
 #nav { background: #252525; }
 #content-wrap { background: #fafafa; }
