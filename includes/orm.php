@@ -193,7 +193,7 @@ class Object {
   }
   
   public function edit() {
-    $return = '<h2>Editing '.$this->name.'<a class="btn quick-add" href="admin.php?view_'.$this->name.'s"><icon class="icon-add"></i> Go Back</i></a></h2>';
+    $return = '<h2>Editing '.$this->name.'</h2>';
     $return .= '<form class="edit-'.$this->name.'" action="admin.php?" method="post">';
     $return .= '<fieldset><legend>Edit '.$this->name.'</legend>';
     $return .= $this->formfields();
@@ -205,7 +205,7 @@ class Object {
   }
   
   public function create() {
-    $return = '<h2>Create '.$this->name.'<a class="btn quick-add" href="admin.php?view_'.$this->name.'s"><icon class="icon-add"></i> Go Back</i></a></h2>';
+    $return = '<h2>Create '.$this->name.'</h2>';
     $return .= '<form class="create-'.$this->name.'" action="admin.php?" method="post">';
     $return .= '<fieldset><legend>Create '.$this->name.'</legend>';
     $return .= $this->formfields();
@@ -252,25 +252,36 @@ class Object {
     return $this->recurse($arr);
   }
   
+  public function viewrow($row) {
+    $return = '';
+    foreach($this->list_field as $field_name) {
+      $value = truncate($row[$field_name], 100);
+      $return .= '<td class="value">' . $value .'</td>';
+    }
+    return $return;
+  }
+  
   public function viewall() {
-    $return = '<h2>Viewing all '.$this->name.'s <a class="btn quick-add" href="admin.php?create_'.$this->name.'"><icon class="icon-add"></i> Create New</i></a></h2>';
+    $return = '<h2>Viewing all '.$this->name.'s <a class="btn quick-add" href="admin.php?create_'.$this->name.'">Create New</a></h2>';
     $return .= '<table class="list list-'. $this->name.'">';
     $arr = json_decode(file_get_contents($this->json_path), true);
+    $return .= '<thead><tr><th></th>';
+    foreach($this->list_field as $field_name) {
+      $return .= '<th>'.$field_name.'</th>';
+    }
+    $return .= '<th></th></tr></thead><tbody>';
     foreach ($arr as $idx => $val) {
-      $return .= '<tr>';
+      $return .= '<tr class="list-'.$this->name.'">';
       $return .= '<td class="edit-button">';
-      $return .= '<a class="edit-button" href="admin.php?edit_'.$this->name.'&id='.$val['id'].'"><i class="icon-edit"></i></a>';
+      $return .= '<a class="edit-button" href="admin.php?edit_'.$this->name.'&id='.$val['id'].'"><i class="icon-pencil"></i></a>';
       $return .= '</td>';
-      foreach($this->list_field as $field_name) {
-        $value = truncate($val[$field_name], 100);
-        $return .= '<td class="value">' . $value .'</td>';
-      }
+      $return .= $this->viewrow($val);
       $return .= '<td class="delete-button">';
       $return .= '<a class="delete-button confirm" href="admin.php?delete_'.$this->name.'&id='.$val['id'].'"><i class="icon-trash"></i></a>';
       $return .= '</td>';
       $return .= '</tr>';
     }
-    $return .= '</table>';
+    $return .= '</tbody></table>';
     return $return;
   }
   
@@ -290,7 +301,7 @@ class Announcement extends Object {
       'content' => array('label' => 'Content', 'type' => 'textarea')
     );
     $this->sort_by = 'id';
-    $this->list_field = array('content');
+    $this->list_field = array('content', 'date');
     parent::__construct($arg1, $arg2);
   }  
 }
@@ -310,7 +321,7 @@ class Event extends Object {
       'content' => array('label' => 'Content', 'type' => 'textarea')
     );
     $this->sort_by = 'start_date';
-    $this->list_field = array('name', 'start_date', 'end_date');
+    $this->list_field = array('name', 'start_date');
     parent::__construct($arg1, $arg2);
   }  
 }
@@ -339,7 +350,7 @@ class Article extends Object {
       'comments' => array('label' => 'Comments', 'type' => 'text')
     );
     $this->sort_by = 'order';
-    $this->list_field = array('order', 'title');
+    $this->list_field = array('OID', 'Article');
     parent::__construct($arg1, $arg2);
   }
   
@@ -352,6 +363,16 @@ class Article extends Object {
       }
     }
     return $max_index;
+  }
+  
+  public function viewrow($row) {
+    $authors = truncate(implode(', ', $row['authors']), 80);
+    $title = truncate($row['title'], 80);
+    $journal = sprintf('%s <strong>%s:</strong> (%s)', 
+      $row['journal'], $row['volume'], $row['year']);
+    $return .= sprintf('<td class="value center">%s</td><td class="value">%s &ldquo;%s.&rdquo; %s</td>', 
+      $row['order'], $authors, $title, $journal);
+    return $return;
   }
   
 }
