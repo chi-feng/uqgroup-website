@@ -5,3 +5,9 @@ RewriteBase /uqgroup/
 RewriteRule ^admin?$ admin.php [NC,L]
 RewriteRule ^/?$ index.php?p=home [NC,L]
 RewriteRule ^([A-Za-z0-9-]+)?$ index.php?p=$1 [NC,L]
+
+<Files admin.php>
+  AuthType SSLCert
+  Require user chifeng ymarz
+  ErrorDocument 401 /__scripts/needcerts
+</Files>
