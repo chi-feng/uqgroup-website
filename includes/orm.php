@@ -1,6 +1,6 @@
 <?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } 
 
-require_once('includes/json.php');
+require_once('includes/common.php');
 
 function truncate($str, $len) {
   if (strlen($str) > $len) {

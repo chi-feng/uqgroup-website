@@ -1,75 +1,20 @@
 <?php 
 
-session_start();
-
 date_default_timezone_set('America/New_York');
 
 define('INCLUDE_GUARD', true);
-define('SESSION_TIMEOUT', 6000);
 
 require_once('includes/orm.php');
-require_once('includes/Bcrypt.php');
 
-$key = 'herpderp'; 
-$iv = '1234567812345678'; 
-// passwords salted and hashed, see implementation in includes/Bcrypt.php
-$users = array(
-  'chifeng' => array('password' => '$2a$10$es5UK4mYTwoaTkgSXXLEfOg6RcbcYa.FZHFCzGFWvhxbFxzyHeLEm'),
-  'ymarz' => array('password' => '$2a$10$zatTt1uoQqrYoFDg16GVsuA2UkQj7OFwnnUB2Ga.rxd39OWoy4MWi'),
-);
+$client_name = $_SERVER["SSL_CLIENT_S_DN_CN"];
+$remote_addr = $_SERVER["REMOTE_ADDR"];
+$ssl_verify = $_SERVER["SSL_CLIENT_VERIFY"];
+
+if ($ssl_verify != "SUCCESS") {
+  die ('SSL verification failed');
+}
 
 $t = array(); 
-
-if (isset($_POST['login'])) {
-  $ip = bcrypt_decrypt($_POST['a'], $key, $iv);
-  if ($_SERVER['REMOTE_ADDR'] != $ip) die ('bad IP');
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-  if (isset($users[$username])) {
-    if (bcrypt_verify($password, $users[$username]['password'])) {
-      $_SESSION['logged_in'] = true;
-      $_SESSION['timestamp'] = time();
-      $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
-      header('Location: admin.php');
-    } else {
-      $t['content'] .= login_form('Username/password mismatch.');
-      finish();
-    }
-  } else {
-    $t['content'] .= login_form('User not found.');
-    finish();
-  }
-}
-
-if (!$_SESSION['logged_in']) {
-  $t['content'] .= login_form();
-  finish();
-}
-
-function logout($msg) {
-  if (session_id() != '') {
-    unset($_SESSION['logged_in']);
-    session_destroy();
-  }
-  global $t;
-  $t['content'] .= login_form($msg);
-  finish();
-}
-
-if (isset($_GET['logout'])) {
-  logout('');
-}
-
-if ($_SERVER['REMOTE_ADDR'] != $_SESSION['ip']) {
-  logout('Your session was invalid.');
-} elseif (time() - $_SESSION['timestamp'] > SESSION_TIMEOUT) {
-  logout('Your session has timed out.');
-} else {
-  
-}
-// we are logged in and the session is okay and we aren't trying to log out
-  
-$_SESSION['timestamp'] = time();
 
 if (isset($_GET['view_announcements'])) {
   $announcement = new Announcement(array());
@@ -261,31 +206,10 @@ function dashboard() {
 }
 
 function finish() {
-  global $t; 
-  include('includes/admin_header.php');
-  echo $t['content'];
-  include('includes/admin_footer.php');  
+  include('includes/admin_template.php');
   die();
 }
 
-function login_form($message='') {
-  global $key, $iv;
-  $client_ip = bcrypt_encrypt($_SERVER['REMOTE_ADDR'], $key, $iv);
-  $hidden_fields = sprintf('<input type="hidden" name="a" value="%s">', $client_ip);
-  $return = '';
-  if (!empty($message)) {
-    $return .= '<div class="message">' . $message .'</div>';
-  }
-  $return .= '<form action="admin" method="post" class="centered">
-  <fieldset>
-  <legend>Login</legend>
-  <label for="username">Username</label><input type="text" name="username" autocomplete="off" /><br />
-  <label for="username">Password</label><input type="password" name="password" autocomplete="off" /><br />
-  ' . $hidden_fields . '<input type="hidden" name="login" value="true" />
-  <label></label><input type="submit" value="Login" class="btn" />
-  </form>';
-  return $return;
-}
 
 finish();
 
