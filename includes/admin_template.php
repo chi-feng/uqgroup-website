@@ -18,10 +18,7 @@ global $t;
 <body>
   
 <div class="menubar">
-  <?php if (!isset($_SESSION['logged_in'])) { ?>
-  <a class="home-button" href="home">Home</a>  
-  <?php } ?>
-  <?php if (isset($_SESSION['logged_in'])) { ?>
+
   <div id="nav"> 
   <ul>
   <li><a href="admin.php"><i class="icon-cog"></i></a>
@@ -60,7 +57,6 @@ global $t;
   </li>
   </ul>
   </div>
-  <?php } ?>
 </div>
   
 <div id="content-wrap">
