@@ -43,7 +43,7 @@ body { background: #666; }
 .home-button{right:0em;}
 
 form { }
-form.centered { display: block; width: 32em; margin: 0 auto; margin-top: 5em; margin-bottom: 10em;}
+form.centered { display: block; width: 35em; margin: 0 auto; margin-top: 5em; margin-bottom: 10em;}
 form fieldset { margin-bottom: 1em; }
 form fieldset legend { display: none; margin: 0 0 1em 0;padding:0.3em 0.5em;
   font-weight: bold;}
