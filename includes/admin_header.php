@@ -6,7 +6,7 @@
   <!--<link href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css"  rel="stylesheet" type="text/css" />-->
   <link href="css/font-awesome.css"  rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui-1.10.0.custom.min"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.10.0.custom.min.js"></script>
   <script type="text/javascript" src="js/admin.js"></script>
   <link rel="stylesheet" type="text/css" href="css/admin.css" media="screen" />
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
