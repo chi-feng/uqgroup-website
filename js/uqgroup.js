@@ -50,8 +50,7 @@ function articlesAttachHover() {
   });
     
   $('.button-bibtex').click(function() {
-    $(this).toggleClass('selected');
-    $(this).parent().parent().find('.bibtex').slideToggle();
+    $(this).parent().parent().find('div.bibtex').modal();
   });
   
 	$('.button-fulltext').click(function (e) {

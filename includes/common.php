@@ -34,7 +34,17 @@ function get_upcoming_events($limit = 0) {
         $end = gmdate("Ymd", $end_time);
       }
       $link = '<a target="_blank" href="http://www.google.com/calendar/event?action=TEMPLATE&text='.urlencode($event['name']).'&dates='.$start.'/'.$end.'&location='.urlencode($event['location']).'&details='.urlencode($event['content']).'&trp='.$trp.'"><i class="icon-calendar"></i></a>';
-      $daterange = (!empty($event['end_date']) && $event['end_date'] != $event['start_date']) ? $event['start_date'].' - '.$event['end_date'] : $event['start_date'];
+      $daterange = '';
+      if (!empty($event['end_date']) && $event['end_date'] != $event['start_date']) {
+        $daterange = $event['start_date'].' - '.$event['end_date'];
+      } elseif (!empty($event['start_time'])) {
+        $daterange = $event['start_date'] . ' ' . $event['start_time'];
+        if (!empty($event['end_time'])) {
+          $daterange .= ' - '.$event['end_time'];
+        }
+      } else {
+        $daterage = $event['start_date'];
+      }
       $return .= sprintf("          <p><strong>%s</strong><br />%s %s</p>\n",
         $daterange, $event['name'], $link);
     }
@@ -60,6 +70,13 @@ function render_conference($idx, $conference) {
   return implode("\n", $return);
 }
 
+function truncate($str, $len) {
+  if (strlen($str) > $len) {
+    return substr($str, 0, $len - 3) . '...';
+  } else {
+    return $str;
+  }
+}
 
 function prettyPrint( $json )
 {

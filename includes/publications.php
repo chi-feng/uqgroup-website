@@ -42,6 +42,21 @@ function get_article_journals() {
   return $journals;
 }
 
+function render_article_short($article) {
+  $html = sprintf('%s, &ldquo;%s.&rdquo; %s <strong>%s</strong> %s (%s)', implode(', ', $article['authors']), $article['title'], $article['journal'], $article['volume'], $article['pages'], $article['year']);
+  return $html; 
+}
+
+function show_article_short($order_id) {
+  global $articles;
+  foreach($articles as $article) {
+    if ($article['order'] == $order_id) {
+      echo render_article_short($article);
+      break;
+    }
+  }
+}
+
 function render_article($index, $article) {
   $article_id = "article-$index";
   
@@ -57,16 +72,16 @@ function render_article($index, $article) {
   
   $bibtex_raw = array(
     '@article {', 
-    'title = "' . $article['title'] . '"',
-    'author = "' . implode(' and ', $article['authors']) . '"',
-    'journal = "' . $article['journal'] . '"',
-    'volume = "' . $article['volume'] . '"',
-    'number = "' . $article['number'] . '"',
-    'pages = "' . $article['pages'] . '"',
-    'doi = "' . $article['doi'] . '"',
-    'keywords = "' . $article['keywords'] . '"', "}\n");
+    '  title = "' . $article['title'] . '",',
+    '  author = "' . implode(' and ', $article['authors']) . '",',
+    '  journal = "' . $article['journal'] . '",',
+    '  volume = "' . $article['volume'] . '",',
+    '  number = "' . $article['number'] . '",',
+    '  pages = "' . $article['pages'] . '",',
+    '  doi = "' . $article['doi'] . '"',
+    "}\n");
   $bibtex_raw = implode("\n", $bibtex_raw);
-  $bibtex = "<textarea class=\"bibtex\">$bibtex_raw</textarea>\n";
+  $bibtex = "<div class=\"bibtex\"><h4>BibTeX</h4><p>Click to select all</p><textarea class=\"bibtex\" readonly=\"readonly\">$bibtex_raw</textarea></div>\n";
   
   $buttons = implode("\n", array(
     '<a href="' . $article['fulltext'] . '" class="button button-fulltext" target="_blank"><span>Fulltext</span><i class="icon-external-link"></i></a>',
@@ -82,15 +97,22 @@ function render_article($index, $article) {
   $abstract = '<div class="abstract">'.$article['abstract']."</div>\n";
   
   $fulltext = "<div class=\"fulltext\"><h4>Fulltext Options</h4>\n";
-  $fulltext .= '<a class="btn external" href="'.$article['fulltext'].'">View on External Site <i class="icon-external-link"></i> </a>';
-  $fulltext .= '<code class="block">'.htmlspecialchars($article['fulltext']).'</code><br />';
-  if (isset($article['arxiv']) && !empty($article['arxiv'])) {
-    $link = $article['arxiv'];
-    if (strpos($article['arxiv'], 'http') === false) {
-      $link = 'http://arxiv.org/abs/' . $article['arxiv'];
+  if (strpos($article['fulltext'], 'arxiv') === false) {
+    $fulltext .= '<a class="btn external" href="'.$article['fulltext'].'">View on External Site <i class="icon-external-link"></i> </a>';
+    $fulltext .= '<code class="block">'.htmlspecialchars($article['fulltext']).'</code><br />';
+    if (isset($article['arxiv']) && !empty($article['arxiv'])) {
+      $link = $article['arxiv'];
+      if (strpos($article['arxiv'], 'http') === false) {
+        $link = 'http://arxiv.org/abs/' . $article['arxiv'];
+      }
+      $fulltext .= '<a class="btn" href="'.$link.'">View on arXiv.org <img class="float-right" src="images/open-access.png" height="20" alt="open-access" /></a>';
+      $fulltext .= '<code class="block">'.htmlspecialchars($link).'</code><br />';
     }
-    $fulltext .= '<a class="btn" href="'.$link.'">View on arXiv.org <img class="float-right" src="images/open-access.png" height="20" alt="open-access" /></a>';
+  } else {
+    $fulltext .= '<a class="btn" href="'.$article['fulltext'].'">View on arXiv.org <img class="float-right" src="images/open-access.png" height="20" alt="open-access" /></a>';
+    $fulltext .= '<code class="block">'.htmlspecialchars($article['fulltext']).'</code><br />';    
   }
+
   $fulltext .= '</div>'."\n";
   
   $zebra = ($index % 2 == 0) ? 'even' : 'odd';
