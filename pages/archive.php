@@ -1,8 +1,5 @@
 <?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
-
-<h2>Archives</h2>
-
-<div class="col-1-2">
+<div class="col-1-2 archive">
 <h3>Announcements</h3>
 <?php
 foreach ($announcements as $index => $announcement) {
@@ -12,11 +9,16 @@ foreach ($announcements as $index => $announcement) {
 ?>
 </div>
 
-<div class="col-2-2">
-<h3>Events</h3>
+<div class="col-2-2 archive">
+<h3>Upcoming Events</h3>
 <?php
 $all_events = get_upcoming_events(-1);
 echo $all_events; 
+?>     
+<h3>Past Events</h3>
+<?php
+$past_events = get_past_events();
+echo $past_events; 
 ?>     
 </div>
 

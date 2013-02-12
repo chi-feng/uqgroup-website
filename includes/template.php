@@ -54,13 +54,13 @@
 <?php
 foreach ($announcements as $index => $announcement) {
   if ($index < 5) {
-    printf("<p><strong>%s</strong><br />%s</p>\n",
+    printf("<p class=\"announcement\"><strong>%s</strong><br />%s</p>\n",
       $announcement['date'], $announcement['content']);
   }
 }
 ?>
 
-      <p><a href="archive">More</a></p>
+      <p><a href="archive">More announcements</a></p>
       </div>
     </div>
     <div class="sidebar-box">
@@ -69,7 +69,7 @@ foreach ($announcements as $index => $announcement) {
         
 <?php echo get_upcoming_events(4); ?>
 
-      <p><a href="archive">More</a></p>
+      <p><a href="archive">More events</a></p>
       </div>
     </div>
     <div class="sidebar-box">

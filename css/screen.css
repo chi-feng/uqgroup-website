@@ -73,12 +73,7 @@ a { color: #933; }
 a:hover { color: #c33; }
 body { background: #ccc url('noisy_grid2.png') fixed; }
 #header { background: #310606 url('banner.jpg'); background-size: cover; }
-#nav { background: #252525; 
-background-image: linear-gradient(bottom, rgb(37,37,37) 0%, rgb(60,60,60) 100%);
-background-image: -o-linear-gradient(bottom, rgb(37,37,37) 0%, rgb(60,60,60) 100%);
-background-image: -moz-linear-gradient(bottom, rgb(37,37,37) 0%, rgb(60,60,60) 100%);
-background-image: -webkit-linear-gradient(bottom, rgb(37,37,37) 0%, rgb(60,60,60) 100%);
-background-image: -ms-linear-gradient(bottom, rgb(37,37,37) 0%, rgb(60,60,60) 100%);}
+#nav { background: #252525; background-image: linear-gradient(bottom, rgb(37,37,37) 0%, rgb(60,60,60) 100%); background-image: -moz-linear-gradient(bottom, rgb(37,37,37) 0%, rgb(60,60,60) 100%); background-image: -webkit-linear-gradient(bottom, rgb(37,37,37) 0%, rgb(60,60,60) 100%); background-image: -ms-linear-gradient(bottom, rgb(37,37,37) 0%, rgb(60,60,60) 100%);}
 #nav-wrap { }
 #content-wrap { background: #fafafa; }
 #sidebar { background: #fafafa;}
@@ -89,7 +84,7 @@ background-image: -ms-linear-gradient(bottom, rgb(37,37,37) 0%, rgb(60,60,60) 10
 
 /* transitions */
 #header-wrap, #nav-wrap, #content-wrap, #footer-wrap, #nav {-webkit-transition:width 0.5s ease;-moz-transition:width 0.5s ease;-ms-transition:width 0.5s ease;transition:width 0.5s ease;}
-a, #publication-switcher h3, #title {-webkit-transition:all 0.15s ease-in-out;-moz-transition:all 0.15s ease-in-out;-ms-transition:all 0.15s ease-in-out;transition:all 0.15s ease-in-out;}
+.button, .btn, #publication-switcher h3 {-webkit-transition:all 0.15s ease-in-out;-moz-transition:all 0.15s ease-in-out;-ms-transition:all 0.15s ease-in-out;transition:all 0.15s ease-in-out;}
 #title a, #nav a, h1, h2, h3, #breadcrumbs, .btn, .button, #sidebar h2 *, i {-moz-user-select: none; webkit-user-select: none; }
 
 #title{width:100%;background:rgba(0,0,0,0.33);margin-top:1.3em;padding:0.5em 2.5em 1em 1.5em;}
@@ -118,6 +113,8 @@ a, #publication-switcher h3, #title {-webkit-transition:all 0.15s ease-in-out;-m
 #sidebar .sidebar-box { }
 #sidebar .icon-external-link { display: block; float: right; }
 #sidebar .icon-calendar { display: block; float: right; }
+#sidebar .event, #sidebar .announcement { margin-bottom: 1em; }
+#sidebar .event strong { margin-bottom: 0.2em;}
 
 #content h2, #divtext h1 { font-size: 175%; margin-bottom: 0.5em; margin-top: -0.2em;}
 #content h3, #divtext h6 { font-size: 105%; margin: 0 0 0.8em; padding-bottom: 0.5em; border-bottom: 1px solid #bbb;}
@@ -179,6 +176,11 @@ a.btn:hover{background:#369;color:#eafaff;box-shadow:0 1px 0 rgba(255,255,255,0.
 .person .photo img { width: 7em; height: 9.7em; margin-bottom:-3px; }
 .person .bio { font-size:95%; }
 
+/* archive.php */
+div.archive p { font-size: 95%; }
+div.archive p .icon-external-link { display: block; float: right; }
+div.archive p .icon-calendar { display: block; float: right; }
+
 #publication-switcher{margin-bottom:0.6em;}
 #publication-switcher h3{background:#bbb;box-shadow:inset 0px 1.2em 3em -1.2em rgba(255,255,255,1);border:1px solid #999;width:33.3333%;height:2.5em;padding:0.7em;font-size:90%;color:#333;border-right:1px solid #ccc;border-left:1px solid #999;text-shadow:0 1px 1px #fff;margin:0;text-align:center;font-weight:bold;display:inline-block;float:left;cursor:pointer;}
 #publication-switcher h3:first-child{border-top-left-radius:0.2em;border-bottom-left-radius:0.2em;}
@@ -205,10 +207,10 @@ a.btn:hover{background:#369;color:#eafaff;box-shadow:0 1px 0 rgba(255,255,255,0.
 #publications-form #select-author { min-width: 11em; }
 #publications-form #select-journal { min-width: 16em; max-width: 20em;}
 
-.course { font-size: 95%; }
-.course p { display: block; float: left; width: 35em ;}
-.course .title { font-size: 110%; border-bottom: 1px dotted #aaa; padding-bottom: 0.6em; line-height: 1.3;}
-.course img { float: right; width: 13em; height: 16em; margin-left: -5em; }
+.course { font-size: 95%; clear:both; margin-bottom: 1em; position:relative;}
+.course p { display: block; float: left; width: 36em ;}
+.course .title { font-size: 110%; padding-bottom: 0.5em; border-bottom: 1px solid #ccc; margin-bottom: 0.5em !important; }
+.course img { position: absolute; top:0; right: 0; width: 13em; height: 15em; margin-left: 0em; border-left: 1em solid #fff;}
 
 .articles .even { background: #f3f3f3; }
 .articles .odd { background: #fcfcfc; }

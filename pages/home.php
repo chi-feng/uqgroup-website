@@ -4,7 +4,7 @@
     
 <p>Welcome to the Uncertainty Quantification Group, in the <a href="http://aeroastro.mit.edu/">Department of Aeronautics and Astronautics</a> at <a href="http://mit.edu">MIT</a>. We are part of the <a href="http://acdl.mit.edu/">Aerospace Computational Design Laboratory</a> and affiliated with the <a href="http://computationalengineering.mit.edu/">Center for Computational Engineering</a>.</p>
     
-<h3 id="research-overview">Research Overview</h2>
+<h3 id="research-overview">Research Overview</h3>
 
 <p>Our research focuses on advancing fundamental computational methodology for uncertainty quantification and statistical inference in complex physical systems, and using these tools to address challenges in modeling energy conversion and environmental applications.</p>
 
