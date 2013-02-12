@@ -20,7 +20,7 @@
   <div id="header" class="clearfix">
     <div id="title">
       <h1><a href="home">Uncertainty Quantification Group</a></h1>
-      <h2><a href="http://mit.edu">Massuchusetts Institute of Technology</a></h2>
+      <h2><a href="http://mit.edu">Massachusetts Institute of Technology</a></h2>
     </div>
   </div>
 </div>
