@@ -11,7 +11,7 @@
   </div>
   <h4>Further Reading</h4>
   <div class="articles">
-  <?php show_articles(array(20)); ?>
+  <?php show_articles(array(18)); ?>
   </div>
 </div>
 

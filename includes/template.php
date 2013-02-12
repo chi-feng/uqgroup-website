@@ -117,7 +117,6 @@ printf("<li><a href=\"%s\">%s</a></li>\n",
       <p>Administrative Assistant<br />&nbsp;</p>
       <p><i class="icon-envelope"></i> shasen (at) mit.edu</p>
       <p><i class="icon-phone"></i> (617) 252-1536</p>
-      </p>
     </div>
   </div>
   <br style="clear: both" />
