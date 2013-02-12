@@ -12,7 +12,7 @@
   <div class="col-1-2">
     <h3>Principal Investigator</h3>
     <ul>
-      <li><a href="marzouk">Youssef Marzouk</a></li>
+      <li><a href="profiles#marzouk">Youssef Marzouk</a></li>
     </ul>
     <h3>Postdoctoral Associates</h3>
     <ul>
