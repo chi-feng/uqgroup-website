@@ -107,7 +107,7 @@ I am interested in modeling fuel cells and applying statistical methodologies fo
   <div class="name">
     <a href="">Alessio Spantini</a>
   </div>
-  <div class="bio">My research aims to construct low-rank/spectral representations of matrix-valued objects and random processes on multi-dimensional index sets via  tensor decomposition. My wish is to apply this knowledge to the solution of stochastic PDEs and random matrices arising, for example, in uncertain dynamical systems.  I grew up in Italy and I graduated in Aerospace Engineering from Politecnico di Milano in July, 2011. In my free time I love playing tennis, volleyball and jogging. I hold a Private Pilot License(a).  I also look forward to learn sailing on the muddy Charles.</div>
+  <div class="bio">My current research focuses in developing methods to enforce and efficiently exploit a low rank structure in the solution of a stochastic PDE via measure transformations (space-time stretching). Broadly speaking, I am interested in linear algebra, optimization, model reduction and UQ. I grew up in Italy and I graduated in Aerospace Engineering from Politecnico di Milano in July, 2011. In my free time I love sailing and jogging. I also hold a Private Pilot License.</div>
 </div>
     
 <h3 id="students-sm">Graduate Students, SM</h3>
