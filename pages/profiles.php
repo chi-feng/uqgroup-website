@@ -24,6 +24,7 @@
     <a href="">Florian Augustin</a>
   </div>
   <div class="bio">
+  I am interested in uncertainty quantification with Polynomial Chaos. My research includes the convergence analysis of numerical algorithms based on the stochastic Galerkin approach as well as structure preserving transformations for the Galerkin projected system. Moreover, I am interested in Compressive Sensing and robust optimization based on derivative free methods. I received my doctoral degree in Mathematics from the TUM (Munich, Germany) in 2011.
   </div>
 </div>
 
