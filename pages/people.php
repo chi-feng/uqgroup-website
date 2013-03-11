@@ -85,7 +85,8 @@
   </ul>
   <h3>Long Term Visitors</h3>
   <ul class="list">
-    <li><strong>Faidra Stavropoulou</strong></li>
+    <li><strong>Faidra Stavropoulou</strong> ()Institute of Biomathematics and Biometry
+Helmholtz Zentrum Munich, Germany)</li>
   </ul>
   <h3>Undergraduate Alumni</h3>
   <ul class="list">
