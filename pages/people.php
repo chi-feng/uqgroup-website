@@ -37,11 +37,6 @@
     
     </ul>
     
-    <h3>Undergraduate Students (UROP)</h3>
-    <ul>
-      <li><a>Yair Shenfeld</a></li>
-    </ul>
-    
   </div>
   <div class="col-2-2">
   
@@ -63,6 +58,11 @@
       <li><a href="profiles#feng">Chi Feng</a></li>
     </ul>
     
+    <h3>Undergraduate Students (UROP)</h3>
+    <ul>
+      <li><a>Yair Shenfeld</a></li>
+    </ul>
+    
   </div>
 </div>
 <br style="clear:both" />
@@ -79,9 +79,9 @@
   </ul>
   <h3>Graduate Alumni</h3>
   <ul class="list">
-    <li><strong>Thomas Coles</strong> (MIT)</strong></li>
-      <li><strong>Thomas Coles (MIT)</strong></li>
-      <li><strong>Subhadeep Mitra (Citibank)</strong></li>
+    <li><strong>Thomas Coles</strong> (MIT)</li>
+      <li><strong>Thomas Coles</strong> (MIT)</li>
+      <li><strong>Subhadeep Mitra</strong> (Citibank)</li>
   </ul>
   <h3>Long Term Visitors</h3>
   <ul class="list">
@@ -92,8 +92,8 @@
     <li><strong>Tomas Kogan</strong> (Cambridge University)</li>
     <li><strong>Kevin Lim</strong> (Princeton University, Department of Economics)</li>
     <li><strong>Hadi Kasab</strong> (American University of Beirut)</li>
-    <li><strong>George Hansel (MIT)</strong></li>
-    <li><strong>Michael Lieu (MIT)</strong></li>
-    <li><strong>Savithru Jayasinghe (Cambridge University)</strong></li>
+    <li><strong>George Hansel</strong> (MIT)</li>
+    <li><strong>Michael Lieu</strong> (MIT)</li>
+    <li><strong>Savithru Jayasinghe</strong> (Cambridge University)</li>
   </ul>
 </div>
