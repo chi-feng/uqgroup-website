@@ -107,7 +107,7 @@ printf("<li><a href=\"%s\">%s</a></li>\n",
       <p>Class of 1942 Associate Professor <br /> of Aeronautics and Astronautics</p>
       <p><i class="icon-envelope"></i> ymarz (at) mit.edu</p>
       <p><i class="icon-phone"></i> (617) 253-1337</p>
-      <p><i class="icon-map-marker"></i> 77 Massachusetts Ave, Room <a href="http://whereis.mit.edu/?go=33" target="_blank">33</a>-217<br />
+      <p><i class="icon-map-marker"></i> 77 Massachusetts Ave, Room <a href="http://whereis.mit.edu/?go=37" target="_blank">37</a>-451<br />
        <i>&nbsp;</i> Cambridge, MA 02139
       </p>
     </div>
