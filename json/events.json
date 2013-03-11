@@ -1,8 +1,8 @@
 [
 	{
 		"id": "0",
-		"start_date": "Feb 8, 2013",
-		"end_date": "Feb 8, 2013",
+		"start_date": "Feb 7, 2013",
+		"end_date": "Feb 7, 2013",
 		"start_time": "5:00pm",
 		"end_time": "6:30pm",
 		"name": "UQ Reading Group",
@@ -20,6 +20,16 @@
 		"content": ""
 	},
 	{
+		"id": "3",
+		"start_date": "Feb 21, 2013",
+		"end_date": "Feb 21, 2013",
+		"start_time": "5:00pm",
+		"end_time": "6:30pm",
+		"name": "UQ Reading Group",
+		"location": "33-419",
+		"content": "Discussion Leader: Matt Ueckermann\r\n\r\nTopic: Dynamically orthogonal method for stochastic PDEs:"
+	},
+	{
 		"id": "1",
 		"start_date": "Feb 25, 2013",
 		"end_date": "Mar 1, 2013",
@@ -28,5 +38,25 @@
 		"name": "SIAM CSE Conference, Boston",
 		"location": "The Westin Boston Waterfront",
 		"content": "http:\/\/www.siam.org\/meetings\/cse13\/"
+	},
+	{
+		"id": "4",
+		"start_date": "Mar 7, 2013",
+		"end_date": "Mar 7, 2013",
+		"start_time": "5:00pm",
+		"end_time": "6:30pm",
+		"name": "UQ Reading Group",
+		"location": "33-419",
+		"content": "Discussion Leader: Matt Parno\r\n\r\nTopic: \"Bayesian optimization\" "
+	},
+	{
+		"id": "5",
+		"start_date": "Mar 14, 2013",
+		"end_date": "Mar 14, 2013",
+		"start_time": "5:30 pm",
+		"end_time": "8:15 pm",
+		"name": "CCE\/CDO Student Symposium",
+		"location": "34-401",
+		"content": "http:\/\/computationalengineering.mit.edu\/events\/ccecdostudentsymposium.php"
 	}
 ]
