@@ -2,6 +2,9 @@
 
 <h2>Research Areas</h2>
 
+<p>Coming Soon!</p>
+
+<!-- 
 <h3>Optimal Bayesian Experimental Design</h3>
 <div class="blurb">
   <p>Not all experiments are created equal, some are more valuable than others. Performing experiments under conditions that maximize the value of data thus would lead to substantial resource savings. We develop a general mathematical framework and an algorithmic approach for optimal experimental design with nonlinear simulation-based models; in particular, we focus on finding sets of experiments that provide the most information about targeted sets of model parameters.</p>
@@ -28,6 +31,8 @@
   <?php show_articles(array(19)); ?>
   </div>
 </div>
+
+-->
 
 <script type="text/javascript" src="js/jquery.simplemodal.js"></script>
 <script type="text/javascript">
