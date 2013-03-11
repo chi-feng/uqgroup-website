@@ -68,7 +68,8 @@
     <a href="http://web.mit.edu/">Nikhil Galagali</a>
   </div>
   <div class="bio">
-I am interested in modeling fuel cells and applying statistical methodologies for parameter inference and model selection. My current work focuses on trying to elucidate electrochemical reaction mechanisms through a combination of physics-based modeling and Bayesian inference approaches. Outside the lab, I enjoy playing squash, guitar, and listening to music. Prior to beginning the doctoral program, I earned a masters degree in Computation for Design and Optimization from MIT and a bachelors degree in civil engineering from IIT Madras.</div>
+    My general research interests include Bayesian inference, Monte Carlo methods, and their applications to problems in chemical kinetics. Specifically, my current work focuses on the development of new model selection approaches for the elucidation of chemical reaction mechanisms. Prior to joining the UQ group, I received an SM degree from MIT and a B.Tech. degree from IIT Madras. Away from the lab, I enjoy music, playing squash, and running. 
+  </div>
 </div>
     
 <div id="gorodetsky" class="person clearfix">
