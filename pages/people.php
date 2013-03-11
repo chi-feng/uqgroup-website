@@ -10,28 +10,38 @@
 
 <div class="people-browser clearfix">  
   <div class="col-1-2">
+    
     <h3>Principal Investigator</h3>
     <ul>
       <li><a href="profiles#marzouk">Youssef Marzouk</a></li>
     </ul>
+    
+    <h3>Research Scientists</h3>
+    <ul>
+      <li><a href="profiles#moselhy">Tarek El Moselhy</a></li>
+    </ul>
+    
     <h3>Postdoctoral Associates</h3>
     <ul>
       <li><a href="profiles#augustin">Florian Augustin</a></li>
       <li><a href="profiles#cui">Tiangang Cui</a></li>
-      <li><a href="profiles#moselhy">Tarek El Moselhy</a></li>
       <li><a href="profiles#tosatto">Luca Tosatto</a></li>
     </ul>
+    
     <h3>Visiting Associates</h3>
     <ul>
       <li><a href="profiles#stavropoulou">Faidra Stavropoulou</a></li>
     </ul>
+    
     <h3>Undergraduates, SB &amp; UROP</h3>
     <ul>
       <li><a>George Hansel (MIT physics)</a></li>
       <li><a>Michael Lieu (MIT Aero Astro)</a></li>
     </ul>
+    
   </div>
   <div class="col-2-2">
+  
     <h3>Graduate Students, PhD</h3>
     <ul>
       <li><a href="profiles#conrad">Patrick Conrad</a></li>
@@ -42,12 +52,14 @@
       <li><a href="profiles#parno">Matthew Parno</a></li>
       <li><a href="profiles#spantini">Alessio Spantini</a></li>
     </ul>
+    
     <h3>Graduate Students, SM</h3>
     <ul>
       <li><a href="profiles#aggarwal">Raghav Aggarwal</a></li>
       <li><a href="profiles#feng">Chi Feng</a></li>
       <li><a href="profiles#mitra">Subhadeep Mitra</a></li>
     </ul>
+    
   </div>
 </div>
 
