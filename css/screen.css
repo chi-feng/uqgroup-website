@@ -210,7 +210,7 @@ div.archive p .icon-calendar { display: block; float: right; }
 .course { font-size: 95%; clear:both; margin-bottom: 1em; position:relative;}
 .course p { display: block; float: left; width: 36em ;}
 .course .title { font-size: 110%; padding-bottom: 0.5em; border-bottom: 1px solid #ccc; margin-bottom: 0.5em !important; }
-.course img { position: absolute; top:0; right: 0; width: 13em; height: 15em; margin-left: 0em; border-left: 1em solid #fff;}
+.course img { position: absolute; top:1.5em; right: 0; width: 13em; height: 15em; margin-left: 0em; border-left: 1em solid #fff;}
 
 .articles .even { background: #f3f3f3; }
 .articles .odd { background: #fcfcfc; }
