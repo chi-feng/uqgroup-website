@@ -12,7 +12,7 @@ foreach ($announcements as $index => $announcement) {
 <div class="col-2-2 archive">
 <h3>Upcoming Events</h3>
 <?php
-$all_events = get_upcoming_events(-1);
+$all_events = get_upcoming_events(100);
 echo $all_events; 
 ?>     
 <h3>Past Events</h3>

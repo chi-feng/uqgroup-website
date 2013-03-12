@@ -35,10 +35,12 @@ function articlesAttachHover() {
 
   $(".articles .article").hover(
     function () {
+      $(this).find($("div.article-buttons")).addClass('active');
       $(this).find($("a.button")).addClass('active');
       $(this).find($("a.thumbnail")).addClass('thumbnail-active');
     },
     function () {
+      $(this).find($("div.article-buttons")).removeClass('active');
       $(this).find($("a.button")).removeClass('active');
       $(this).find($("a.thumbnail")).removeClass('thumbnail-active');
     }

@@ -82,10 +82,11 @@ body { background: #ccc url('noisy_grid2.png') fixed; }
 #footer .footer-bottom { background:#222; }
 #header-wrap, #nav, #content-wrap, #footer-wrap { box-shadow: 0 0 2em 0 rgba(0,0,0,0.3); }
 
-/* transitions */
+/* transitions 
 #header-wrap, #nav-wrap, #content-wrap, #footer-wrap, #nav {-webkit-transition:width 0.5s ease;-moz-transition:width 0.5s ease;-ms-transition:width 0.5s ease;transition:width 0.5s ease;}
-.button, .btn, #publication-switcher h3 {-webkit-transition:all 0.15s ease-in-out;-moz-transition:all 0.15s ease-in-out;-ms-transition:all 0.15s ease-in-out;transition:all 0.15s ease-in-out;}
+.article-buttons, .article-buttons *, .btn, #publication-switcher h3 {-webkit-transition:all 0.15s ease-in-out;-moz-transition:all 0.15s ease-in-out;-ms-transition:all 0.15s ease-in-out;transition:all 0.15s ease-in-out;}
 #title a, #nav a, h1, h2, h3, #breadcrumbs, .btn, .button, #sidebar h2 *, i {-moz-user-select: none; webkit-user-select: none; }
+*/
 
 #title{width:100%;background:rgba(0,0,0,0.33);margin-top:1.3em;padding:0.5em 2.5em 1em 1.5em;}
 #title h1{font-size:190%;line-height:1.4em;}
@@ -237,17 +238,23 @@ textarea.bibtex{width:100%;height:15em;line-height:1.2em;font-size:80%;padding:0
 .article .keywords strong { font-weight: bold; }
 .article .abstract { display: none; clear: both; font-size: 90%; background:rgba(220,220,220,0.35); padding: 0.75em;  text-align: justify; }
 .article .fulltext { display: none; }
-#content .article a.button{position:absolute;padding:0.35em 0.5em;font-size:85%;right:0.5em;width:6.5em;border:1px solid transparent;color:#bbb;height:2em;}
+#content .article a.button{position:absolute;padding:0.35em 0.2em;font-size:85%;right:0.5em;width:6.1em;border:1px solid transparent;color:#bbb;height:2em;}
 #content .article a.button i { margin-right: 0.1em; }
 .article a.button-fulltext { top: 0.5em; }
 .article a.button-abstract { top: 2.5em; }
 .article a.button-bibtex { top: 4.5em; }
 .article a.button i { float: right; }
-.article a.button span.caption { }
-#content .article a.button:hover { border: 1px solid #b77; color: #933; }
-#content .article a.active { color: #933; }
-#content .article a.selected { background: #b77; color: #fff; }
-#content .article a.selected:hover { background: #933; color: #fff; }
+.article a.button span { opacity: 0.0; }
+
+#content .article a.button:hover, #content .article a.button:hover span { color: #933; }
+#content .article a.active {color: #999; }
+#content .article a.active span { opacity: 1.0;  color: #999;}
+/*#content .article a.selected { background: #b77; color: #fff; }
+#content .article a.selected:hover { background: #933; color: #fff; }*/
+
+#content .article-buttons { position: absolute; height: 5.9em; top: 0; right: 0; width: 6em;  }
+#content .even .article-buttons.active { background:#f3f3f3; }
+#content .odd .article-buttons.active { background:#fcfcfc; }
 
 #simplemodal-overlay {background-color:#000;}
 #simplemodal-container {height:20em; width:30em; color:#333; background-color:#fff; border:1px solid #ccc; padding:1em;}
@@ -270,7 +277,7 @@ textarea.bibtex{width:100%;height:15em;line-height:1.2em;font-size:80%;padding:0
 .conference-url {  }
 
 /* hanging indents */
-#content .article .abstract p { margin-bottom: 0;  }
+#content .article .abstract p { margin-bottom: 0; }
 #content .article .abstract p + p { text-indent: 1.5em; margin-top: 0; }
 
 /* research.php */
