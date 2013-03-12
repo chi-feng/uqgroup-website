@@ -65,11 +65,19 @@
 </div>
 
 <div id="tosatto" class="person clearfix">
-  <div class="photo"><img src="images/people/default.png" alt="tosatto" /></div>
+  <div class="photo"><img src="images/people/tosatto.png" alt="tosatto" /></div>
   <div class="name">
     <a href="">Luca Tosatto</a>
   </div>
-  <div class="bio"></div>
+  <div class="bio">
+    I am interested in model reduction and reactive flow simulations for
+    chemical systems with uncertain parameters. My research includes the
+    study of Markov chain approximations to generate reduced models for
+    chemical systems with stochastic fluctuations. I am also interested
+    in large scale simulations of reactive flows using distributed memory
+    algorithms. I received my doctoral degree in engineering from Yale
+    University in 2012.
+  </div>
 </div>
     
 <h3 id="students-phd">Graduate Students, PhD</h3>
