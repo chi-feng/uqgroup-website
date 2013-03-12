@@ -185,7 +185,7 @@
 <h3 id="students-sm">Graduate Students, SM</h3>
 
 <div id="aggarwal" class="person clearfix">
-  <div class="photo"><img src="images/people/default.png" alt="profile" /></div>
+  <div class="photo"><img src="images/people/aggarwal.png" alt="profile" /></div>
   <div class="name">
     <a href="">Raghav Aggarwal (co-advised with Michael Demkowicz, MIT DMSE)</a>
   </div>
