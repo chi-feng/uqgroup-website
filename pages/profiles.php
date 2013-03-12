@@ -8,7 +8,7 @@
   <a href="profiles">Profiles</a>
 </div>
     
-<h3 id="pi">Principle Investigator</h3>
+<h3 id="pi">Principal Investigator</h3>
     
 <div id="marzouk" class="person clearfix">
   <div class="photo"><img src="images/people/marzouk.gif" alt="marzouk" /></div>
@@ -61,6 +61,15 @@
   </div>
   <div class="bio">I am interested in solving inverse problems with polynomial chaos, which starts by creating effective approximations. Second, I am interested in finding ways of performing Bayesian inference more effectively, by developing Markov chain Monte Carlo algorithms that exploit problem structure. When not researching, I enjoy sailing and ultimate frisbee.</div>
 </div>
+
+<div id="davis" class="person clearfix">
+  <div class="photo"><img src="images/people/default.png" alt="profile" /></div>
+  <div class="name">
+    <a href="">Andrew Davis (co-advised with Patrick Heimbach, MIT EAPS)</a>
+  </div>
+  <div class="bio">Stuff.</div>
+</div>
+
 
 <div id="galagali" class="person clearfix">
   <div class="photo"><img src="images/people/galagali.gif" alt="profile" /></div>
@@ -117,7 +126,7 @@
 <div id="aggarwal" class="person clearfix">
   <div class="photo"><img src="images/people/default.png" alt="profile" /></div>
   <div class="name">
-    <a href="">Raghav Aggarwal</a>
+    <a href="">Raghav Aggarwal (co-advised with Michael Demkowicz, MIT DMSE)</a>
   </div>
   <div class="bio">Studying the underlying models which describe the nature of materials under extreme stress and strain.</div>
 </div>
