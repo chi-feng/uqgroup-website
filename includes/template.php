@@ -92,14 +92,7 @@ printf("<li><a href=\"%s\">%s</a></li>\n",
 </div> <!-- content-wrap -->
 <div id="footer-wrap">
 <div id="footer" class="clearfix">
-  <div class="logos-wrapper">
-  <ul class="logos">
-    <li><a href="http://mit.edu" target="_blank"><img src="images/mitlogo.png" alt="cce" width="200" /></a></li>
-    <li><a href="http://aeroastro.mit.edu" target="_blank"><img src="images/aeroastro.png" alt="aeroastro" width="180" /></a></li>
-    <li><a href="http://acdl.mit.edu" target="_blank"><img src="images/acdl.png" alt="acdl" width="100" /></a></li>
-    <li><a href="http://computationalengineering.mit.edu" target="_blank"><img src="images/cce.png" alt="cce" width="200" /></a></li>
-  </ul>
-  </div>
+  
   <div class="contact">
     <div class="youssef">
       <h4>Contact Information</h4>
@@ -119,6 +112,16 @@ printf("<li><a href=\"%s\">%s</a></li>\n",
       <p><i class="icon-phone"></i> (617) 252-1536</p>
     </div>
   </div>
+  
+  <div class="logos-wrapper">
+  <ul class="logos">
+    <li><a href="http://mit.edu" target="_blank"><img src="images/mitlogo.png" alt="cce" width="200" /></a></li>
+    <li><a href="http://aeroastro.mit.edu" target="_blank"><img src="images/aeroastro.png" alt="aeroastro" width="180" /></a></li>
+    <li><a href="http://acdl.mit.edu" target="_blank"><img src="images/acdl.png" alt="acdl" width="100" /></a></li>
+    <li><a href="http://computationalengineering.mit.edu" target="_blank"><img src="images/cce.png" alt="cce" width="200" /></a></li>
+  </ul>
+  </div>
+  
   <br style="clear: both" />
   <div class="footer-bottom clearfix">
     <div class="designed-by">

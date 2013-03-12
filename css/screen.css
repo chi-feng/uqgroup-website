@@ -21,6 +21,7 @@ code,pre{font-family:"Inconsolata","Consolas","Monaco",monospace;}
   .sidebar-box { width:33.3333%; float: left; border-right: 1px solid #ccc; min-height: 15em;}
   .sidebar-box:last-child {border-right: none;}
   .logos-wrapper { width: 17em; }
+  #content      { width:  50em; }
 }
 
 /* landscape */
@@ -28,10 +29,24 @@ code,pre{font-family:"Inconsolata","Consolas","Monaco",monospace;}
   #header-wrap, #content-wrap, #footer-wrap, #nav { width: 67em; }
   #sidebar-wrap { width:  17em; float:right; position: relative;}
   .logos-wrapper { width: 41em; }
+  #content      { width:  50em; }
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { }
+
+/* portrait */
+@media (max-width:50em) { 
+  #header-wrap, #content-wrap, #footer-wrap, #nav { width: 31.5em;  }
+  #sidebar { width: 31.5em; float:left; }
+  .sidebar-box { width:100%; float: left; border-right: 1px solid #ccc; min-height: 5em; clear: right;}
+  .sidebar-box:last-child {border-right: none;}
+  .logos-wrapper { width: 33em; text-align: center;}
+  #content      { width:  31.5em; }
+  #articles * { }
+  .article .thumbnail {display: none;}
+}
+
 
 html, body { height: 100%; }
 body { }
@@ -42,7 +57,7 @@ body { }
 #content-wrap { z-index: 1;  }
 #sidebar-wrap { }
 #sidebar      { width: 100%;}
-#content      { width:  50em; float: left; margin-right: -20em; padding: 1.5em 1.5em;  margin-left: -1px; position: relative; overflow: hidden; z-index: 2; }
+#content      { float: left; margin-right: -20em; padding: 1.5em 1.5em;  margin-left: -1px; position: relative; overflow: hidden; z-index: 2; }
 #footer       { padding: 0; width: 100%; }
 #nav.stuck    { margin: 0 auto; } 
 #nav          { }
@@ -88,11 +103,18 @@ body { background: #ccc url('noisy_grid2.png') fixed; }
 #title a, #nav a, h1, h2, h3, #breadcrumbs, .btn, .button, #sidebar h2 *, i {-moz-user-select: none; webkit-user-select: none; }
 */
 
-#title{width:100%;background:rgba(0,0,0,0.33);margin-top:1.3em;padding:0.5em 2.5em 1em 1.5em;}
+#title {width:100%;background:rgba(0,0,0,0.33);margin-top:1.3em;padding:0.5em 2.5em 1em 1.5em;}
 #title h1{font-size:190%;line-height:1.4em;}
 #title h2{font-size:120%;}
 #title h1 a{color:#fff;}
 #title h2 a{color:rgba(255,255,255,0.5);}
+
+@media (max-width:50em) { 
+  #title h1{font-size:150%;line-height:1.4em;}
+  #title h2{font-size:100%;}
+  #title {width:100%;background:rgba(0,0,0,0.33);margin-top:0.6em;padding:0.5em 2.5em 1em 1em;}
+  #header { height: 6em; }
+}
 
 #nav-wrap { }
 #nav ul { font-size: 90%; }
@@ -228,7 +250,7 @@ div.archive p .icon-calendar { display: block; float: right; }
 .article .author { }
 .article .journal { font-size: 90%; }
 .article .journal strong { font-weight: bold; }
-.article .title { font-weight: bold; font-style: italic; margin-bottom: 0.3em; padding-right: 6em; line-height: 1; }
+.article .title { font-weight: bold; font-style: italic; margin-bottom: 0.3em; padding-right: 2.5em; line-height: 1; }
 .article .title a { font-size: 95%; font-weight: bold; }
 .article div.bibtex { display: none; }
 textarea.bibtex{width:100%;height:15em;line-height:1.2em;font-size:80%;padding:0.5em;background:#fafafa;color:#333;border: 1px solid #ccc;}
@@ -255,6 +277,19 @@ textarea.bibtex{width:100%;height:15em;line-height:1.2em;font-size:80%;padding:0
 #content .article-buttons { position: absolute; height: 5.9em; top: 0; right: 0; width: 6em;  }
 #content .even .article-buttons.active { background:#f3f3f3; }
 #content .odd .article-buttons.active { background:#fcfcfc; }
+
+@media (max-width:50em) { 
+  #publication-switcher h3 {width: 100%; }
+  #publication-switcher-wrapper {width: 28.5em; }
+  #publication-switcher h3 {border:1px solid #999;border-radius:0.2em;}
+  #articles-wrapper, #conferences-wrapper, #books-wrapper { width: 28.4em; }
+  #publications-form { display:none; }
+  #content .article {padding-left: 0.7em; }
+  .course p { width: 100%; }
+  .course img {display: none; }
+  #footer .logos li { display: inline-block; width: 16em; padding: 1em 0 0 0em; text-align: center;}
+  #footer .logos img { height: 3.4em; width: 15em; margin: 0 0.5em; }
+}
 
 #simplemodal-overlay {background-color:#000;}
 #simplemodal-container {height:20em; width:30em; color:#333; background-color:#fff; border:1px solid #ccc; padding:1em;}
