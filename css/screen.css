@@ -195,8 +195,8 @@ a.btn:hover{background:#369;color:#eafaff;box-shadow:0 1px 0 rgba(255,255,255,0.
 .person .name a { display: block; color: #000; }
 .person .name a:hover { color: #666; }
 .person .photo, .person .photo img { /*border-radius: 0.2em; */}
-.person .photo { float: left; margin-right: 1.2em; /*padding: 1px 1px 0 1px; border: 1px solid #ddd;*/ box-shadow: 0px 5px 1.2em -5px rgba(0,0,0,0.5); }
-.person .photo img { width: 7em; height: 9.7em; /*margin-bottom:-3px;*/ }
+.person .photo { float: left; margin-right: 1.2em; /*padding: 1px 1px 0 1px; border: 1px solid #ddd;*/ }
+.person .photo img { width: 7em; height: 9.7em; /*margin-bottom:-3px;*/ box-shadow: 0px 5px 1.2em -5px rgba(0,0,0,0.5); }
 .person .bio { font-size:95%; }
 
 /* archive.php */
