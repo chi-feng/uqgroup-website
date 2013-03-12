@@ -19,7 +19,7 @@
 <h3 class="noline">Featured Publications</h3>
 
 <div class="articles">
-<?php show_articles(array(20, 19, 18)); ?>
+<?php show_articles(array(20, 21, 22)); ?>
 </div>
 
 <div class="see-all">
