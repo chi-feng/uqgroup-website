@@ -1,6 +1,6 @@
 <?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
 
-<h2>Research Areas</h2>
+<h2>Research Projects and Sponsors</h2>
 
 <p>Coming Soon!</p>
 
