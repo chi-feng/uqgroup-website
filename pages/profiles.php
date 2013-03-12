@@ -170,7 +170,7 @@
 </div>
     
 <div id="spantini" class="person clearfix">
-  <div class="photo"><img src="images/people/spantini.gif" alt="profile" /></div>
+  <div class="photo"><img src="images/people/spantini.png" alt="profile" /></div>
   <div class="name">
     <a href="">Alessio Spantini</a>
   </div>
