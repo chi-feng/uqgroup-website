@@ -250,7 +250,7 @@ div.archive p .icon-calendar { display: block; float: right; }
 .article .author { }
 .article .journal { font-size: 90%; }
 .article .journal strong { font-weight: bold; }
-.article .title { font-weight: bold; font-style: italic; margin-bottom: 0.3em; padding-right: 2.5em; line-height: 1; }
+.article .title { font-weight: bold; font-style: italic; margin-bottom: 0.3em; padding-right: 6em; line-height: 1; }
 .article .title a { font-size: 95%; font-weight: bold; }
 .article div.bibtex { display: none; }
 textarea.bibtex{width:100%;height:15em;line-height:1.2em;font-size:80%;padding:0.5em;background:#fafafa;color:#333;border: 1px solid #ccc;}
@@ -270,13 +270,17 @@ textarea.bibtex{width:100%;height:15em;line-height:1.2em;font-size:80%;padding:0
 
 #content .article a.button:hover, #content .article a.button:hover span { color: #933; }
 #content .article a.active {color: #999; }
-#content .article a.active span { opacity: 1.0;  color: #999;}
+#content .article a.active span { color: #999;}
 /*#content .article a.selected { background: #b77; color: #fff; }
 #content .article a.selected:hover { background: #933; color: #fff; }*/
 
 #content .article-buttons { position: absolute; height: 5.9em; top: 0; right: 0; width: 6em;  }
-#content .even .article-buttons.active { background:#f3f3f3; }
-#content .odd .article-buttons.active { background:#fcfcfc; }
+#content .article-buttons.active span { opacity: 0.4;}
+#content .article-buttons:hover span { opacity: 1.0; }
+#content .even .article-buttons.active { background:inherit; }
+#content .odd .article-buttons.active { background:inherit; }
+#content .even:hover { background:#efefef; }
+#content .odd:hover { background:#f8f8f8; }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   #publication-switcher h3 {width: 100%; }
