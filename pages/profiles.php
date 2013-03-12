@@ -87,11 +87,19 @@
 </div>
 
 <div id="davis" class="person clearfix">
-  <div class="photo"><img src="images/people/default.png" alt="profile" /></div>
+  <div class="photo"><img src="images/people/davis.png" alt="profile" /></div>
   <div class="name">
     <a href="">Andrew Davis (co-advised with Patrick Heimbach, MIT EAPS)</a>
   </div>
-  <div class="bio">Stuff.</div>
+  <div class="bio">I am interested in combining large-scale simulations of geophysical 
+    phenomena, often involving numerical PDEs, with inversion and inference algorithms, such as PDE 
+    constrained optimization and Markov chain Monte Carlo.  Specifically, we are trying to quantify 
+    uncertainty in parameter reconstruction given model and data errors.
+    <br />
+    I received my Bachelor's degree in Mathematics from Clarkson University in 2010 and my 
+    Masters in Computation from Design and Optimization from MIT in 2012.  The picture was taken in 
+    Svalbard, Norway, an Arctic archipelago, where I spent a summer collecting glacier and fjord data.
+  </div>
 </div>
 
 
