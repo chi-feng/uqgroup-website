@@ -190,7 +190,12 @@
     <a href="">Raghav Aggarwal (co-advised with Michael Demkowicz, MIT DMSE)</a>
   </div>
   <div class="bio">
-    Studying the underlying models which describe the nature of materials under extreme stress and strain.
+    I am interested inferring grain boundary crystallography-property relations from heterogeneous data, 
+    using Bayesian methods. In particular, my research seeks to understand the mechanisms of gallium 
+    penetration into aluminum, by developing physics-based models and performing both parameter inference 
+    and model selection, using experimental data collected across a range of scales. I received my 
+    bachelors degree from IIT, Delhi in 2012. During my time off work, I enjoy boxing, film photography 
+    and cooking.
   </div>
 </div>
 
