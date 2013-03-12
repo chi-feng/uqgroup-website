@@ -80,13 +80,11 @@
   <h3>Graduate Alumni</h3>
   <ul class="list">
     <li><strong>Thomas Coles</strong> (MIT)</li>
-      <li><strong>Thomas Coles</strong> (MIT)</li>
       <li><strong>Subhadeep Mitra</strong> (Citibank)</li>
   </ul>
   <h3>Long Term Visitors</h3>
   <ul class="list">
-    <li><strong>Faidra Stavropoulou</strong> ()Institute of Biomathematics and Biometry
-Helmholtz Zentrum Munich, Germany)</li>
+    <li><strong>Faidra Stavropoulou</strong> (TU Munich)</li>
   </ul>
   <h3>Undergraduate Alumni</h3>
   <ul class="list">
