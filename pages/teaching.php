@@ -5,8 +5,7 @@
 <div class="course clearfix">
   <a href="http://stellar.mit.edu/S/course/16/sp12/16.940/index.html"><img src="images/teaching/16.940.png" /></a>
   <p class="title">
-    <strong>16.940 Numerical Methods for Stochastic Modeling and Inference</strong>
-    <br />by Y.M. Marzouk
+    <strong>16.940: Numerical Methods for Stochastic Modeling and Inference</strong>
   </p>
   <p>Offered Spring 2010, Spring 2012, Spring 2014</p>
   <p>
@@ -18,8 +17,7 @@
 <div class="course clearfix">
   <a href="http://stellar.mit.edu/S/course/16/fa11/16.100/index.html"><img src="http://stellar.mit.edu/S/course/16/fa11/16.100/nexusMaterial/images/homePageImage" /></a>
   <p class="title">
-    <strong>16.100 Aerodynamics</strong>
-    <br />by Y.M. Marzouk 
+    <strong>16.100: Aerodynamics</strong>
   </p>
   <p>Offered Fall 2009, 2010, 2011; Fall 2013</p>
   <p>
@@ -30,8 +28,7 @@
 <div class="course clearfix">
   <a href="http://stellar.mit.edu/S/course/16/sp11/16.90/index.html"><img src="http://stellar.mit.edu/S/course/16/sp12/16.90/nexusMaterial/images/homePageImage" /></a>
   <p class="title">
-    <strong>16.90 Computational Methods in Aerospace Engineering</strong>
-    <br />by Y.M. Marzouk
+    <strong>16.90: Computational Methods in Aerospace Engineering</strong>
   </p>
   <p>Offered Spring 2009, 2010, 2011</p>
   <p>
