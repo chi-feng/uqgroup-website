@@ -1,6 +1,6 @@
 RewriteEngine On
 #RewriteBase /~feng/uqgroup/
-RewriteBase /uqgroup/
+#RewriteBase /uqgroup/
 
 RewriteRule ^admin?$ admin.php [NC,L]
 RewriteRule ^/?$ index.php?p=home [NC,L]
