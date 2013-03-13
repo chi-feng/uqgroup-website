@@ -33,7 +33,7 @@
     
   <li><a href="http://perso.limsi.fr/Individu/mathelin/">Lionel Mathelin, LIMSI/CNRS (France)</a></li>
   <li><a href="http://www.ucl.ac.uk/statistics/people/bencalderhead">Ben Calderhead, University College London (UK)</a></li>
-  <li><a href="http://www.jinglaili.net/">Jinglai Li, Shanghai Jiatong University (China)</a></li>
+  <li><a href="http://www.jinglaili.net/">Jinglai Li, Shanghai Jiaotong University (China)</a></li>
     
     </ul>
     
