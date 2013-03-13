@@ -24,6 +24,22 @@
   </div>
 </div>
 
+<h3 id="research-scientists">Research Scientists</h3>
+
+<div id="moselhy" class="person clearfix">
+  <div class="photo"><img src="images/people/moselhy.gif" alt="moselhy" /></div>
+  <div class="name">
+    <a href="http://web.mit.edu/tmoselhy/www/">Tarek El Moselhy</a>
+  </div>
+  <div class="bio">
+    My research interests include numerical methods for stochastic PDEs, Bayesian inference, 
+    interconnect parasitic extraction under manufacturing uncertainties, and floating random walk. I received 
+    my PhD in electrical engineering from MIT in 2010, working with Prof. Luca Daniel in the Computational 
+    Prototyping Group. I received my MSc in engineering mathematics (2005) a Diploma in mathematics (2003) and 
+    my BSc in communication engineering (2000) all from Cairo University, Egypt.
+    </div>
+</div>
+
 <h3 id="postdocs">Postdoctoral Associates</h3>
 
 <div id="augustin" class="person clearfix">
@@ -48,20 +64,6 @@
   <div class="bio">
     Stuff.
   </div>
-</div>
-
-<div id="moselhy" class="person clearfix">
-  <div class="photo"><img src="images/people/moselhy.gif" alt="moselhy" /></div>
-  <div class="name">
-    <a href="http://web.mit.edu/tmoselhy/www/">Tarek El Moselhy</a>
-  </div>
-  <div class="bio">
-    My research interests include numerical methods for stochastic PDEs, Bayesian inference, 
-    interconnect parasitic extraction under manufacturing uncertainties, and floating random walk. I received 
-    my PhD in electrical engineering from MIT in 2010, working with Prof. Luca Daniel in the Computational 
-    Prototyping Group. I received my MSc in engineering mathematics (2005) a Diploma in mathematics (2003) and 
-    my BSc in communication engineering (2000) all from Cairo University, Egypt.
-    </div>
 </div>
 
 <div id="tosatto" class="person clearfix">
