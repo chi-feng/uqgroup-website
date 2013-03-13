@@ -62,7 +62,11 @@
     <a href="">Tiangang Cui</a>
   </div>
   <div class="bio">
-    Stuff.
+    I am interested in large scale inverse problems, data assimilation, spatial statistics, and 
+    applications in environmental fluids. My recent research focus on scalable Markov chain Monte 
+    Carlo methods, goal oriented model order reduction techniques, and methods for exploiting the 
+    intrinsic low dimensional structure of high dimensional probability distributions. I received
+    my PhD in Engineering Science from the University of Auckland, New Zealand in 2010.
   </div>
 </div>
 
