@@ -14,13 +14,13 @@
   <div class="photo"><img src="images/people/marzouk.gif" alt="marzouk" /></div>
   <div class="name"><a href="http://web.mit.edu/aeroastro/people/marzouk.html">Youssef Marzouk</a></div>
   <div class="bio">
-    He is the Class of 1942 Associate Professor of Aeronautics and Astronautics at MIT. 
+    Youssef is the Class of 1942 Associate Professor of Aeronautics and Astronautics at MIT. 
     He received his SB (1997), SM (1999), and PhD (2004) degrees in mechanical engineering from MIT. 
-    Afterwards, he spent four years at Sandia National Laboratories in Livermore, California — 
-    first as a Truman postdoctoral fellow and then as a senior member of the technical staff — 
-    before returning to MIT and joining the faculty in 2009. He is a recipient of the Hertz Foundation 
-    Doctoral Thesis Prize (2004) and the DOE Early Career Research Award (2010). Youssef is also an avid 
-    classical pianist.
+    Afterwards, he spent four years at Sandia National Laboratories in Livermore, California&#151;first 
+    as a Truman postdoctoral fellow and then as a senior member of the technical staff&#151;before returning 
+    to MIT and joining the faculty in 2009. He is a recipient of the Hertz Foundation 
+    Doctoral Thesis Prize (2004), the DOE Early Career Research Award (2010), and the MIT Junior Bose Award for
+    Excellence in Teaching (2012). Youssef is also an avid coffee drinker and classical pianist.
   </div>
 </div>
 
@@ -63,8 +63,8 @@
   </div>
   <div class="bio">
     I am interested in large scale inverse problems, data assimilation, spatial statistics, and 
-    applications in environmental fluids. My recent research focus on scalable Markov chain Monte 
-    Carlo methods, goal oriented model order reduction techniques, and methods for exploiting the 
+    applications in environmental fluids. My recent research focuses on scalable Markov chain Monte 
+    Carlo methods, goal-oriented model order reduction techniques, and methods for exploiting the 
     intrinsic low dimensional structure of high dimensional probability distributions. I received
     my PhD in Engineering Science from the University of Auckland, New Zealand in 2010.
   </div>
@@ -192,7 +192,7 @@
     in the solution of a stochastic PDE via measure transformations (space-time stretching). Broadly speaking, 
     I am interested in linear algebra, optimization, model reduction and UQ. I grew up in Italy and I graduated 
     in Aerospace Engineering from Politecnico di Milano in July, 2011. In my free time I love sailing and jogging. 
-    I also hold a Private Pilot License.
+    I also hold a private pilot license.
   </div>
 </div>
     
