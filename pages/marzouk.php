@@ -10,7 +10,7 @@
 
 <?php
   
-$homepage = file_get_contents('http://web.mit.edu/aeroastro/people/marzouk.html');
+$homepage = file_get_contents('http://aeroastro.mit.edu/faculty-research/faculty-list/youssef-m-marzouk');
 
 $start = strpos($homepage, '<div id="divtext">');
 $end = strpos($homepage, '</div>', $start);
