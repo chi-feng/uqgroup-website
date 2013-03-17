@@ -12,7 +12,7 @@
     
 <div id="marzouk" class="person clearfix">
   <div class="photo"><img src="images/people/marzouk.gif" alt="marzouk" /></div>
-  <div class="name"><a href="http://web.mit.edu/aeroastro/people/marzouk.html">Youssef Marzouk</a></div>
+  <div class="name"><a href="http://aeroastro.mit.edu/faculty-research/faculty-list/youssef-m-marzouk">Youssef Marzouk</a></div>
   <div class="bio">
     Youssef is the Class of 1942 Associate Professor of Aeronautics and Astronautics at MIT. 
     He received his SB (1997), SM (1999), and PhD (2004) degrees in mechanical engineering from MIT. 
