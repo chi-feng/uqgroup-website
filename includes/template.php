@@ -96,7 +96,7 @@ printf("<li><a href=\"%s\">%s</a></li>\n",
   <div class="contact">
     <div class="youssef">
       <h4>Contact Information</h4>
-      <p><a href="http://web.mit.edu/aeroastro/people/marzouk.html" target="_blank"><strong>Youssef Marzouk</strong></a></p>
+      <p><a href="http://aeroastro.mit.edu/faculty-research/faculty-list/youssef-m-marzouk" target="_blank"><strong>Youssef Marzouk</strong></a></p>
       <p>Class of 1942 Associate Professor <br /> of Aeronautics and Astronautics</p>
       <p><i class="icon-envelope"></i> ymarz (at) mit.edu</p>
       <p><i class="icon-phone"></i> (617) 253-1337</p>
