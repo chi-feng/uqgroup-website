@@ -25,16 +25,13 @@
     <ul>
       <li><a href="profiles#augustin">Florian Augustin</a></li>
       <li><a href="profiles#cui">Tiangang Cui</a></li>
+      <li><a href="profiles#solonen">Antti Solonen</a></li>
       <li><a href="profiles#tosatto">Luca Tosatto</a></li>
     </ul>
     
     <h3>Current Visitors</h3>
     <ul>
-    
-  <li><a href="http://perso.limsi.fr/Individu/mathelin/">Lionel Mathelin, LIMSI/CNRS (France)</a></li>
-  <li><a href="http://www.ucl.ac.uk/statistics/people/bencalderhead">Ben Calderhead, University College London (UK)</a></li>
-  <li><a href="http://www.jinglaili.net/">Jinglai Li, Shanghai Jiaotong University (China)</a></li>
-    
+      <li><a href="http://www.ucl.ac.uk/statistics/people/bencalderhead">Ben Calderhead, University College London (UK)</a></li>
     </ul>
     
   </div>
@@ -47,7 +44,6 @@
       <li><a href="profiles#galagali">Nikhil Galagali</a></li>
       <li><a href="profiles#gorodetsky">Alex Gorodetsky</a></li>
       <li><a href="profiles#huan">Xun Huan</a></li>
-      <li><a href="profiles#naveen">Naveen Kartik Conjeevaram Krishnakumar</a></li>
       <li><a href="profiles#parno">Matthew Parno</a></li>
       <li><a href="profiles#spantini">Alessio Spantini</a></li>
     </ul>
@@ -56,6 +52,7 @@
     <ul>
       <li><a href="profiles#aggarwal">Raghav Aggarwal</a></li>
       <li><a href="profiles#feng">Chi Feng</a></li>
+      <li><a href="profiles#wang">Zheng Wang</a></li>
     </ul>
     
     <h3>Undergraduate Students (UROP)</h3>
@@ -80,11 +77,14 @@
   <h3>Graduate Alumni</h3>
   <ul class="list">
     <li><strong>Thomas Coles</strong> (MIT)</li>
-      <li><strong>Subhadeep Mitra</strong> (Citibank)</li>
+    <li><strong>Subhadeep Mitra</strong> (Citibank)</li>
+    <li><strong>Naveen Kartik Conjeevaram Krishnakumar</strong> (Grantham Mayo van Otterloo)</li>
   </ul>
   <h3>Long Term Visitors</h3>
   <ul class="list">
     <li><strong>Faidra Stavropoulou</strong> (TU Munich)</li>
+    <li><a href="http://perso.limsi.fr/Individu/mathelin/">Lionel Mathelin, LIMSI/CNRS (France)</a></li>
+    <li><a href="http://www.jinglaili.net/">Jinglai Li, Shanghai Jiaotong University (China)</a></li>
   </ul>
   <h3>Undergraduate Alumni</h3>
   <ul class="list">

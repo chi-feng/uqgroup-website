@@ -76,6 +76,7 @@ function render_article($index, $article) {
     '  author = "' . implode(' and ', $article['authors']) . '",',
     '  journal = "' . $article['journal'] . '",',
     '  volume = "' . $article['volume'] . '",',
+    '  year ="' . $article['year'] .'",',
     '  number = "' . $article['number'] . '",',
     '  pages = "' . $article['pages'] . '",',
     '  doi = "' . $article['doi'] . '"',
