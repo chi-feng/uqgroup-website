@@ -82,9 +82,10 @@
   </ul>
   <h3>Long Term Visitors</h3>
   <ul class="list">
-    <li><strong>Faidra Stavropoulou</strong> (TU Munich)</li>
-    <li><a href="http://perso.limsi.fr/Individu/mathelin/">Lionel Mathelin, LIMSI/CNRS (France)</a></li>
+    <li><strong>Dominic Kohler</strong> (Siemens AG)</li>
     <li><a href="http://www.jinglaili.net/">Jinglai Li, Shanghai Jiaotong University (China)</a></li>
+    <li><a href="http://perso.limsi.fr/Individu/mathelin/">Lionel Mathelin, LIMSI/CNRS (France)</a></li>
+    <li><strong>Faidra Stavropoulou</strong> (TU Munich)</li>
   </ul>
   <h3>Undergraduate Alumni</h3>
   <ul class="list">
