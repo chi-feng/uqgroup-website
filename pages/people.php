@@ -16,11 +16,6 @@
       <li><a href="profiles#marzouk">Youssef Marzouk</a></li>
     </ul>
     
-    <h3>Research Scientists</h3>
-    <ul>
-      <li><a href="profiles#moselhy">Tarek El Moselhy</a></li>
-    </ul>
-    
     <h3>Postdoctoral Associates</h3>
     <ul>
       <li><a href="profiles#augustin">Florian Augustin</a></li>
@@ -31,7 +26,8 @@
     
     <h3>Current Visitors</h3>
     <ul>
-      <li><a href="http://www.ucl.ac.uk/statistics/people/bencalderhead">Ben Calderhead, University College London (UK)</a></li>
+      <li><a href="">Daniele Bigoni, Technical University of Denmark</a></li>
+      <li><a href="http://www.ucl.ac.uk/statistics/people/bencalderhead">Ben Calderhead, Imperial College London</a></li>
     </ul>
     
   </div>
@@ -72,6 +68,7 @@
     <li><strong>Sonjoy Das</strong> (University of Buffalo, Mechanical and Aerospace Engineering) <a href="http://lotus.eng.buffalo.edu/"><i class="icon-external-link"></i></a></li>
     <li><strong>Michalis Frangos</strong> (Schlumberger)</li>
     <li><strong>Jinglai Li</strong> (Shanghai Jiaotong University) <a href="http://www.jinglaili.net/"><i class="icon-external-link">&nbsp;</i></a></li>
+    <li><a href="http://web.mit.edu/tmoselhy/www/">Tarek El Moselhy</a> D. E. Shaw Group</li>
     <li><strong>Ankur Srivastava</strong> (GE Global Research) <a href="http://www.linkedin.com/pub/ankur-srivastava/21/285/6b6"><i class="icon-external-link">&nbsp;</i></a></li>
   </ul>
   <h3>Graduate Alumni</h3>
