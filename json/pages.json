@@ -35,4 +35,8 @@
         "tab": "home", 
         "title": "Announcements Archive"
     }
+    "outings": {
+        "tab": "outings", 
+        "title": "Outings"
+    }
 }
