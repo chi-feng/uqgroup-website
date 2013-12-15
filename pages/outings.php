@@ -14,3 +14,14 @@
 </div>
 
 <br style="clear: both" />
+
+<div class="outing">
+  <h3>Apple Picking (2013/10)</h3>
+  <div class="gallery">
+    <a href="/images/outings/2013apple/apple1.jpg" data-lightbox="2013apple"><img src="images/outings/2013apple/thumb.apple1.jpg" /></a>
+    <a href="/images/outings/2013apple/apple2.jpg" data-lightbox="2013apple"><img src="images/outings/2013apple/thumb.apple2.jpg" /></a>
+    <a href="/images/outings/2013apple/apple3.jpg" data-lightbox="2013apple"><img src="images/outings/2013apple/thumb.apple3.jpg" /></a>
+  </div>
+</div>
+
+<br style="clear: both" />
