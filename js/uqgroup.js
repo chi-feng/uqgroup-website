@@ -14,7 +14,7 @@ $(function() {
 		if (scroll_top > sticky_navigation_offset_top) { 
 			$('#nav-wrap').css({ 'position': 'fixed', 'z-index':3 });
       $('#nav').addClass('stuck');   
-      $('#sidebar-wrap, #content').css({'margin-top':'2.25em'});   
+      $('#sidebar-wrap, #content').css({'margin-top':'2.8em'});   
       $('#nav .totop').css({'opacity':'1'});   
 		} else {
 			$('#nav-wrap').css({ 'position': 'relative', 'z-index':0 }); 
@@ -26,6 +26,10 @@ $(function() {
 	sticky_navigation();
 	$(window).scroll(function() {
 		 sticky_navigation();
+     var speedFactor = -0.4;
+     var pos = $(window).scrollTop();
+     $('#header').css('backgroundPosition', "50% " + Math.round(($('#header').offset().top - pos) * speedFactor) + "px");
+     $('#footer-wrap').css('backgroundPosition', "50% " + Math.round(($('#footer-wrap').offset().top - pos) * (-0.5)) + "px");
 	});	
 });
 
