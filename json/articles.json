@@ -1,5 +1,27 @@
 [
 	{
+		"id": "25",
+		"title": "Adaptive construction of surrogates for the Bayesian solution of inverse problems",
+		"keywords": "Bayesian inference, cross-entropy method, importance sampling, inverse problem, Kullback-Leibler divergence, Markov chain Monte Carlo, polynomial chaos",
+		"authors": [
+			"Li, J.",
+			"Marzouk, Y."
+		],
+		"abstract": "The Bayesian approach to inverse problems typically relies on posterior sampling approaches, such as Markov chain Monte Carlo, for which the generation of each sample requires one or more evaluations of the parameter-to-observable map or forward model. When these evaluations are computationally intensive, approximations of the forward model are essential to accelerating sample-based inference. Yet the construction of globally accurate approximations for nonlinear forward models can be computationally prohibitive and in fact unnecessary, as the posterior distribution typically concentrates on a small fraction of the support of the prior distribution. We present a new approach that uses stochastic optimization to construct polynomial approximations over a sequence of measures adaptively determined from the data, eventually concentrating on the posterior distribution. The approach yields substantial gains in efficiency and accuracy over prior-based surrogates, as demonstrated via application to inverse problems in partial differential equations.",
+		"order": "26",
+		"fulltext": "http:\/\/arxiv.org\/abs\/1309.5524",
+		"journal": "Submitted",
+		"doi": "",
+		"year": "2013",
+		"arxiv": "1309.5524",
+		"volume": "",
+		"thumbnail": "arxiv2.png",
+		"number": "",
+		"month": "0",
+		"pages": "",
+		"comments": "Submitted"
+	},
+	{
 		"id": "24",
 		"title": "A priori testing of sparse adaptive polynomial chaos expansions using an ocean general circulation model database",
 		"keywords": "",
@@ -13,19 +35,19 @@
 			"Marzouk, Y.M.",
 			"Iskandarani, M."
 		],
-		"abstract": "",
+		"abstract": "This work explores the implementation of an adaptive strategy to design sparse ensembles of oceanic simulations suitable for constructing polynomial chaos surrogates. We use a recently developed pseudo-spectral algorithm that is based on a direct application of the Smolyak sparse grid formula and that allows the use of arbitrary admissible sparse grids. The adaptive algorithm is tested using an existing simulation database of the oceanic response to Hurricane Ivan in the Gulf of Mex- ico. The a priori tests demonstrate that sparse and adaptive pseudo-spectral constructions lead to substantial savings over isotropic sparse sampling in the present setting.",
 		"order": "25",
-		"fulltext": "",
-		"journal": "Submitted",
-		"doi": "",
+		"fulltext": "http:\/\/dx.doi.org\/10.1007\/s10596-013-9361-3",
+		"journal": "Computational Geosciences",
+		"doi": "10.1007\/s10596-013-9361-3",
 		"year": "2013",
 		"arxiv": "",
-		"volume": "",
+		"volume": "In press",
 		"thumbnail": "arxiv1.png",
 		"number": "",
-		"month": "0",
+		"month": "7",
 		"pages": "",
-		"comments": "Submitted to Computational Geosciences"
+		"comments": "Issue not yet assigned"
 	},
 	{
 		"id": "23",
@@ -38,16 +60,16 @@
 		"abstract": "Optimal experimental design (OED) seeks experiments expected to yield the most useful data for some purpose. In practical circumstances where experiments are time-consuming or resource-intensive, OED can yield enormous savings. We pursue OED for nonlinear systems from a Bayesian perspective, with the goal of choosing experiments that are optimal for parameter inference. Our objective in this context is the expected information gain in model parameters, which in general can only be estimated using Monte Carlo methods. Maximizing this objective thus becomes a stochastic optimization problem. \r\n\r\n<p>This paper develops gradient-based stochastic optimization methods for the design of experiments on a continuous parameter space. Given a Monte Carlo estimator of expected information gain, we use infinitesimal perturbation analysis to derive gradients of this estimator. We are then able to formulate two gradient-based stochastic optimization approaches: (i) Robbins-Monro stochastic approximation, and (ii) sample average approximation combined with a deterministic quasi-Newton method. A polynomial chaos approximation of the forward model accelerates objective and gradient evaluations in both cases. We discuss the implementation of these optimization methods, then conduct an empirical comparison of their performance. To demonstrate design in a nonlinear setting with partial differential equation forward models, we use the problem of sensor placement for source inversion. Numerical results yield useful guidelines on the choice of algorithm and sample sizes, assess the impact of estimator bias, and quantify tradeoffs of computational cost versus solution quality and robustness.",
 		"order": "24",
 		"fulltext": "http:\/\/arxiv.org\/abs\/1212.2228",
-		"journal": "Submitted",
+		"journal": "International Journal for Uncertainty Quantification",
 		"doi": "",
 		"year": "2013",
 		"arxiv": "http:\/\/arxiv.org\/abs\/1212.2228",
-		"volume": "",
+		"volume": "In press",
 		"thumbnail": "arxiv1.png",
 		"number": "",
 		"month": "0",
 		"pages": "",
-		"comments": "Submitted to International Journal for Uncertainty Quantification"
+		"comments": "International Journal for Uncertainty Quantification, in press"
 	},
 	{
 		"id": "22",
@@ -60,16 +82,16 @@
 		"abstract": "Polynomial approximations of computationally intensive models are central to uncertainty quantification. This paper describes an adaptive method for non-intrusive pseudospectral approximation, based on Smolyak's algorithm with generalized sparse grids. We rigorously develop and generalize the non-adaptive method proposed in [6], and compare it to a common alternative approach for using sparse grids to construct polynomial approximations, direct quadrature. Analysis of direct quadrature shows that O(1) errors are an intrinsic property of some configurations of the method, as a consequence of internal aliasing. We provide precise conditions, based on the chosen polynomial basis and quadrature rules, under which this aliasing error occurs. We then establish theoretical results on the accuracy of Smolyak pseudospectral approximation, and show that the Smolyak approximation avoids internal aliasing and makes far more effective use of sparse function evaluations. These results are applicable to broad choices of quadrature rule and generalized sparse grids. Exploiting this flexibility, we introduce a greedy heuristic for adaptive refinement of the pseudospectral approximation. We numerically demonstrate convergence of the algorithm on the Genz test functions, and illustrate the accuracy and efficiency of the adaptive approach on a realistic chemical kinetics problem.",
 		"order": "23",
 		"fulltext": "http:\/\/arxiv.org\/abs\/1209.1406",
-		"journal": "Submitted",
+		"journal": "SIAM Journal on Scientific Computing",
 		"doi": "",
 		"year": "2013",
 		"arxiv": "http:\/\/arxiv.org\/abs\/1209.1406",
-		"volume": "",
+		"volume": "in press",
 		"thumbnail": "arxiv2.png",
 		"number": "",
 		"month": "0",
 		"pages": "",
-		"comments": "Submitted to SIAM Journal on Scientific Computing"
+		"comments": "In press"
 	},
 	{
 		"id": "17",
