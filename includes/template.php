@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>UQGroup - <?=$t['title'];?></title> 
-  <link href="css/screen.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
   <link href="css/font-awesome.css"  rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="js/jquery.min.js"></script>
