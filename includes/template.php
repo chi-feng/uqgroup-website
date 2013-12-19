@@ -17,27 +17,28 @@
   <link rel="shortcut icon" href="favicon.ico" />  
 </head>
 <body>
+<div id="vertical-container">
 <div id="header-wrap">
   <div id="header" class="clearfix">
     <div id="title">
+      <div id="title-wrap">
       <h1><a href="home">Uncertainty Quantification Group</a></h1>
       <h2><a href="http://mit.edu">Massachusetts Institute of Technology</a></h2>
+      </div>
     </div>
   </div>
 </div>
 <div id="nav-wrap" class="clearfix">
   <div id="nav" class="clearfix">
     <ul id="navbar">
-      
       <?php
       foreach ($tabs as $key => $value) {
         $active = ($pages[$page]['tab'] == $key) ? ' class="active"' : ''; 
         printf("<li><a href=\"%s\"%s>%s</a></li>\n", $key, $active, $value['name']);
       }
       ?>
-      
-      <a class="totop" onclick="$('html, body').animate({scrollTop:0}, 500);"><i class="icon-circle-arrow-up"></i></a>
     </ul>
+    <a class="totop" onclick="$('html, body').animate({scrollTop:0}, 500);"><i class="icon-circle-arrow-up"></i></a>
   </div>
 </div>
 <div id="content-wrap" class="clearfix">
@@ -124,14 +125,19 @@ printf("<li><a href=\"%s\">%s</a></li>\n",
   </div>
   
   <br style="clear: both" />
-  <div class="footer-bottom clearfix">
+</div>
+
+  <div id="footer-bottom" class="clearfix">
+    <div class="center-width">
     <div class="designed-by">
       Design by <a href="http://chifeng.scripts.mit.edu/">Chi Feng</a>
     </div>
     <div class="copyright">
       Copyright &copy;2013, MIT Uncertainty Quantification Group.  
     </div>
+    </div>
   </div>
+
 </div>
 </div>
 <script type="text/javascript">

@@ -68,10 +68,6 @@ foreach ($conferences as $index => $conference) {
 <script type="text/javascript">
 //<![CDATA[
 
-function copyToClipboard (selector) {
-  window.prompt ("Copy to clipboard: Ctrl+C, Enter", $(selector).html());
-}
-
 function populateFilters(articles) {
   
   var d = new Date();
@@ -142,7 +138,7 @@ $(document).ready(function() {
     articles = data;
     populateFilters(articles);
     articlesAttachHover();
-    $("#publication-switcher-wrapper").height($('#articles').height() + 30);
+    $("#publication-switcher-wrapper").height($('#articles').height() + 5);
   });
     
   $("#publications-form select").change(function () {

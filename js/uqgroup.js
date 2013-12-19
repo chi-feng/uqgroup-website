@@ -31,8 +31,6 @@ $(function() {
 
 function articlesAttachHover() {
 
-  $('textarea.bibtex').click(function() { $(this).select(); });
-
   $(".articles .article").hover(
     function () {
       $(this).find($("div.article-buttons")).addClass('active');

@@ -23,7 +23,7 @@
 </div>
 
 <div class="see-all">
-  <a href="publications">Show all publications</a>
+  <a href="publications">See all publications</a>
 </div>
 
 <script type="text/javascript" src="js/jquery.simplemodal.js"></script>

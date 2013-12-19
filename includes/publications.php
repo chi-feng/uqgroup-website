@@ -82,7 +82,7 @@ function render_article($index, $article) {
     '  doi = "' . $article['doi'] . '"',
     "}\n");
   $bibtex_raw = implode("\n", $bibtex_raw);
-  $bibtex = "<div class=\"bibtex\"><h4>BibTeX</h4><p>Click to select all</p><textarea class=\"bibtex\" readonly=\"readonly\">$bibtex_raw</textarea></div>\n";
+  $bibtex = "<div class=\"bibtex\"><h4>BibTeX</h4><textarea class=\"bibtex\" readonly=\"readonly\">$bibtex_raw</textarea></div>\n";
   
   $buttons = implode("\n", array(
     '<a href="' . $article['fulltext'] . '" class="button button-fulltext" target="_blank"><span>Fulltext</span><i class="icon-external-link"></i></a>',
