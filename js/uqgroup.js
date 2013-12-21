@@ -5,6 +5,8 @@ $(document).ready(function() {
     $('#content').height($('#sidebar').height());
   }
 
+  $('img').on('dragstart', function(event) { event.preventDefault(); });
+
 });
   
 $(function() {

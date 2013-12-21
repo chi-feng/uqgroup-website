@@ -4,17 +4,17 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>UQGroup - <?=$t['title'];?></title> 
-  <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="/css/style.css" rel="stylesheet" type="text/css" media="screen" />
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
-  <link href="css/font-awesome.css"  rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/uqgroup.js"></script>
-  <script type="text/javascript" src="js/lightbox-2.6.min.js"></script>
+  <link href="/css/font-awesome.css"  rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/uqgroup.js"></script>
+  <script type="text/javascript" src="/js/lightbox-2.6.min.js"></script>
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <link rel="shortcut icon" href="favicon.ico" />  
+  <link rel="shortcut icon" href="/favicon.ico" />  
 </head>
 <body>
 <div id="vertical-container">
@@ -22,7 +22,7 @@
   <div id="header" class="clearfix">
     <div id="title">
       <div id="title-wrap">
-      <h1><a href="home">Uncertainty Quantification Group</a></h1>
+      <h1><a href="/home">Uncertainty Quantification Group</a></h1>
       <h2><a href="http://mit.edu">Massachusetts Institute of Technology</a></h2>
       </div>
     </div>
@@ -34,14 +34,14 @@
       <?php
       foreach ($tabs as $key => $value) {
         $active = ($pages[$page]['tab'] == $key) ? ' class="active"' : ''; 
-        printf("<li><a href=\"%s\"%s>%s</a></li>\n", $key, $active, $value['name']);
+        printf("<li><a href=\"/%s\"%s>%s</a></li>\n", $key, $active, $value['name']);
       }
       ?>
     </ul>
     <a class="totop" onclick="$('html, body').animate({scrollTop:0}, 500);"><i class="icon-circle-arrow-up"></i></a>
   </div>
 </div>
-<div id="content-wrap" class="clearfix">
+<div id="content-wrap" class="clearfix <?php if ($t['nosidebar']) echo 'nosidebar'; ?>">
 <div id="content" class="column">
   
 <?php echo $t['content']; ?>
@@ -62,7 +62,7 @@ foreach ($announcements as $index => $announcement) {
 }
 ?>
 
-      <p><a href="archive">More announcements</a></p>
+      <p><a href="/archive">More announcements</a></p>
       </div>
     </div>
     <div class="sidebar-box">
@@ -71,7 +71,7 @@ foreach ($announcements as $index => $announcement) {
         
 <?php echo get_upcoming_events(4); ?>
 
-      <p><a href="archive">More events</a></p>
+      <p><a href="/archive">More events</a></p>
       </div>
     </div>
     <div class="sidebar-box">
@@ -81,7 +81,7 @@ foreach ($announcements as $index => $announcement) {
           
 <?php
 foreach ($links as $link) {
-printf("<li><a href=\"%s\">%s</a></li>\n",
+printf("<li><a href=/\"%s\">%s</a></li>\n",
   $link['href'], $link['name']);
 }
 ?>
@@ -117,10 +117,10 @@ printf("<li><a href=\"%s\">%s</a></li>\n",
   
   <div class="logos-wrapper">
   <ul class="logos">
-    <li><a href="http://mit.edu" target="_blank"><img src="images/mitlogo.png" alt="cce" width="200" /></a></li>
-    <li><a href="http://aeroastro.mit.edu" target="_blank"><img src="images/aeroastro.png" alt="aeroastro" width="180" /></a></li>
-    <li><a href="http://acdl.mit.edu" target="_blank"><img src="images/acdl.png" alt="acdl" width="100" /></a></li>
-    <li><a href="http://computationalengineering.mit.edu" target="_blank"><img src="images/cce.png" alt="cce" width="200" /></a></li>
+    <li><a href="http://mit.edu" target="_blank"><img src="/images/mitlogo.png" alt="cce" width="200" /></a></li>
+    <li><a href="http://aeroastro.mit.edu" target="_blank"><img src="/images/aeroastro.png" alt="aeroastro" width="180" /></a></li>
+    <li><a href="http://acdl.mit.edu" target="_blank"><img src="/images/acdl.png" alt="acdl" width="100" /></a></li>
+    <li><a href="http://computationalengineering.mit.edu" target="_blank"><img src="/images/cce.png" alt="cce" width="200" /></a></li>
   </ul>
   </div>
   

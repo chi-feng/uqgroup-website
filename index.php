@@ -14,6 +14,7 @@ $tabs          = json_decode(file_get_contents('json/tabs.json'),         true);
 $announcements = json_decode(file_get_contents('json/announcements.json'),true);
 $events        = json_decode(file_get_contents('json/events.json'),       true);
 $links         = json_decode(file_get_contents('json/links.json'),        true);
+$people        = json_decode(file_get_contents('json/people.json'),       true);
 
 // get the requested page
 $page = 'home';

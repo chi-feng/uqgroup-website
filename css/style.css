@@ -17,8 +17,10 @@ code,pre{font-family:"Inconsolata","Consolas","Monaco",monospace;}
 #header-wrap, #footer-wrap{ width: 100%;}
 #content-wrap, #nav, #title-wrap, #footer, .center-width  { width: 67em; }
 #sidebar-wrap { width:  18em; float:right; position: relative;}
+#content-wrap.nosidebar #sidebar-wrap {display:none;}
 .logos-wrapper { width: 41em; }
 #content      { width:  49em; }
+#content-wrap.nosidebar #content {width: 67em; }
 #footer-wrap { position: absolute; 0;}
 
 html, body { height: 100%; width: 100%;}
@@ -115,7 +117,7 @@ body { background: #fff;; }
 #sidebar .event strong { margin-bottom: 0.2em;}
 
 #content h2, #divtext h1 { font-size: 150%; margin-bottom: 0.5em; margin-top: -0.2em;}
-#content h3, #divtext h6 { font-size: 120%; margin: 0 0 0.4em; padding-bottom: 0.4em; border-bottom: 1px dotted #ccc;}
+h3, #divtext h6 { font-size: 120%; margin: 0 0 0.4em; padding-bottom: 0.4em; border-bottom: 1px dotted #ccc;}
 #content h3.noline { padding-bottom: 0; border-bottom: none; }
 #content h3 .btn.float-right { display: inline-block; font-size: 80%; margin-top: -0.6em;}
 #content h4 { font-size: 100%; margin: 0 0 0.5em; }
@@ -155,24 +157,24 @@ a.btn:hover{background:#369;color:#eafaff;box-shadow:0 1px 0 rgba(255,255,255,0.
 
 /* people.php */
 .people-browser { }
-.people-browser h3 { padding-bottom: 0.5em; }
-.people-browser ul { margin-bottom: 1em; }
+.people-browser h3 { border-bottom: 0; clear: both; }
+.people-browser ul { background: #eee; padding-top: 0.3em; border-radius:0.2em;}
 .people-browser li { display: block; margin-bottom: 0.5em; }
+li.person { display: inline-block; float: left; text-align: center; }
+li.person img { display: block; width: 7.4em; height: 10em; margin: 0.3em 00em 0.5em 0.8em; }
+.people-browser ul.pi { width: 8.7em;}
+li.person { color :#222; font-size: 95%; }
+li.person .name { padding-left: 0.5em; }
+li.person a .name { color: #222; }
+li.person .info { display: block; font-size: 85%;}
+li.person .info.small { font-size: 75%;}
+.alumni li { font-size: 90%; }
+
 #content div.alumni { margin-top: 1em; }
 #content div.alumni li { color: #666; }
 #content div.alumni li strong { font-weight: normal; color: #000; }
 .group-photo { margin: -1em; margin-bottom: 1em; }
 .group-photo img { }
-
-/* profiles.php */
-.person { margin-bottom: 30px; }
-.person .name { font-size: 125%; margin-bottom: 0.5em; }
-.person .name a { display: block; color: #000; }
-.person .name a:hover { color: #666; }
-.person .photo, .person .photo img { /*border-radius: 0.2em; */}
-.person .photo { float: left; margin-right: 1.2em; /*padding: 1px 1px 0 1px; border: 1px solid #ddd;*/ }
-.person .photo img { width: 7em; height: 9.7em; /*margin-bottom:-3px;*/ box-shadow: 0px 5px 1.2em -5px rgba(0,0,0,0.5); }
-.person .bio { font-size:95%; }
 
 /* archive.php */
 div.archive p { font-size: 95%; }
@@ -314,11 +316,7 @@ textarea.bibtex{width:100%;height:15em;line-height:1.2em;font-size:80%;padding:0
   margin-left: 0;
   margin-right: 10px;
   border-radius: 3px;
-  box-shadow: 0 0.2em 0.6em 0 rgba(0,0,0,0.4); 
-}
-
-#content .gallery img:hover {
-  box-shadow: 0 0.2em 0.6em 0 rgba(0,0,0,0.6);
+  box-shadow: 0 0.2em 0.6em -0.1em rgba(0,0,0,0.4); 
 }
 
 
