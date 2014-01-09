@@ -150,7 +150,5 @@ _gaq.push(['_trackPageview']);
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 </script>
-<script src="/js/instantclick.js" data-no-instant></script>
-<script>InstantClick.init();</script>
 </body>
 </html>
