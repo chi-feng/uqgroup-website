@@ -1,5 +1,15 @@
 [
 	{
+		"id": "6",
+		"start_date": "Mar 31, 2014",
+		"end_date": "Apr 3, 2014",
+		"start_time": "",
+		"end_time": "",
+		"name": "SIAM Conference on Uncertainty Quantification",
+		"location": "Savannah, GA",
+		"content": "http:\/\/www.siam.org\/meetings\/uq14\/"
+	},
+	{
 		"id": "0",
 		"start_date": "Feb 7, 2013",
 		"end_date": "Feb 7, 2013",

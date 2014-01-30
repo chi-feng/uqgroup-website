@@ -81,7 +81,7 @@ foreach ($announcements as $index => $announcement) {
           
 <?php
 foreach ($links as $link) {
-printf("<li><a href=/\"%s\">%s</a></li>\n",
+printf("<li><a href=\"%s\">%s</a></li>\n",
   $link['href'], $link['name']);
 }
 ?>
