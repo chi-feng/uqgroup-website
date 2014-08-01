@@ -9,6 +9,6 @@
     },
     {
         "name": "<i class=\"icon-lock\"></i> Website Administration", 
-        "href": "admin"
+        "href": "https://uqlab.scripts.mit.edu:444/uqgroup-website/admin.php"
     }
 ]

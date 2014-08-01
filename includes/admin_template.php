@@ -24,8 +24,7 @@ global $t;
   <li><a href="admin.php"><i class="icon-cog"></i></a>
     <ul>
     <li><a href="admin.php">Dashboard</a></li>
-    <li><a href="home">Home</a></li>
-    <li><a href="admin.php?logout">Logout</a></li>
+    <li><a href="http://uqgroup.mit.edu/home">Home</a></li>
     </ul>
   </li>
   <li><a href="admin.php?view_announcements">Announcements</a>
