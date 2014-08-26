@@ -153,10 +153,6 @@ class Object {
         case 'text':
         $return .= '<input type="text" name="'.$name.'" class="input-'.$name.'" value="'.$this->data[$name].'" />';
         break;
-	case 'checkbox':
-	$checked = (empty($this->data[$name])) ? '' : ' checked ';
-	$return .= '<input type="checkbox" name="'.$name.'" class="input-'.$name.'" '.$checked.' />';
-	break;
         case 'textarea':
         $return .= '<textarea class="textarea-'.$name.'" name="'.$name.'" />'.$this->data[$name].'</textarea>';
         break;

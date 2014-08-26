@@ -8,21 +8,29 @@ function people_filter($type) {
   if ($type == 'visitor') {
     foreach($people as $person) {
       if ($person['type'] == $type) 
-        echo '<li class="person"><img src="/images/people/'.$person['url'].'.png" /><span class="name">'.$person['name'].'</span><span class="info small">'.$person['institution'].'</span></li>';
+        echo '<li class="person"><img src="/images/people/'.$person['url'].'.png" alt="'.$person['name'].'" title="'.$person['name'].'" />
+          <span class="name">'.$person['name'].'</span>
+          <span class="info small">'.$person['institution'].'</span>
+          </li>';
     }
   } elseif ($type == 'urop') {
     foreach($people as $person) {
       if ($person['type'] == $type) 
-        echo '<li class="person"><img src="/images/people/'.$person['url'].'.png" /><span class="name">'.$person['name'].'</span><span class="info"><a href="/people/'.$person['url'].'">bio</a></span></li>';
+        echo '<li class="person"><img src="/images/people/'.$person['url'].'.png" alt="'.$person['name'].'" title="'.$person['name'].'" />
+          <span class="name">'.$person['name'].'</span>
+          <span class="info"><a href="/people/'.$person['url'].'">bio</a></span>
+          </li>';
     }
   } else {
     foreach($people as $person) {
       if ($person['type'] == $type) 
-        echo '<li class="person"><a class="bio-button" rel="'.$person['url'].'"><img src="/images/people/'.$person['url'].'.png" /><span class="name">'.$person['name'].'</span></a><span class="info"><a href="mailto:'.$person['email'].' at mit dot edu">email</a>&nbsp;|&nbsp;<a class="bio-button" rel="'.$person['url'].'">bio</a></span></li>';
-        echo '<div class="bio" style="display: none" id="'.$person['url'].'"><h3>'.$person['name'].'</h3><p>'.$person['bio'].'</p></div>';
+        echo '<li class="person"><a class="bio-button" rel="'.$person['url'].'"><img src="/images/people/'.$person['url'].'.png" alt="'.$person['name'].'" title="'.$person['name'].'" />
+          <span class="name">'.$person['name'].'</span></a>
+          <span class="info"><a href="mailto:'.$person['email'].' at mit dot edu">email</a>&nbsp;|&nbsp;<a class="bio-button" rel="'.$person['url'].'">bio</a></span>
+          </li>';
+        echo '<div class="bio" id="'.$person['url'].'"><h3>'.$person['name'].'</h3><p>'.$person['bio'].'</p></div>';
     }
   }
-
   echo '</ul>';
 }
 ?>
@@ -36,6 +44,7 @@ function people_filter($type) {
     <h3>Principal Investigator</h3>
     <?php people_filter('pi'); ?>
   </div>
+
   <!--
   <div style="width:50%;float:left;">
     <h3>Current Visitors</h3>
@@ -43,13 +52,13 @@ function people_filter($type) {
   </div>
   -->
 
-    <h3>Graduate Students, PhD</h3>
-    <?php people_filter('phd'); ?>
-    
-    <h3>Undergraduate Students (UROP)</h3>
-    <ul style="background: none">
-      <li><a>Yair Shenfeld</a></li>
-    </ul>
+  <h3>Graduate Students, PhD</h3>
+  <?php people_filter('phd'); ?>
+  
+  <h3>Undergraduate Students (UROP)</h3>
+  <ul style="background: none">
+    <li><a>Yair Shenfeld</a></li>
+  </ul>
 
     
   </div>

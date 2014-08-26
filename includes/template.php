@@ -7,9 +7,6 @@
   <link href="/css/style.css" rel="stylesheet" type="text/css" media="screen" />
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
   <link href="/css/font-awesome.css"  rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="/js/jquery.min.js"></script>
-  <script type="text/javascript" src="/js/uqgroup.js"></script>
-  <script type="text/javascript" src="/js/lightbox-2.6.min.js"></script>
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,34 +40,28 @@
 </div>
 <div id="content-wrap" class="clearfix <?php if ($t['nosidebar']) echo 'nosidebar'; ?>">
 <div id="content" class="column">
-  
 <?php echo $t['content']; ?>
-  
 </div> <!-- content -->
 <div id="sidebar-wrap">
   <div id="sidebar">
     <div class="sidebar-box">
       <h2>Announcements</h2>
       <div class="sidebar-content">
-        
-<?php
-foreach ($announcements as $index => $announcement) {
-  if ($index < 5) {
-    printf("<p class=\"announcement\"><strong>%s</strong><br />%s</p>\n",
-      $announcement['date'], $announcement['content']);
-  }
-}
-?>
-
+      <?php
+      foreach ($announcements as $index => $announcement) {
+        if ($index < 5) {
+          printf("<p class=\"announcement\"><strong>%s</strong><br />%s</p>\n",
+            $announcement['date'], $announcement['content']);
+        }
+      }
+      ?>
       <p><a href="/archive">More announcements</a></p>
       </div>
     </div>
     <div class="sidebar-box">
       <h2>Upcoming Events</h2>
       <div class="sidebar-content">
-        
-<?php echo get_upcoming_events(4); ?>
-
+      <?php echo get_upcoming_events(4); ?>
       <p><a href="/archive">More events</a></p>
       </div>
     </div>
@@ -78,14 +69,12 @@ foreach ($announcements as $index => $announcement) {
       <h2>Links</h2>
       <div class="sidebar-content">
         <ul class="links">
-          
-<?php
-foreach ($links as $link) {
-printf("<li><a href=\"%s\">%s</a></li>\n",
-  $link['href'], $link['name']);
-}
-?>
-
+        <?php
+        foreach ($links as $link) {
+        printf("<li><a href=\"%s\">%s</a></li>\n",
+          $link['href'], $link['name']);
+        }
+        ?>
         </ul>
       </div>
     </div>    
@@ -94,7 +83,6 @@ printf("<li><a href=\"%s\">%s</a></li>\n",
 </div> <!-- content-wrap -->
 <div id="footer-wrap">
 <div id="footer" class="clearfix">
-  
   <div class="contact">
     <div class="youssef">
       <h4>Contact Information</h4>
@@ -114,7 +102,6 @@ printf("<li><a href=\"%s\">%s</a></li>\n",
       <p><i class="icon-phone"></i> (617) 252-1536</p>
     </div>
   </div>
-  
   <div class="logos-wrapper">
   <ul class="logos">
     <li><a href="http://mit.edu" target="_blank"><img src="/images/mitlogo.png" alt="cce" width="200" /></a></li>
@@ -123,10 +110,8 @@ printf("<li><a href=\"%s\">%s</a></li>\n",
     <li><a href="http://computationalengineering.mit.edu" target="_blank"><img src="/images/cce.png" alt="cce" width="200" /></a></li>
   </ul>
   </div>
-  
   <br style="clear: both" />
 </div>
-
   <div id="footer-bottom" class="clearfix">
     <div class="center-width">
     <div class="designed-by">
@@ -137,9 +122,11 @@ printf("<li><a href=\"%s\">%s</a></li>\n",
     </div>
     </div>
   </div>
-
 </div>
 </div>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/uqgroup.js"></script>
+<script type="text/javascript" src="/js/lightbox-2.6.min.js"></script>
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-38300402-1']);

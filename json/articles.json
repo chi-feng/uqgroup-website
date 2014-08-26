@@ -103,10 +103,10 @@
 		"title": "Likelihood-informed dimension reduction for nonlinear inverse problems",
 		"keywords": "Inverse problem, Bayesian inference, dimension reduction, low-rank approximation, Markov chain Monte Carlo, variance reduction",
 		"authors": [
-			"T. Cui,",
-			"J. Martin,",
-			"Y. M. Marzouk,",
-			"A. Solonen,",
+			"T. Cui",
+			"J. Martin",
+			"Y. M. Marzouk",
+			"A. Solonen",
 			"A. Spantini"
 		],
 		"abstract": "The intrinsic dimensionality of an inverse problem is affected by prior information, the accuracy and number of observations, and the smoothing properties of the forward operator. From a Bayesian perspective, changes from the prior to the posterior may, in many problems, be confined to a relatively low-dimensional subspace of the parameter space. We present a dimension reduction approach that defines and identifies such a subspace, called the \"likelihood-informed subspace\" (LIS), by characterizing the relative influences of the prior and the likelihood over the support of the posterior distribution. This identification enables new and more efficient computational methods for Bayesian inference with nonlinear forward models and Gaussian priors. In particular, we approximate the posterior distribution as the product of a lower-dimensional posterior defined on the LIS and the prior distribution marginalized onto the complementary subspace. Markov chain Monte Carlo sampling can then proceed in lower dimensions, with significant gains in computational efficiency. We also introduce a Rao-Blackwellization strategy that de-randomizes Monte Carlo estimates of posterior expectations for additional variance reduction. We demonstrate the efficiency of our methods using two numerical examples: inference of permeability in a groundwater system governed by an elliptic PDE, and an atmospheric remote sensing problem based on Global Ozone Monitoring System (GOMOS) observations.",
@@ -128,8 +128,8 @@
 		"title": "Data-driven model reduction for the Bayesian solution of inverse problems",
 		"keywords": "model reduction; inverse problem; adaptive Markov chain Monte Carlo; approximate Bayesian inference",
 		"authors": [
-			"T. Cui,",
-			"Y. M. Marzouk,",
+			"T. Cui",
+			"Y. M. Marzouk",
 			"K. Willcox"
 		],
 		"abstract": "One of the major challenges in the Bayesian solution of inverse problems governed by partial differential equations (PDEs) is the computational cost of repeatedly evaluating numerical PDE models, as required by Markov chain Monte Carlo (MCMC) methods for posterior sampling. This paper proposes a data-driven projection-based model reduction technique to reduce this computational cost. The proposed technique has two distinctive features. First, the model reduction strategy is tailored to inverse problems: the snapshots used to construct the reduced-order model are computed adaptively from the posterior distribution. Posterior exploration and model reduction are thus pursued simultaneously. Second, to avoid repeated evaluations of the full-scale numerical model as in a standard MCMC method, we couple the full-scale model and the reduced-order model together in the MCMC algorithm. This maintains accurate inference while reducing its overall computational cost. In numerical experiments considering steady-state flow in a porous medium, the data-driven reduced-order model achieves better accuracy than a reduced-order model constructed using the classical approach. It also improves posterior sampling efficiency by several orders of magnitude compared to a standard MCMC method.",
@@ -151,7 +151,7 @@
 		"title": "NOWPAC: A provably convergent nonlinear optimizer with path-augmented constraints for noisy regimes",
 		"keywords": "",
 		"authors": [
-			"F. Augustin,",
+			"F. Augustin",
 			"Y. M. Marzouk"
 		],
 		"abstract": "This paper proposes the algorithm NOWPAC (Nonlinear Optimization With Path-Augmented Constraints) for nonlinear constrained derivative-free optimization. The algorithm uses a trust region framework based on p-reduced fully linear models for the objective function and the constraints. A new constraint-handling scheme based on a quadratic inner boundary path makes the search for feasible trial steps more efficient. In all iterations, the intermediate designs computed by NOWPAC are strictly feasible, and we prove that they converge to a first order critical point. We also discuss the convergence of NOWPAC in situations where evaluations of the objective function or the constraints are inexact, e.g., corrupted by numerical errors. We determine a rate of decay that the magnitude of these numerical errors must satisfy, while approaching the critical point, to guarantee convergence. For settings where adjusting the accuracy of the objective or constraint evaluations is not possible, as is often the case in practical applications, we introduce an error indicator to detect these regimes and prevent deterioration of the optimization results.",
@@ -173,9 +173,9 @@
 		"title": "Asymptotically exact MCMC algorithms via local approximations of computationally intensive models",
 		"keywords": "Markov chain Monte Carlo, experimental design, approximation theory, local approximation, computer experiments, emulators",
 		"authors": [
-			"P. Conrad,",
-			"Y. M. Marzouk,",
-			"N. Pillai,",
+			"P. Conrad",
+			"Y. M. Marzouk",
+			"N. Pillai",
 			"A. Smith"
 		],
 		"abstract": "We construct a new framework for accelerating MCMC algorithms for sampling from posterior distributions in the context of computationally intensive models. We proceed by constructing local surrogates of the forward model within the Metropolis-Hastings kernel, borrowing ideas from deterministic approximation theory, optimization, and experimental design. Our work departs from previous work in surrogate-based inference by exploiting useful convergence characteristics of local approximations. We prove the ergodicity of our approximate Markov chain and show that it samples asymptotically from the \\emph{exact} posterior distribution of interest. We describe variations of the algorithm that construct either local polynomial approximations or Gaussian process regressors, thus spanning two important classes of surrogate models. Our theoretical results reinforce the key observation underlying this paper: when the likelihood has some \\emph{local} regularity, the number of model evaluations per MCMC step can be greatly reduced, without incurring significant bias in the Monte Carlo average. Our numerical experiments demonstrate order-of-magnitude reductions in the number of forward model evaluations used in representative ODE or PDE inference problems, in both real and synthetic data examples.",
@@ -197,7 +197,7 @@
 		"title": "Efficient localization of discontinuities in complex computational simulations",
 		"keywords": "discontinuity detection, polynomial annihilation, function approximation, support vector machines, active learning, uncertainty quantification",
 		"authors": [
-			"A. Gorodetsky,",
+			"A. Gorodetsky",
 			"Y. M. Marzouk"
 		],
 		"abstract": "Surrogate models for computational simulations are input-output approximations that allow computationally intensive analyses, such as uncertainty propagation and inference, to be performed efficiently. When a simulation output does not depend smoothly on its inputs, the error and convergence rate of many approximation methods deteriorate substantially. This paper details a method for efficiently localizing discontinuities in the input parameter domain, so that the model output can be approximated as a piecewise smooth function. The approach comprises an initialization phase, which uses polynomial annihilation to assign function values to different regions and thus seed an automated labeling procedure, followed by a refinement phase that adaptively updates a kernel support vector machine representation of the separating surface via active learning. The overall approach avoids structured grids and exploits any available simplicity in the geometry of the separating surface, thus reducing the number of model evaluations required to localize the discontinuity. The method is illustrated on examples of up to eleven dimensions, including algebraic models and ODE\/PDE systems, and demonstrates improved scaling and efficiency over other discontinuity localization approaches.",
@@ -219,7 +219,7 @@
 		"title": "Adaptive construction of surrogates for the Bayesian solution of inverse problems",
 		"keywords": "Bayesian inference, cross-entropy method, importance sampling, inverse problem, Kullback-Leibler divergence, Markov chain Monte Carlo, polynomial chaos",
 		"authors": [
-			"J. Li,",
+			"J. Li",
 			"Y. M. Marzouk"
 		],
 		"abstract": "The Bayesian approach to inverse problems typically relies on posterior sampling approaches, such as Markov chain Monte Carlo, for which the generation of each sample requires one or more evaluations of the parameter-to-observable map or forward model. When these evaluations are computationally intensive, approximations of the forward model are essential to accelerating sample-based inference. Yet the construction of globally accurate approximations for nonlinear forward models can be computationally prohibitive and in fact unnecessary, as the posterior distribution typically concentrates on a small fraction of the support of the prior distribution. We present a new approach that uses stochastic optimization to construct polynomial approximations over a sequence of measures adaptively determined from the data, eventually concentrating on the posterior distribution. The approach yields substantial gains in efficiency and accuracy over prior-based surrogates, as demonstrated via application to inverse problems in partial differential equations.",
@@ -241,13 +241,13 @@
 		"title": "A priori testing of sparse adaptive polynomial chaos expansions using an ocean general circulation model database",
 		"keywords": "",
 		"authors": [
-			"J. Winokur,",
-			"P. Conrad,",
-			"I. Sraj,",
-			"O. Knio,",
-			"A. Srinivasan,",
-			"W. C. Thacker,",
-			"Y. M. Marzouk,",
+			"J. Winokur",
+			"P. Conrad",
+			"I. Sraj",
+			"O. Knio",
+			"A. Srinivasan",
+			"W. C. Thacker",
+			"Y. M. Marzouk",
 			"M. Iskandarani,"
 		],
 		"abstract": "This work explores the implementation of an adaptive strategy to design sparse ensembles of oceanic simulations suitable for constructing polynomial chaos surrogates. We use a recently developed pseudo-spectral algorithm that is based on a direct application of the Smolyak sparse grid formula and that allows the use of arbitrary admissible sparse grids. The adaptive algorithm is tested using an existing simulation database of the oceanic response to Hurricane Ivan in the Gulf of Mex- ico. The a priori tests demonstrate that sparse and adaptive pseudo-spectral constructions lead to substantial savings over isotropic sparse sampling in the present setting.",
@@ -269,7 +269,7 @@
 		"title": "Gradient-based stochastic optimization methods in Bayesian experimental design",
 		"keywords": "",
 		"authors": [
-			"X. Huan,",
+			"X. Huan",
 			"Y. M. Marzouk"
 		],
 		"abstract": "Optimal experimental design (OED) seeks experiments expected to yield the most useful data for some purpose. In practical circumstances where experiments are time-consuming or resource-intensive, OED can yield enormous savings. We pursue OED for nonlinear systems from a Bayesian perspective, with the goal of choosing experiments that are optimal for parameter inference. Our objective in this context is the expected information gain in model parameters, which in general can only be estimated using Monte Carlo methods. Maximizing this objective thus becomes a stochastic optimization problem. \r\n\r\n<p>This paper develops gradient-based stochastic optimization methods for the design of experiments on a continuous parameter space. Given a Monte Carlo estimator of expected information gain, we use infinitesimal perturbation analysis to derive gradients of this estimator. We are then able to formulate two gradient-based stochastic optimization approaches: (i) Robbins-Monro stochastic approximation, and (ii) sample average approximation combined with a deterministic quasi-Newton method. A polynomial chaos approximation of the forward model accelerates objective and gradient evaluations in both cases. We discuss the implementation of these optimization methods, then conduct an empirical comparison of their performance. To demonstrate design in a nonlinear setting with partial differential equation forward models, we use the problem of sensor placement for source inversion. Numerical results yield useful guidelines on the choice of algorithm and sample sizes, assess the impact of estimator bias, and quantify tradeoffs of computational cost versus solution quality and robustness.",
@@ -291,7 +291,7 @@
 		"title": "Adaptive Smolyak pseudospectral approximations",
 		"keywords": "Smolyak algorithms, sparse grids, orthogonal polynomials, pseudospectral approximation, approximation theory, uncertainty quantification",
 		"authors": [
-			"P. Conrad,",
+			"P. Conrad",
 			"Y. M. Marzouk"
 		],
 		"abstract": "Polynomial approximations of computationally intensive models are central to uncertainty quantification. This paper describes an adaptive method for non-intrusive pseudospectral approximation, based on Smolyak's algorithm with generalized sparse grids. We rigorously analyze and extend the non-adaptive method proposed in [Constantine et al. 2012], and compare it to a common alternative approach for using sparse grids to construct polynomial approximations, direct quadrature. Analysis of direct quadrature shows that O(1) errors are an intrinsic property of some configurations of the method, as a consequence of internal aliasing. We provide precise conditions, based on the chosen polynomial basis and quadrature rules, under which this aliasing error occurs. We then establish theoretical results on the accuracy of Smolyak pseudospectral approximation, and show that the Smolyak approximation avoids internal aliasing and makes far more effective use of sparse function evaluations. These results are applicable to broad choices of quadrature rule and generalized sparse grids. Exploiting this flexibility, we introduce a greedy heuristic for adaptive refinement of the pseudospectral approximation. We numerically demonstrate convergence of the algorithm on the Genz test functions, and illustrate the accuracy and efficiency of the adaptive approach on a realistic chemical kinetics problem.",
@@ -313,8 +313,8 @@
 		"title": "Bayesian inverse problems with Monte Carlo forward models",
 		"keywords": "linear transport; perturbation Monte Carlo; Bayesian; importance sampling; inverse problems; Markov chain Monte Carlo",
 		"authors": [
-			"G. Bal,",
-			"I. Langmore,",
+			"G. Bal",
+			"I. Langmore",
 			"Y. M. Marzouk"
 		],
 		"abstract": "<p>The full application of Bayesian inference to inverse problems requires exploration of a posterior distribution that typically does not possess a standard form. In this context, Markov chain Monte Carlo (MCMC) methods are often used. These methods require many evaluations of a computationally intensive forward model to produce the equivalent of one independent sample from the posterior. We consider applications in which approximate forward models at multiple resolution levels are available, each endowed with a probabilistic error estimate. These situations occur, for example, when the forward model involves Monte Carlo integration. We present a novel MCMC method called $MC^3$ that uses low-resolution forward models to approximate draws from a posterior distribution built with the high-resolution forward model. The acceptance ratio is estimated with some statistical error; then a confidence interval for the true acceptance ratio is found, and acceptance is performed correctly with some confidence. The high-resolution models are rarely run and a significant speed up is achieved.<\/p><p>Our multiple-resolution forward models themselves are built around a new importance sampling scheme that allows Monte Carlo forward models to be used efficiently in inverse problems. The method is used to solve an inverse transport problem that finds applications in atmospheric remote sensing. We present a path-recycling methodology to efficiently vary parameters in the transport equation. The forward transport equation is solved by a Monte Carlo method that is amenable to the use of $MC^3$ to solve the inverse transport problem using a Bayesian formalism.<\/p>",
@@ -336,7 +336,7 @@
 		"title": "Simulation-based optimal Bayesian experimental design for nonlinear systems",
 		"keywords": "Uncertainty quantification; Bayesian inference; Optimal experimental design; Nonlinear experimental design; Stochastic approximation; Shannon information; Chemical kinetics",
 		"authors": [
-			"X. Huan,",
+			"X. Huan",
 			"Y. M. Marzouk"
 		],
 		"abstract": "<p>The optimal selection of experimental conditions is essential to maximizing the value of data for inference and prediction, particularly in situations where experiments are time-consuming and expensive to conduct. We propose a general mathematical framework and an algorithmic approach for optimal experimental design with nonlinear simulation-based models; in particular, we focus on finding sets of experiments that provide the most information about targeted sets of parameters.<\/p><p>Our framework employs a Bayesian statistical setting, which provides a foundation for inference from noisy, indirect, and incomplete data, and a natural mechanism for incorporating heterogeneous sources of information. An objective function is constructed from information theoretic measures, reflecting expected information gain from proposed combinations of experiments. Polynomial chaos approximations and a two-stage Monte Carlo sampling method are used to evaluate the expected information gain. Stochastic approximation algorithms are then used to make optimization feasible in computationally intensive and high-dimensional settings. These algorithms are demonstrated on model problems and on nonlinear parameter inference problems arising in detailed combustion kinetics.<\/p>",
@@ -358,7 +358,7 @@
 		"title": "Bayesian inference with optimal maps",
 		"keywords": "Bayesian inference; Optimal transport; Measure-preserving maps; Inverse problems; Polynomial chaos; Numerical optimization",
 		"authors": [
-			"T. A. Moselhy,",
+			"T. A. Moselhy",
 			"Y. M. Marzouk"
 		],
 		"abstract": "<p>We present a new approach to Bayesian inference that entirely avoids Markov chain simulation, by constructing a map that pushes forward the prior measure to the posterior measure. Existence and uniqueness of a suitable measure-preserving map is established by formulating the problem in the context of optimal transport theory. We discuss various means of explicitly parameterizing the map and computing it efficiently through solution of an optimization problem, exploiting gradient information from the forward model when possible. The resulting algorithm overcomes many of the computational bottlenecks associated with Markov chain Monte Carlo. Advantages of a map-based representation of the posterior include analytical expressions for posterior moments and the ability to generate arbitrary numbers of independent posterior samples without additional likelihood evaluations or forward solves. The optimization approach also provides clear convergence criteria for posterior approximation and facilitates model selection through automatic evaluation of the marginal likelihood. We demonstrate the accuracy and efficiency of the approach on nonlinear inverse problems of varying dimension, involving the inference of parameters appearing in ordinary and partial differential equations.<\/p>",
@@ -380,9 +380,9 @@
 		"title": "Bayesian reconstruction of binary media with unresolved fine-scale spatial structures",
 		"keywords": "Upscaling; Binary media; Bayesian technique; Multiscale inference",
 		"authors": [
-			"J. Ray,",
-			"S. McKenna,",
-			"B. van Bloemen Waanders,",
+			"J. Ray",
+			"S. McKenna",
+			"B. van Bloemen Waanders",
 			"Y. M. Marzouk"
 		],
 		"abstract": "",
@@ -404,8 +404,8 @@
 		"title": "Sequential data assimilation with multiple models",
 		"keywords": "Uncertainty quantification; Data assimilation; Kalman filter; Model averaging",
 		"authors": [
-			"A. Narayan,",
-			"Y. M. Marzouk,",
+			"A. Narayan",
+			"Y. M. Marzouk",
 			"D. Xiu"
 		],
 		"abstract": "Data assimilation is an essential tool for predicting the behavior of real physical systems given approximate simulation models and limited observations. For many complex systems, there may exist several models, each with different properties and predictive capabilities. It is desirable to incorporate multiple models into the assimilation procedure in order to obtain a more accurate prediction of the physics than any model alone can provide. In this paper, we propose a framework for conducting sequential data assimilation with multiple models and sources of data. The assimilated solution is a linear combination of all model predictions and data. One notable feature is that the combination takes the most general form with matrix weights. By doing so the method can readily utilize different weights in different sections of the solution state vectors, allow the models and data to have different dimensions, and deal with the case of a singular state covariance. We prove that the proposed assimilation method, termed direct assimilation, minimizes a variational functional, a generalized version of the one used in the classical Kalman filter. We also propose an efficient iterative assimilation method that assimilates two models at a time until all models and data are assimilated. The mathematical equivalence of the iterative method and the direct method is established. Numerical examples are presented to demonstrate the effectiveness of the new method.",
@@ -427,10 +427,10 @@
 		"title": "Data-free inference of the joint distribution of uncertain model parameters",
 		"keywords": "Uncertainty quantification; Bayesian statistics; Missing information",
 		"authors": [
-			"R. D. Berry,",
-			"H. N. Najm,",
-			"B. J. Debusschere,",
-			"Y. M. Marzouk,",
+			"R. D. Berry",
+			"H. N. Najm",
+			"B. J. Debusschere",
+			"Y. M. Marzouk",
 			"H. Adalsteinsson"
 		],
 		"abstract": "<p>A critical problem in accurately estimating uncertainty in model predictions is the lack of details in the literature on the correlation (or full joint distribution) of uncertain model parameters. In this paper we describe a framework and a class of algorithms for analyzing such \u201cmissing data\u201d problems in the setting of Bayesian statistics. The analysis focuses on the family of posterior distributions consistent with given statistics (e.g. nominal values, confidence intervals). The combining of consistent distributions is addressed via techniques from the opinion pooling literature. The developed approach allows subsequent propagation of uncertainty in model inputs consistent with reported statistics, in the absence of data.<\/p>",
@@ -452,11 +452,11 @@
 		"title": "Computational singular perturbation with non-parametric tabulation of slow manifolds for time integration of stiff chemical kinetics",
 		"keywords": "chemical kinetics, computational singular perturbation, slow manifold, non-parametric regression, nearest neighbors, kd-trees",
 		"authors": [
-			"B. J. Debusschere,",
-			"Y. M. Marzouk,",
-			"H. N. Najm,",
-			"B. Rhoads,",
-			"D. A. Goussis,",
+			"B. J. Debusschere",
+			"Y. M. Marzouk",
+			"H. N. Najm",
+			"B. Rhoads",
+			"D. A. Goussis",
 			"M. Valorani"
 		],
 		"abstract": "<p>This paper presents a novel tabulation strategy for the adaptive numerical integration of chemical kinetics using the computational singular perturbation (CSP) method. The strategy stores and reuses CSP quantities required to filter out fast dissipative processes, resulting in a non-stiff chemical source term. In particular, non-parametric regression on low-dimensional slow invariant manifolds (SIMs) in the chemical state space is used to approximate the CSP vectors spanning the fast chemical subspace and the associated fast chemical time-scales. The relevant manifold and its dimension varies depending on the local number of exhausted modes at every location in the chemical state space. Multiple manifolds are therefore tabulated, corresponding to different numbers of exhausted modes (dimensions) and associated radical species. Non-parametric representations are inherently adaptive, and rely on efficient approximate-nearest-neighbor queries. As the CSP information is only a function of the non-radical species in the system and has relatively small gradients in the chemical state space, tabulation occurs in a lower-dimensional state space and at a relatively coarse level, thereby improving scalability to larger chemical mechanisms. The approach is demonstrated on the simulation of homogeneous constant pressure H2\u2013air and CH4\u2013air ignition, over a range of initial conditions. For CH4\u2013air, results are shown that outperform direct implicit integration of the stiff chemical kinetics while maintaining good accuracy.<\/p>",
@@ -478,9 +478,9 @@
 		"title": "Truncated multi-Gaussian fields and effective conductance of binary media",
 		"keywords": "Upscaling; Binary media; Effective conductivity",
 		"authors": [
-			"S. McKenna,",
-			"J. Ray,",
-			"Y. M. Marzouk,",
+			"S. McKenna",
+			"J. Ray",
+			"Y. M. Marzouk",
 			"B. van Bloemen Waanders"
 		],
 		"abstract": "<p>Truncated Gaussian fields provide a flexible model for defining binary media with dispersed (as opposed to layered) inclusions. General properties of excursion sets on these truncated fields are coupled with a distance-based upscaling algorithm and approximations of point process theory to develop an estimation approach for effective conductivity in two-dimensions. Estimation of effective conductivity is derived directly from knowledge of the kernel size used to create the multiGaussian field, defined as the full-width at half maximum (FWHM), the truncation threshold and conductance values of the two modes. Therefore, instantiation of the multiGaussian field is not necessary for estimation of the effective conductance. The critical component of the effective medium approximation developed here is the mean distance between high conductivity inclusions. This mean distance is characterized as a function of the FWHM, the truncation threshold and the ratio of the two modal conductivities. Sensitivity of the resulting effective conductivity to this mean distance is examined for two levels of contrast in the modal conductances and different FWHM sizes. Results demonstrate that the FWHM is a robust measure of mean travel distance in the background medium. The resulting effective conductivities are accurate when compared to numerical results and results obtained from effective media theory, distance-based upscaling and numerical simulation.<\/p>",
@@ -502,9 +502,9 @@
 		"title": "Contributions of the wall boundary layer to the formation of the counter-rotating vortex pair in transverse jets.",
 		"keywords": "jets; vortex flows",
 		"authors": [
-			"F. Schlegel,",
-			"D. Wee,",
-			"Y. M. Marzouk,",
+			"F. Schlegel",
+			"D. Wee",
+			"Y. M. Marzouk",
 			"A. F. Ghoniem"
 		],
 		"abstract": "<p>Using high-resolution 3-D vortex simulations, this study seeks a mechanistic understanding of vorticity dynamics in transverse jets at a finite Reynolds number. A full no-slip boundary condition, rigorously formulated in terms of vorticity generation along the channel wall, captures unsteady interactions between the wall boundary layer and the jet \u2013 in particular, the separation of the wall boundary layer and its transport into the interior. For comparison, we also implement a reduced boundary condition that suppresses the separation of the wall boundary layer away from the jet nozzle. By contrasting results obtained with these two boundary conditions, we characterize near-field vortical structures formed as the wall boundary layer separates on the backside of the jet. Using various Eulerian and Lagrangian diagnostics, it is demonstrated that several near-wall vortical structures are formed as the wall boundary layer separates. The counter-rotating vortex pair, manifested by the presence of vortices aligned with the jet trajectory, is initiated closer to the jet exit. Moreover tornado-like wall-normal vortices originate from the separation of spanwise vorticity in the wall boundary layer at the side of the jet and from the entrainment of streamwise wall vortices in the recirculation zone on the lee side. These tornado-like vortices are absent in the case where separation is suppressed. Tornado-like vortices merge with counter-rotating vorticity originating in the jet shear layer, significantly increasing wall-normal circulation and causing deeper jet penetration into the crossflow stream.<\/p>",
@@ -526,13 +526,13 @@
 		"title": "Bayesian inference of atomic diffusivity in a binary Ni\/Al system based on molecular dynamics",
 		"keywords": "",
 		"authors": [
-			"F. Rizzi,",
-			"M. Salloum,",
-			"Y. M. Marzouk,",
-			"R. Xu,",
-			"M. L. Falk,",
-			"T. P. Weihs,",
-			"G. Fritz,",
+			"F. Rizzi",
+			"M. Salloum",
+			"Y. M. Marzouk",
+			"R. Xu",
+			"M. L. Falk",
+			"T. P. Weihs",
+			"G. Fritz",
 			"O. M. Knio"
 		],
 		"abstract": "<p>This work focuses on characterizing the integral features of atomic diffusion in Ni\/Al nanolaminates based on molecular dynamics (MD) computations. Attention is focused on the simplified problem of extracting the diffusivity, D, in an isothermal system at high temperature. To this end, a mixing measure theory is developed that relies on analyzing the moments of the cumulative distribution functions (CDFs) of the constituents. The mixing measures obtained from replica simulations are exploited in a Bayesian inference framework, based on contrasting these measures with corresponding moments of a dimensionless concentration evolving according to a Fickian process. The noise inherent in the MD simulations is described as a Gaussian process, and this hypothesis is verified both a priori and using a posterior predictive check. Computed values of D for an initially unmixed system rapidly heated to 1500 K are found to be consistent with experimental correlation for diffusion of Ni into molten Al. On the contrary, large discrepancies with experimental predictions are observed when D is estimated based on large-time mean-square displacement (MSD) analysis, and when it is evaluated using the Arrhenius correlation calibrated against experimental measurements of self-propagating front velocities. Implications are finally drawn regarding extension of the present work and potential refinement of continuum modeling approaches.<\/p>",
@@ -554,8 +554,8 @@
 		"title": "A Bayesian approach for estimating bioterror attacks from patient data",
 		"keywords": "Bayesian inference;anthrax;Sverdlovsk outbreak;bioterrorism",
 		"authors": [
-			"J. Ray,",
-			"Y. M. Marzouk,",
+			"J. Ray",
+			"Y. M. Marzouk",
 			"H. N. Najm"
 		],
 		"abstract": "<p>Terrorist attacks using an aerosolized pathogen have gained credibility as a national security concern after the anthrax attacks of 2001. Inferring some important details of the attack quickly, for example, the number of people infected, the time of infection, and a representative dose received can be crucial to planning a medical response. We use a Bayesian approach, based on a short time series of diagnosed patients, to estimate a joint probability density for these parameters. We first test the formulation with idealized cases and then apply it to realistic scenarios, including the Sverdlovsk anthrax outbreak of 1979. We also use simulated outbreaks to explore the impact of model error, as when the model used for generating simulated epidemic curves does not match the model subsequently used to characterize the attack. We find that in all cases except for the smallest attacks (fewer than 100 infected people), 3\u20135 days of data are sufficient to characterize the outbreak to a specificity that is useful for directing an emergency response.<\/p>",
@@ -577,9 +577,9 @@
 		"title": "Convergence characteristics and computational cost of two algebraic kernels in vortex methods with a tree-code algorithm",
 		"keywords": "",
 		"authors": [
-			"D. Wee,",
-			"Y. M. Marzouk,",
-			"F. Schlegel,",
+			"D. Wee",
+			"Y. M. Marzouk",
+			"F. Schlegel",
 			"A. F. Ghoniem"
 		],
 		"abstract": "<p>We study the convergence characteristics of two algebraic kernels used in vortex calculations: the Rosenhead\u2013Moore kernel, which is a low-order kernel, and the Winckelmans\u2013Leonard kernel, which is a high-order kernel. To facilitate the study, a method of evaluating particle-cluster interactions is introduced for the Winckelmans\u2013Leonard kernel. The method is based on Taylor series expansion in Cartesian coordinates, as initially proposed by Lindsay and Krasny [J. Comput. Phys., 172 (2001), pp. 879\u2013907] for the Rosenhead\u2013Moore kernel. A recurrence relation for the Taylor coefficients of the Winckelmans\u2013Leonard kernel is derived by separating the kernel into two parts, and an error estimate is obtained to ensure adaptive error control. The recurrence relation is incorporated into a tree-code to evaluate vorticity-induced velocity. Next, comparison of convergence is made while utilizing the tree-code. Both algebraic kernels lead to convergence, but the Winckelmans\u2013Leonard kernel exhibits a superior convergence rate. The combined desingularization and discretization error from the Winckelmans\u2013Leonard kernel is an order of magnitude smaller than that from the Rosenhead\u2013Moore kernel at a typical resolution. Simulations of vortex rings are performed using the two algebraic kernels in order to compare their performance in a practical setting. In particular, numerical simulations of the side-by-side collision of two identical vortex rings suggest that the three-dimensional evolution of vorticity at finite resolution can be greatly affected by the choice of the kernel. We find that the Winckelmans\u2013Leonard kernel is able to perform the same task with a much smaller number of vortex elements than the Rosenhead\u2013Moore kernel, greatly reducing the overall computational cost.<\/p>",
@@ -601,7 +601,7 @@
 		"title": "Dimensionality reduction and polynomial chaos acceleration of Bayesian inference in inverse problems",
 		"keywords": "Inverse problems; Bayesian inference; Dimensionality reduction; Polynomial chaos; Markov chain Monte Carlo; Galerkin projection; Gaussian processes; Karhunen\u2013Lo\u00e8ve expansion; RKHS",
 		"authors": [
-			"Y. M. Marzouk,",
+			"Y. M. Marzouk",
 			"H. N. Najm"
 		],
 		"abstract": "<p>We consider a Bayesian approach to nonlinear inverse problems in which the unknown quantity is a spatial or temporal field, endowed with a hierarchical Gaussian process prior. Computational challenges in this construction arise from the need for repeated evaluations of the forward model (e.g., in the context of Markov chain Monte Carlo) and are compounded by high dimensionality of the posterior. We address these challenges by introducing truncated Karhunen\u2013Lo\u00e8ve expansions, based on the prior distribution, to efficiently parameterize the unknown field and to specify a stochastic forward problem whose solution captures that of the deterministic forward model over the support of the prior. We seek a solution of this problem using Galerkin projection on a polynomial chaos basis, and use the solution to construct a reduced-dimensionality surrogate posterior density that is inexpensive to evaluate. We demonstrate the formulation on a transient diffusion equation with prescribed source terms, inferring the spatially-varying diffusivity of the medium from limited and noisy data.<\/p>",
@@ -623,7 +623,7 @@
 		"title": "A stochastic collocation approach to Bayesian inference in inverse problems",
 		"keywords": "",
 		"authors": [
-			"Y. M. Marzouk,",
+			"Y. M. Marzouk",
 			"D. Xiu"
 		],
 		"abstract": "<p>We present an efficient numerical strategy for the Bayesian solution of inverse problems. Stochastic collocation methods, based on generalized polynomial chaos (gPC), are used to construct a polynomial approximation of the forward solution over the support of the prior distribution. This approximation then defines a surrogate posterior probability density that can be evaluated repeatedly at minimal computational cost. The ability to simulate a large number of samples from the posterior distribution results in very accurate estimates of the inverse solution and its associated uncertainty. Combined with high accuracy of the gPC-based forward solver, the new algorithm can provide great efficiency in practical applications. A rigorous error analysis of the algorithm is conducted, where we establish convergence of the approximate posterior to the true posterior and obtain an estimate of the convergence rate. It is proved that fast (exponential) convergence of the gPC forward solution yields similarly fast (exponential) convergence of the posterior. The numerical strategy and the predicted convergence rates are then demonstrated on nonlinear inverse problems ofvarying smoothness and dimension.<\/p>",
@@ -645,10 +645,10 @@
 		"title": "Uncertainty quantification in chemical systems",
 		"keywords": "uncertainty quantification; polynomial chaos; multiwavelets; chemistry; ignition",
 		"authors": [
-			"H. N. Najm,",
-			"B. J. Debusschere,",
-			"Y. M. Marzouk,",
-			"S. Widmer,",
+			"H. N. Najm",
+			"B. J. Debusschere",
+			"Y. M. Marzouk",
+			"S. Widmer",
 			"O. LeMa\u00eetre"
 		],
 		"abstract": "<p>We demonstrate the use of multiwavelet spectral polynomial chaos techniques for uncertainty quantification in non-isothermal ignition of a methane\u2013air system. We employ Bayesian inference for identifying the probabilistic representation of the uncertain parameters and propagate this uncertainty through the ignition process. We analyze the time evolution of moments and probability density functions of the solution. We also examine the role and significance of dependence among the uncertain parameters. We finish with a discussion of the role of non-linearity and the performance of the algorithm.<\/p>",
@@ -670,9 +670,9 @@
 		"title": "Bayesian inference of spectral expansions for predictability assessment in stochastic reaction networks",
 		"keywords": "uncertainty quantification; bayesian inference; polynomial chaos; stochastic reaction networks; domain decomposition; predictability",
 		"authors": [
-			"K. Sargsyan,",
-			"B. J. Debusschere,",
-			"H. N. Najm,",
+			"K. Sargsyan",
+			"B. J. Debusschere",
+			"H. N. Najm",
 			"Y. M. Marzouk"
 		],
 		"abstract": "<p>Stochastic reaction networks modeled as jump Markov processes serve as the main mathematical representation of biochemical phenomena in cells, particularly when the relevant molecule count is low, causing deterministic macroscale chemical reaction models to fail. Further, as there is mainly empirical knowledge about the rate parameters, parametric uncertainty analysis becomes very important. The conventional predictability tools for deterministic systems do not readily generalize to the stochastic setting. We use spectral polynomial chaos expansions to represent stochastic processes. Bayesian inference techniques with Markov chain Monte Carlo are used to find the best spectral representation of the system state, taking into account not only intrinsic stochastic noise but also parametric uncertainties. A likelihood-based adaptive domain decomposition is introduced and applied, in particular, for the cases when the parameter range includes deterministic bifurcations. We show that the adaptive multidomain polynomial chaos representation captures the correct system behavior for a benchmark bistable Schl\u00f6gl model for a wide range of parameter variations.<\/p>",
@@ -694,8 +694,8 @@
 		"title": "Stochastic spectral methods for efficient Bayesian solution of inverse problems",
 		"keywords": "Inverse problems; Bayesian inference; Polynomial chaos; Monte Carlo; Markov chain Monte Carlo; Spectral methods; Galerkin projection; Diffusive transport",
 		"authors": [
-			"Y. M. Marzouk,",
-			"H. N. Najm,",
+			"Y. M. Marzouk",
+			"H. N. Najm",
 			"L. A. Rahn,"
 		],
 		"abstract": "<p>We present a reformulation of the Bayesian approach to inverse problems, that seeks to accelerate Bayesian inference by using polynomial chaos (PC) expansions to represent random variables. Evaluation of integrals over the unknown parameter space is recast, more efficiently, as Monte Carlo sampling of the random variables underlying the PC expansion. We evaluate the utility of this technique on a transient diffusion problem arising in contaminant source inversion. The accuracy of posterior estimates is examined with respect to the order of the PC representation, the choice of PC basis, and the decomposition of the support of the prior. The computational cost of the new scheme shows significant gains over direct sampling.<\/p>",
@@ -717,7 +717,7 @@
 		"title": "Vorticity structure and evolution in a transverse jet",
 		"keywords": "",
 		"authors": [
-			"Y. M. Marzouk,",
+			"Y. M. Marzouk",
 			"A. F. Ghoniem"
 		],
 		"abstract": "<p>Transverse jets arise in many applications, including propulsion, effluent dispersion, oil field flows, and V\/STOL aerodynamics. This study seeks a fundamental, mechanistic understanding of the structure and evolution of vorticity in the transverse jet. We develop a high-resolution three-dimensional vortex simulation of the transverse jet at large Reynolds number and consider jet-to-crossflow velocity ratios r ranging from 5 to 10. A new formulation of vorticity-flux boundary conditions accounts for the interaction of channel wall vorticity with the jet flow immediately around the orifice. We demonstrate that the nascent jet shear layer contains not only azimuthal vorticity generated in the jet pipe, but wall-normal and azimuthal perturbations resulting from the jet\u2013crossflow interaction. This formulation also yields analytical expressions for vortex lines in the near field as a function of $r$.<\/p><p>Transformation of the cylindrical shear layer emanating from the orifice begins with axial elongation of its lee side to form sections of counter-rotating vorticity aligned with the jet trajectory. Periodic roll-up of the shear layer accompanies this deformation, creating complementary vortex arcs on the lee and windward sides of the jet. Counter-rotating vorticity then drives lee-side roll-ups in the windward direction, along the normal to the jet trajectory. Azimuthal vortex arcs of alternating sign thus approach each other on the windward boundary of the jet. Accordingly, initially planar material rings on the shear layer fold completely and assume an interlocking structure that persists for several diameters above the jet exit. Though the near field of the jet is dominated by deformation and periodic roll-up of the shear layer, the resulting counter-rotating vorticity is a pronounced feature of the mean field; in turn, the mean counter-rotation exerts a substantial influence on the deformation of the shear layer. Following the pronounced bending of the trajectory into the crossflow, we observe a sudden breakdown of near-field vortical structures into a dense distribution of smaller scales. Spatial filtering of this region reveals the persistence of counter-rotating streamwise vorticity initiated in the near field.<\/p>",
@@ -739,7 +739,7 @@
 		"title": "K-means clustering for optimal partitioning and dynamic load balancing of parallel hierarchical N-body simulations",
 		"keywords": "k-means clustering; Treecode; N-body problems; Hierarchical methods; Parallel processing; Load balancing; Particle methods; Vortex methods; Three-dimensional flow; Transverse jet",
 		"authors": [
-			"Y. M. Marzouk,",
+			"Y. M. Marzouk",
 			"A. F. Ghoniem"
 		],
 		"abstract": "<p>A number of complex physical problems can be approached through N-body simulation, from fluid flow at high Reynolds number to gravitational astrophysics and molecular dynamics. In all these applications, direct summation is prohibitively expensive for large N and thus hierarchical methods are employed for fast summation. This work introduces new algorithms, based on k-means clustering, for partitioning parallel hierarchical N-body interactions. We demonstrate that the number of particle\u2013cluster interactions and the order at which they are performed are directly affected by partition geometry. Weighted k-means partitions minimize the sum of clusters\u2019 second moments and create well-localized domains, and thus reduce the computational cost of N-body approximations by enabling the use of lower-order approximations and fewer cells.<\/p><p>We also introduce compatible techniques for dynamic load balancing, including adaptive scaling of cluster volumes and adaptive redistribution of cluster centroids. We demonstrate the performance of these algorithms by constructing a parallel treecode for vortex particle simulations, based on the serial variable-order Cartesian code developed by Lindsay and Krasny [Journal of Computational Physics 172 (2) (2001) 879\u2013907]. The method is applied to vortex simulations of a transverse jet. Results show outstanding parallel efficiencies even at high concurrencies, with velocity evaluation errors maintained at or below their serial values; on a realistic distribution of 1.2 million vortex particles, we observe a parallel efficiency of 98% on 1024 processors. Excellent load balance is achieved even in the face of several obstacles, such as an irregular, time-evolving particle distribution containing a range of length scales and the continual introduction of new vortex particles throughout the domain. Moreover, results suggest that k-means yields a more efficient partition of the domain than a global oct-tree.<\/p>",
@@ -761,8 +761,8 @@
 		"title": "Toward a flame embedding model for turbulent combustion simulation",
 		"keywords": "Two dimensional model; One dimensional model; Premixed flame; Finite difference method; Numerical simulation; Flame structure; Turbulent flame; Combustion",
 		"authors": [
-			"Y. M. Marzouk,",
-			"A. F. Ghoniem,",
+			"Y. M. Marzouk",
+			"A. F. Ghoniem",
 			"H. N. Najm"
 		],
 		"abstract": "<p>Combustion in turbulent flows may take the form of a thin flame wrapped around vortical structures. For this regime, the flame embedding approach seeks to decouple computations of the outer nonreacting flow and the combustion zone by discretizing the flame surface into a number of elemental flames, each incorporating the local impact of unsteady flow-flame interaction. An unsteady strained laminar flame solver, based on a boundary-layer approximation of combustion in a time-dependent stagnation-point potential flow, is proposed as an elemental flame model. To validate the concept, two-dimensional simulations of premixed flame-vortex interactions are performed for a matrix of vortex strengths and length scales, and a section of the flame is selected for comparison with the flame embedding model results. Results show that using the flame leading-edge strain rate gives reasonable agreement in the cases of low strain rate and weak strain rate gradient within the flame structure. This agreement deteriorates substantially when both are high. We propose two different schemes, both based on averaging the strain rate across the flame structure, and demonstrate that agreement between the one-dimensional model and the two-dimensional simulation greatly improves when the actual strain rate at the reaction zone of the one-dimensional flame is made to match that of the two-dimensional flame.<\/p>",
@@ -784,8 +784,8 @@
 		"title": "Dynamic response of strained premixed flames to equivalence ratio gradients",
 		"keywords": "",
 		"authors": [
-			"Y. M. Marzouk,",
-			"A. F. Ghoniem,",
+			"Y. M. Marzouk",
+			"A. F. Ghoniem",
 			"H. N. Najm"
 		],
 		"abstract": "<p>Premixed flames encounter gradients of mixture equivalence ratio in stratified charge engines, lean premixed gas-turbine engines, and a variety of other applications. In cases for which the scales\u2014spatial or temporal\u2014of fuel concentration gradients in the reactants are comparable to flame scales, changes in burning rate, flammability limits, and flame structure have been observed. This paper uses an unsteady strained flame in the stagnation point configuration to examine the effect of temporal gradients on combustion in a premixed methane\/air mixture. An inexact Newton backtracking method, coupled with a preconditioned Krylov subspace iterative solver, was used to improve the efficiency of the numerical solution and expand its domain of convergence in the presence of detailed chemistry.<\/p><p>Results indicate that equivalence ratio variations with timescales lower than 10 ms have significant effects on the burning process, including reaction zone broadening, burning rate enhancement, and extension of the flammability limit toward learner mixtures. While the temperature of a flame processing a stoichiometric-to-lean equivalence ratio gradient decreased slightly within the front side of the reaction zone, radical concentrations remained elevated over the entire flame structure. These characteristics are linked to a feature reminiscent of \u201cback-supported\u201d flames\u2014flames in which a stream of products resulting from burning at higher equivalence ratio is continuously supplied to lower equivalence ratio reactants. The relevant feature is the establishment of a positive temperature gradient on the products side of the flame which maintains the temperature high enough and the radical concentration sufficient to sustain combustion there. Unsteadiness in equivalence ratio produces similar gradients within the flame structure, thus compensating for the change in temperature at the leading edge of the reaction zone and accounting for an observed \u201cflame inertia\u201d. For sufficiently large equivalence ratio gradients, a flame starting in a stoichiometric mixture can burn through a very lean one by taking advantage of this mechanism.<\/p>",
@@ -807,7 +807,7 @@
 		"title": "Asymmetric autocorrelation function to resolve directional ambiguity in PIV images",
 		"keywords": "",
 		"authors": [
-			"Y. M. Marzouk,",
+			"Y. M. Marzouk",
 			"D. P. Hart"
 		],
 		"abstract": "<p>Autocorrelation of a double-exposed image, unlike cross-correlation between two images, produces a correlation function that is symmetric about the origin. Thus, while it is possible to calculate the speed and direction of tracer particles in a particle image velocimetry (PIV) image using autocorrelation, it is impossible to tell whether the velocity is in the positive or negative direction. This ambiguity can be resolved by spatially shifting one exposure relative to the next or labeling exposures with color or polarization, but the complexity and limitations of these methods can be prohibitive. It is, however, possible to resolve the sign of the velocity from a triple-exposed image using unequal time intervals between exposures.<\/p><p>Triple-exposed images, like double-exposed images, correlate symmetrically about zero. The directional ambiguity, however, can be resolved by calculating the probability that the three exposures occur in a specific temporal order; that is, by assuming that the correlation has a specific sign and testing to see if the assumption is correct. Traditional spectral and statistical correlation techniques are unable to accomplish this. Presented herein is a computationally efficient asymmetric correlation function that is able to differentiate the temporal order of triple exposed images. Included is a discussion of the limitations of this function and of difficulties in experimental implementation.<\/p>",

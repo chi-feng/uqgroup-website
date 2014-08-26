@@ -16,13 +16,6 @@
   <li><span>What information is needed to drive inference, design, and control?</span></li>
 </ul>
 
-<!--
-<ul class="bullets">
-  <li>How to quantify confidence in computational predictions?</li> 
-  <li>How to build or refine models of complex physical processes from indirect and limited observations?</li>
-  <li>What information is needed to drive inference, design, and control?</li>
-</ul>
--->
 <h3 class="noline">Featured Publications</h3>
 
 <div class="articles">
