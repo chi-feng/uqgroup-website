@@ -28,7 +28,7 @@ function people_filter($type) {
           <span class="name">'.$person['name'].'</span></a>
           <span class="info"><a href="mailto:'.$person['email'].' at mit dot edu">email</a>&nbsp;|&nbsp;<a class="bio-button" rel="'.$person['url'].'">bio</a></span>
           </li>';
-        echo '<div class="bio" id="'.$person['url'].'"><h3>'.$person['name'].'</h3><p>'.$person['bio'].'</p></div>';
+        echo '<div class="bio" style="display: none" id="'.$person['url'].'"><h3>'.$person['name'].'</h3><p>'.$person['bio'].'</p></div>';
     }
   }
   echo '</ul>';
