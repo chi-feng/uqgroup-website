@@ -1,5 +1,4 @@
-<?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } 
-
+<?php
 $t['nosidebar'] = true;
 
 function people_filter($type) {

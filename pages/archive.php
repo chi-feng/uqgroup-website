@@ -1,9 +1,8 @@
-<?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
 <div class="col-1-2 archive">
 <h3>Announcements</h3>
 <?php
 foreach ($announcements as $index => $announcement) {
-  printf("          <p><strong>%s</strong><br />%s</p>\n",
+  printf("<p><strong>%s</strong><br />%s</p>\n",
     $announcement['date'], $announcement['content']);
 }
 ?>

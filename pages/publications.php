@@ -1,5 +1,3 @@
-<?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
-
 <div id="publication-switcher" class="clearfix">
   <h3 id="journal-publications" class="active">Journal Articles</h3>
   <h3 id="conference-publications">Conference Publications</h3>
@@ -7,9 +5,6 @@
 </div>
 
 <form id="publications-form">
-  <!-- form fields render at different sizes on different browsers but tables
-       at 100% width will auto-strech cells in a predictable way so that the
-       spacing between form fields will work out ... -->
   <table>
     <tr>
       <td><select id="select-year"><option value="">Year</option><optgroup label='-'></optgroup></select></td>
@@ -29,7 +24,7 @@ foreach ($articles as $index => $article) {
   echo render_article($index, $article);
 }
 ?>
-  <p id="notfound" style="display:none"><strong>No articles found matching filter.</strong></p>
+<p id="notfound" style="display:none"><strong>No articles found matching filter.</strong></p>
 </div>
 </div>
 <div id="conferences-wrapper">
@@ -44,20 +39,15 @@ foreach ($conferences as $index => $conference) {
 </div>
 <div id="books-wrapper">
 <div id="books">
-
 <h4 id="books-and-chapters">Books and Book Chapters</h4>
-
 <ol>
   <li>Frangos, M., Marzouk, Y.M., Willcox, K.E., van Bloemen Waanders, B. “Surrogate and reduced-order models for statistical inverse problems.” Chapter in Biegler, Biros, Ghattas, Heinkenschloss, Keyes, Mallick, Marzouk, Tenorio, van Bloemen Waanders, &amp; Willcox (eds.), Computational Methods for Large Scale Inverse Problems and Uncertainty Quantification, Wiley (2010).</li>
   <li>L. Biegler, G. Biros, O. Ghattas, M. Heinkenschloss, D. Keyes, B. Mallick, Y. Marzouk, L. Tenorio, B. van Bloemen Waanders, and K. Willcox, editors. <em>Computational Methods for Large Scale Inverse Problems and Uncertainty Quantification</em><em>. </em>Wiley (2010). </li>
 </ol>
-
 <h4 id="other-publications">Magazine Articles and Other Press</h4>
-
 <ol>
   <li>Marzouk, Y.M., Willcox, K.E.,  &quot;Confronting energy and environment's toughest challenges with computational engineering.&quot; AeroAstro Magazine No. 7, 2009–2010. [<a href="http://web.mit.edu/aeroastro/news/magazine/aeroastro7/compu-engineering.html">link</a>]</li>
 </ol>
-
 </div>
 </div>
 </div>

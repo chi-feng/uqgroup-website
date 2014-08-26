@@ -1,5 +1,3 @@
-<?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
-
 <h2>Group Outings</h2>
 
 <div class="outing">

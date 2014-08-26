@@ -1,6 +1,3 @@
-<?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
-
-<!-- <h2>Teaching</h2> -->
 
 <div class="course clearfix">
   <a href="http://stellar.mit.edu/S/course/16/sp12/16.940/index.html"><img src="images/teaching/16.940.png" /></a>

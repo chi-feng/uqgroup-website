@@ -1,5 +1,3 @@
-<?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } ?>
-
 <h2>Introduction</h2>
     
 <p>Welcome to the Uncertainty Quantification Group, in the <a href="http://aeroastro.mit.edu/">Department of Aeronautics and Astronautics</a> at <a href="http://mit.edu">MIT</a>. We are part of the <a href="http://acdl.mit.edu/">Aerospace Computational Design Laboratory</a> and affiliated with the <a href="http://computationalengineering.mit.edu/">Center for Computational Engineering</a>.</p>
