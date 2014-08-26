@@ -36,11 +36,12 @@ function people_filter($type) {
     <h3>Principal Investigator</h3>
     <?php people_filter('pi'); ?>
   </div>
-
+  <!--
   <div style="width:50%;float:left;">
     <h3>Current Visitors</h3>
     <?php people_filter('visitor'); ?>
   </div>
+  -->
 
     <h3>Graduate Students, PhD</h3>
     <?php people_filter('phd'); ?>
@@ -77,6 +78,8 @@ function people_filter($type) {
   </ul>
   <h3>Long Term Visitors</h3>
   <ul class="list">
+    <li><strong>Daniele Bigoni</strong> (Tech. Univ. of Denmark)</li>
+    <li><strong>Ben Calderhead</strong> (Imperial College London)</li>
     <li><strong>Dominic Kohler</strong> (Siemens AG)</li>
     <li><strong>Jinglai Li</strong> (Shanghai Jiaotong University)</li>
     <li><strong>Lionel Mathelin</strong> (LIMSI/CNRS France)</strong></li>
