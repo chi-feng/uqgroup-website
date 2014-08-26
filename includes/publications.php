@@ -2,6 +2,16 @@
 
 require_once('includes/common.php');
 
+function show_featured_articles() {
+  global $articles;
+  $index = 0;
+  foreach ($articles as $article) {
+    if (isset($article['featured']) && $article['featured'] == 'yes') {
+      echo render_article($index++, $article);
+    }
+  }
+}
+
 function show_articles($arr) {
   global $articles;
   $index = 0;

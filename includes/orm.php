@@ -153,6 +153,10 @@ class Object {
         case 'text':
         $return .= '<input type="text" name="'.$name.'" class="input-'.$name.'" value="'.$this->data[$name].'" />';
         break;
+	case 'checkbox':
+	$checked = (empty($this->data[$name])) ? '' : ' checked ';
+	$return .= '<input type="checkbox" name="'.$name.'" class="input-'.$name.'" '.$checked.' />';
+	break;
         case 'textarea':
         $return .= '<textarea class="textarea-'.$name.'" name="'.$name.'" />'.$this->data[$name].'</textarea>';
         break;
@@ -341,7 +345,8 @@ class Article extends Object {
       'number' => array('label' => 'Number', 'type' => 'text'),  
       'month' => array('label' => 'Month', 'type' => 'month'),  
       'pages' => array('label' => 'Pages', 'type' => 'text'),  
-      'comments' => array('label' => 'Comments', 'type' => 'text')
+      'comments' => array('label' => 'Comments', 'type' => 'text'),
+      'featured' => array('label' => 'Featured', 'type' => 'text')
     );
     $this->sort_by = 'order';
     $this->list_field = array('OID', 'Article');
@@ -360,12 +365,15 @@ class Article extends Object {
   }
   
   public function viewrow($row) {
+    $style = '';
+    if (isset($row['featured']) && $row['featured'] == 'yes')
+      $style = 'background:#dfd';
     $authors = truncate(implode(', ', $row['authors']), 80);
     $title = truncate($row['title'], 80);
     $journal = sprintf('%s <strong>%s:</strong> (%s)', 
       $row['journal'], $row['volume'], $row['year']);
-    $return .= sprintf('<td class="value center">%s</td><td class="value">%s &ldquo;%s.&rdquo; %s</td>', 
-      $row['order'], $authors, $title, $journal);
+    $return .= sprintf('<td class="value center">%s</td><td class="value" style="%s">%s &ldquo;%s.&rdquo; %s</td>', 
+      $row['order'], $style, $authors, $title, $journal);
     return $return;
   }
   
