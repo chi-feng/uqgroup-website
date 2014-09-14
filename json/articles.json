@@ -1,5 +1,30 @@
 [
 	{
+		"id": "27",
+		"title": "Accelerating asymptotically exact MCMC for computationally intensive models via local approximations",
+		"keywords": "Markov chain Monte Carlo, experimental design, approximation theory, local approximation, computer experiments, emulators",
+		"authors": [
+			"P. Conrad",
+			"Y. M. Marzouk",
+			"N. Pillai",
+			"A. Smith"
+		],
+		"abstract": "We construct a new framework for accelerating Markov chain Monte Carlo in posterior sampling problems where standard methods are limited by the computational cost of the likelihood, or of numerical models embedded therein. Our approach introduces local approximations of these models into the Metropolis-Hastings kernel, borrowing ideas from deterministic approximation theory, optimization, and experimental design. Previous efforts at integrating approximate models into inference typically sacrifice either the sampler's exactness or efficiency; our work seeks to address these limitations by exploiting useful convergence characteristics of local approximations. We prove the ergodicity of our approximate Markov chain, showing that it samples asymptotically from the \\emph{exact} posterior distribution of interest. We describe variations of the algorithm that employ either local polynomial approximations or local Gaussian process regressors. Our theoretical results reinforce the key observation underlying this paper: when the likelihood has some \\emph{local} regularity, the number of model evaluations per MCMC step can be greatly reduced without biasing the Monte Carlo average. Numerical experiments demonstrate multiple order-of-magnitude reductions in the number of forward model evaluations used in representative ODE and PDE inference problems, with both synthetic and real data.",
+		"order": "36",
+		"fulltext": "http:\/\/arxiv.org\/abs\/1402.1694",
+		"journal": "Submitted",
+		"doi": "",
+		"year": "2014",
+		"arxiv": "1402.1694",
+		"volume": "",
+		"thumbnail": "arxiv2.png",
+		"number": "revised version",
+		"month": "0",
+		"pages": "",
+		"comments": "",
+		"featured": "yes"
+	},
+	{
 		"id": "32",
 		"title": "Optimal low-rank approximations of Bayesian linear inverse problems",
 		"keywords": "inverse problems, Bayesian inference, low-rank approximation, covariance approximation, F\u00f6rstner-Moonen metric, posterior mean approximation, Bayes risk, optimality",
@@ -161,30 +186,6 @@
 		"doi": "",
 		"year": "2014",
 		"arxiv": "1403.1931",
-		"volume": "",
-		"thumbnail": "arxiv2.png",
-		"number": "",
-		"month": "0",
-		"pages": "",
-		"comments": ""
-	},
-	{
-		"id": "27",
-		"title": "Asymptotically exact MCMC algorithms via local approximations of computationally intensive models",
-		"keywords": "Markov chain Monte Carlo, experimental design, approximation theory, local approximation, computer experiments, emulators",
-		"authors": [
-			"P. Conrad",
-			"Y. M. Marzouk",
-			"N. Pillai",
-			"A. Smith"
-		],
-		"abstract": "We construct a new framework for accelerating MCMC algorithms for sampling from posterior distributions in the context of computationally intensive models. We proceed by constructing local surrogates of the forward model within the Metropolis-Hastings kernel, borrowing ideas from deterministic approximation theory, optimization, and experimental design. Our work departs from previous work in surrogate-based inference by exploiting useful convergence characteristics of local approximations. We prove the ergodicity of our approximate Markov chain and show that it samples asymptotically from the \\emph{exact} posterior distribution of interest. We describe variations of the algorithm that construct either local polynomial approximations or Gaussian process regressors, thus spanning two important classes of surrogate models. Our theoretical results reinforce the key observation underlying this paper: when the likelihood has some \\emph{local} regularity, the number of model evaluations per MCMC step can be greatly reduced, without incurring significant bias in the Monte Carlo average. Our numerical experiments demonstrate order-of-magnitude reductions in the number of forward model evaluations used in representative ODE or PDE inference problems, in both real and synthetic data examples.",
-		"order": "28",
-		"fulltext": "http:\/\/arxiv.org\/abs\/1402.1694",
-		"journal": "Submitted",
-		"doi": "",
-		"year": "2014",
-		"arxiv": "1402.1694",
 		"volume": "",
 		"thumbnail": "arxiv2.png",
 		"number": "",

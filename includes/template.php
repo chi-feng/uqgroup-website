@@ -7,6 +7,9 @@
   <link href="/css/style.css" rel="stylesheet" type="text/css" media="screen" />
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
   <link href="/css/font-awesome.css"  rel="stylesheet" type="text/css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/uqgroup.js"></script>
+  <script type="text/javascript" src="/js/lightbox-2.6.min.js"></script>
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -124,9 +127,6 @@
   </div>
 </div>
 </div>
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/uqgroup.js"></script>
-<script type="text/javascript" src="/js/lightbox-2.6.min.js"></script>
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-38300402-1']);
