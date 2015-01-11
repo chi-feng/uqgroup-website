@@ -1,3 +1,8 @@
+<?php
+$template = Template::getInstance();
+$template->title = 'Home';
+$template->tab = 'Home';
+?>
 <h2>Introduction</h2>
     
 <p>Welcome to the Uncertainty Quantification Group, in the <a href="http://aeroastro.mit.edu/">Department of Aeronautics and Astronautics</a> at <a href="http://mit.edu">MIT</a>. We are part of the <a href="http://acdl.mit.edu/">Aerospace Computational Design Laboratory</a> and affiliated with the <a href="http://computationalengineering.mit.edu/">Center for Computational Engineering</a>.</p>
@@ -17,7 +22,9 @@
 <h3 class="noline">Featured Publications</h3>
 
 <div class="articles">
-<?php show_featured_articles(); ?>
+<?php 
+$articles = json_decode(file_get_contents('json/articles.json'), true);
+show_featured_articles(); ?>
 </div>
 
 <div class="see-all">

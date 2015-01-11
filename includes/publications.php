@@ -1,4 +1,4 @@
-<?php if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } 
+<?php
 
 require_once('includes/common.php');
 
@@ -102,7 +102,7 @@ function render_article($index, $article) {
   $buttons = "<div class=\"article-buttons\">\n$buttons\n</div>\n";
   
   $keywords = (isset($article['keywords']) ? '<div class="keywords"><strong>Keywords: </strong>' . $artice['keywords'] .'</div>' : '');
-  $thumbnail_src = (isset($article['thumbnail']) && !empty($article['thumbnail'])) ? 'images/publications/' . $article['thumbnail'] : 'images/publications/none.png';
+  $thumbnail_src = (isset($article['thumbnail']) && !empty($article['thumbnail'])) ? '/images/publications/' . $article['thumbnail'] : '/images/publications/none.png';
   $thumbnail = '<a href="' . $article['fulltext'] . '"><img class="thumbnail" src="'. $thumbnail_src .'" /></a>' . "\n";
 
   $abstract = '<div class="abstract">'.$article['abstract']."</div>\n";
@@ -133,6 +133,24 @@ function render_article($index, $article) {
     "</div>\n"));
   
   return $div;
+}
+
+function render_conference($idx, $conference) {
+  $return = array();
+  $return[] = '<div class="conference">';
+  $return[] = '<span class="conference-order">'. $conference['order'] .'.</span>';
+  $return[] = '<span class="conference-authors">'. implode(', ', $conference['authors']) .',</span>';
+  $return[] = '<span class="conference-title">&ldquo;'. $conference['title'] .'.&rdquo;</span>';
+  $return[] = '<span class="conference-conference">'. $conference['conference'] .'</span>';
+  if (strlen($conference['publication'])) {
+    $return[] = '<span class="conference-publication">'. $conference['publication'] .'</span>';
+  }
+  $return[] = '<span class="conference-year">('. $conference['year'] .')</span>';
+  if (strlen($conference['url'])) {
+    $return[] = '<span class="conference-url">[<a href="'. $conference['url'] .'">Link</a>]</span>';
+  }
+  $return[] = '</div>';
+  return implode("\n", $return);
 }
 
 ?>
