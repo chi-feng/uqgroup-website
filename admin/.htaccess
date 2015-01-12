@@ -1,0 +1,5 @@
+<Files index.php>
+  AuthType SSLCert
+  Require user chifeng ymarz
+  ErrorDocument 401 /__scripts/needcerts
+</Files>

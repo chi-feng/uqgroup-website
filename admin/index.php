@@ -188,7 +188,7 @@ function dashboard() {
 }
 
 function finish() {
-  include('../includes/admin_template.php');
+  include('template.php');
   die();
 }
 
