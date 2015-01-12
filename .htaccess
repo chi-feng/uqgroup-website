@@ -1,15 +1,11 @@
+Options +FollowSymLinks
+IndexIgnore */*
 RewriteEngine On
-#RewriteBase /~feng/uqgroup/
-#RewriteBase /uqgroup/
 
-RewriteRule ^admin?$ admin.php [NC,L]
-RewriteRule ^muq-doc?$ muq-doc/index.html [NC,L]
-RewriteRule ^/?$ index.php?p=home [NC,L]
-RewriteRule ^people/([A-Za-z0-9-]+)?$ index.php?p=profile&name=$1 [NC,L]
-RewriteRule ^([A-Za-z0-9-]+)?$ index.php?p=$1 [NC,L]
+# Include in the next line all folders to exclude
+RewriteCond %{REQUEST_URI}  !(admin|js|css) [NC]
 
-<Files admin.php>
-  AuthType SSLCert
-  Require user chifeng ymarz
-  ErrorDocument 401 /__scripts/needcerts
-</Files>
+RewriteCond %{REQUEST_URI} !\.(gif|jpg|png)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php

@@ -31,7 +31,6 @@ $(function() {
      var speedFactor = -0.4;
      var pos = $(window).scrollTop();
      $('#header').css('backgroundPosition', "50% " + Math.round(($('#header').offset().top - pos) * speedFactor) + "px");
-     $('#footer-wrap').css('backgroundPosition', "50% " + Math.round(($('#footer-wrap').offset().top - pos) * (-0.5)) + "px");
 	});	
 });
 
@@ -63,65 +62,6 @@ function articlesAttachHover() {
     $(this).parent().parent().find('.fulltext').modal();
 		return false;
 	});
-}
-
-function articleFilter() {
-  
-  var count = 0;
-  
-  var year = $('#select-year').val();
-  var author = $('#select-author').val();
-  var journal = $('#select-journal').val();
-  var keyword = $('#input-keyword').val().toLowerCase();
-  
-  $.each(articles, function(index, article) {
-    var selector = '#article-' + index;
-    
-    var allowed = true;    
-    
-    if (keyword != '' && keyword != 'keyword') {
-      if (article.keywords == undefined) {
-        allowed = false;
-      } else if (article.keywords.toLowerCase().indexOf(keyword) != -1) { 
-        allowed = true; 
-      } else if (article.title.toLowerCase().indexOf(keyword) != -1) { 
-        allowed = true; 
-      } else if (article.journal.toLowerCase().indexOf(keyword) != -1) { 
-        allowed = true; 
-      } else {
-        allowed = false;
-      }
-    } 
-    
-    if (year != '' && article.year.indexOf(year) == -1) { 
-      allowed = false; 
-    }
-    if (author != '' && $.inArray(author, article.authors) == -1) {
-      allowed = false; 
-    }
-    if (journal != '' && article.journal.indexOf(journal) == -1) { 
-      allowed = false; 
-    }
-
-    
-    if (allowed) {
-      if (count == 0) {
-        $('.articles').show();
-        $('#notfound').hide();
-      }
-      $(selector).show();
-      count = count + 1;
-    } else {
-      $(selector).hide();
-    }
-    
-  });
-  
-  if (count == 0) {
-    $('.articles').hide();
-    $('#notfound').show();
-  }
-  
 }
 
 /*

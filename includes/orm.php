@@ -1,8 +1,66 @@
 <?php 
 
-if (!defined('INCLUDE_GUARD')) { header("HTTP/1.0 403 Forbidden"); die(); } 
+function truncate($str, $len) {
+  if (strlen($str) > $len) {
+    return substr($str, 0, $len - 3) . '...';
+  } else {
+    return $str;
+  }
+}
 
-require_once('includes/common.php');
+function format_json( $json )
+{
+    $result = '';
+    $level = 0;
+    $prev_char = '';
+    $in_quotes = false;
+    $ends_line_level = NULL;
+    $json_length = strlen( $json );
+
+    for( $i = 0; $i < $json_length; $i++ ) {
+        $char = $json[$i];
+        $new_line_level = NULL;
+        $post = "";
+        if( $ends_line_level !== NULL ) {
+            $new_line_level = $ends_line_level;
+            $ends_line_level = NULL;
+        }
+        if( $char === '"' && $prev_char != '\\' ) {
+            $in_quotes = !$in_quotes;
+        } else if( ! $in_quotes ) {
+            switch( $char ) {
+                case '}': case ']':
+                    $level--;
+                    $ends_line_level = NULL;
+                    $new_line_level = $level;
+                    break;
+
+                case '{': case '[':
+                    $level++;
+                case ',':
+                    $ends_line_level = $level;
+                    break;
+
+                case ':':
+                    $post = " ";
+                    break;
+
+                case " ": case "\t": case "\n": case "\r":
+                    $char = "";
+                    $ends_line_level = $new_line_level;
+                    $new_line_level = NULL;
+                    break;
+            }
+        }
+        if( $new_line_level !== NULL ) {
+            $result .= "\n".str_repeat( "\t", $new_line_level );
+        }
+        $result .= $char.$post;
+        $prev_char = $char;
+    }
+
+    return $result;
+}
 
 class Object {
   
@@ -70,7 +128,7 @@ class Object {
     $arr = json_decode(file_get_contents($this->json_path), true);
     $this->data['id'] = strval($this->max_id($arr) + 1);
     array_unshift($arr, $this->data);
-    $json = prettyPrint(json_encode($arr));
+    $json = format_json(json_encode($arr));
     file_put_contents($this->json_path, $json);
   }
   
@@ -78,7 +136,7 @@ class Object {
     $arr = json_decode(file_get_contents($this->json_path), true);
     $this->data['id'] = strval($this->max_id($arr) + 1);
     $arr[] = $this->data;
-    $json = prettyPrint(json_encode($arr));
+    $json = format_json(json_encode($arr));
     file_put_contents($this->json_path, $json);
   }
   
@@ -92,7 +150,7 @@ class Object {
       }
     }
     if ($found) {
-      $json = prettyPrint(json_encode($arr));
+      $json = format_json(json_encode($arr));
       file_put_contents($this->json_path, $json);
       return true;
     } else {
@@ -110,7 +168,7 @@ class Object {
       }
     }
     if ($found) {
-      $json = prettyPrint(json_encode($arr));
+      $json = format_json(json_encode($arr));
       file_put_contents($this->json_path, $json);
       return true;
     } else {
@@ -139,7 +197,7 @@ class Object {
     } else {
       usort($arr, array($this, 'sort_function_asc'));
     }
-    $json = prettyPrint(json_encode($arr));
+    $json = format_json(json_encode($arr));
     file_put_contents($this->json_path, $json);
   }
   
@@ -188,7 +246,7 @@ class Object {
   
   public function edit() {
     $return = '<h2>Editing '.$this->name.'</h2>';
-    $return .= '<form class="edit-'.$this->name.'" action="admin.php?" method="post">';
+    $return .= '<form class="edit-'.$this->name.'" action="/admin/index.php?" method="post">';
     $return .= '<fieldset><legend>Edit '.$this->name.'</legend>';
     $return .= $this->formfields();
     $return .= '<input type="hidden" name="id" value="'.$this->data['id'].'" />';
@@ -200,7 +258,7 @@ class Object {
   
   public function create() {
     $return = '<h2>Create '.$this->name.'</h2>';
-    $return .= '<form class="create-'.$this->name.'" action="admin.php?" method="post">';
+    $return .= '<form class="create-'.$this->name.'" action="/admin/index.php?" method="post">';
     $return .= '<fieldset><legend>Create '.$this->name.'</legend>';
     $return .= $this->formfields();
     $return .= '<input type="hidden" name="insert_'.$this->name.'" value="true" />';
@@ -256,7 +314,7 @@ class Object {
   }
   
   public function viewall() {
-    $return = '<h2>Viewing all '.$this->name.'s <a class="btn quick-add" href="admin.php?create_'.$this->name.'">Create New</a></h2>';
+    $return = '<h2>Viewing all '.$this->name.'s <a class="btn quick-add" href="/admin/index.php?create_'.$this->name.'">Create New</a></h2>';
     $return .= '<table class="list list-'. $this->name.'">';
     $arr = json_decode(file_get_contents($this->json_path), true);
     $return .= '<thead><tr><th></th>';
@@ -267,11 +325,11 @@ class Object {
     foreach ($arr as $idx => $val) {
       $return .= '<tr class="list-'.$this->name.'">';
       $return .= '<td class="edit-button">';
-      $return .= '<a class="edit-button" href="admin.php?edit_'.$this->name.'&id='.$val['id'].'"><i class="icon-pencil"></i></a>';
+      $return .= '<a class="edit-button" href="/admin/index.php?edit_'.$this->name.'&id='.$val['id'].'"><i class="icon-pencil"></i></a>';
       $return .= '</td>';
       $return .= $this->viewrow($val);
       $return .= '<td class="delete-button">';
-      $return .= '<a class="delete-button confirm" href="admin.php?delete_'.$this->name.'&id='.$val['id'].'"><i class="icon-trash"></i></a>';
+      $return .= '<a class="delete-button confirm" href="/admin/index.php?delete_'.$this->name.'&id='.$val['id'].'"><i class="icon-trash"></i></a>';
       $return .= '</td>';
       $return .= '</tr>';
     }
@@ -288,7 +346,7 @@ class Object {
 class Announcement extends Object {
   public function __construct($arg1, $arg2 = '') {
     $this->name = 'announcement';
-    $this->json_path = 'json/announcements.json';
+    $this->json_path = '../json/announcements.json';
     $this->fields = array(
       'id' => array('label' => 'ID', 'type' => 'hidden'), 
       'date' => array('label' => 'Date', 'type' => 'date'), 
@@ -300,37 +358,35 @@ class Announcement extends Object {
   }  
 }
 
-class Event extends Object {
+class Person extends Object {
   public function __construct($arg1, $arg2 = '') {
-    $this->name = 'event';
-    $this->json_path = 'json/events.json';
+    $this->name = 'person';
+    $this->json_path = '../json/people.json';
     $this->fields = array(
       'id' => array('label' => 'ID', 'type' => 'hidden'), 
-      'start_date' => array('label' => 'Start Date', 'type' => 'date'), 
-      'end_date' => array('label' => 'End Date', 'type' => 'date'), 
-      'start_time' => array('label' => 'Start Time', 'type' => 'time'), 
-      'end_time' => array('label' => 'End Time', 'type' => 'time'), 
       'name' => array('label' => 'Name', 'type' => 'text'), 
-      'location' => array('label' => 'Location', 'type' => 'text'), 
-      'content' => array('label' => 'Content', 'type' => 'textarea')
+      'type' => array('label' => 'Type', 'type' => 'text'),
+      'email' => array('label' => 'Athena ID', 'type' => 'text'), 
+      'url' => array('label' => 'Shortname', 'type' => 'text'), 
+      'bio' => array('label' => 'Bio', 'type' => 'textarea')
     );
-    $this->sort_by = 'start_date';
-    $this->list_field = array('name', 'start_date');
+    $this->sort_by = 'name';
+    $this->list_field = array('name', 'type');
     parent::__construct($arg1, $arg2);
-  }  
+  }
 }
 
 class Article extends Object {
   public function __construct($arg1, $arg2 = '') {
     $this->name = 'article';
-    $this->json_path = 'json/articles.json';
+    $this->json_path = '../json/articles.json';
     $this->fields = array(
       'id' => array('label' => 'ID', 'type' => 'hidden'),  
       'title' => array('label' => 'Title', 'type' => 'text'),  
       'keywords' => array('label' => 'Keywords', 'type' => 'text'),  
       'authors' => array('label' => 'Authors', 'type' => 'array'), 
       'abstract' => array('label' => 'Abstract', 'type' => 'textarea'),  
-      'order' => array('label' => 'Order ID', 'type' => 'text'),   
+      'order' => array('label' => 'Ordering ID', 'type' => 'text'),   
       'fulltext' => array('label' => 'Fulltext URL', 'type' => 'text'),  
       'journal' => array('label' => 'Journal', 'type' => 'text'),  
       'doi' => array('label' => 'DOI', 'type' => 'text'),  
@@ -375,11 +431,10 @@ class Article extends Object {
   
 }
 
-
 class Conference extends Object {
   public function __construct($arg1, $arg2 = '') {
     $this->name = 'conference';
-    $this->json_path = 'json/conferences.json';
+    $this->json_path = '../json/conferences.json';
     $this->fields = array(
       'id' => array('label' => 'ID', 'type' => 'hidden'),  
       'title' => array('label' => 'Title', 'type' => 'text'),  

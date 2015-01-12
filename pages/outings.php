@@ -1,3 +1,9 @@
+<?php
+$template = Template::getInstance();
+$template->title = 'Teaching';
+$template->tab = 'Teaching';
+?>
+
 <h2>Group Outings</h2>
 
 <div class="outing">
