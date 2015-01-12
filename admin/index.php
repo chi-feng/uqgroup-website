@@ -163,7 +163,7 @@ function dashboard() {
   global $t;
   $json_files = glob('../json/*.json');
   $t['content'] .= '<h2>Administration Dashboard</h2>';
-  $t['content'] .= '<div class="col-2-2">';
+  $t['content'] .= '<div class="col-1-2">';
   $t['content'] .= '<h3>JSON Permissions</h3>';
   $t['content'] .= '<table class="status json-status">';
   $t['content'] .= '<tr><th>File</th><th>Perms</th><th>Read</th><th>Write</th></tr>';
@@ -181,19 +181,7 @@ function dashboard() {
   }
   $t['content'] .= '</table>';
   $t['content'] .= '</div>';
-  $t['content'] .= '<div class="col-1-2">';
-  $t['content'] .= '<h3>Page Status</h3>';
-  $t['content'] .= '<table class="status page-status">';
-  $t['content'] .= '<tr><th>File</th><th>Page</th><th>Exists</th></tr>';
-  foreach (json_decode(file_get_contents('../json/pages.json'), true) as $page => $details) {
-    $file = "../pages/$page.php";
-    $title = $details['title'];
-    $exists = file_exists($file) ? '<td class="green"><i class="icon-ok"></i></td>' : '<td class="red"><i class="icon-remove"></i></td>';
-    $t['content'] .= sprintf('<tr><td>%s</td><td>%s</td>%s</tr>',
-      $file, $title, $exists);
-  }
-  $t['content'] .= '</table>';
-  $t['content'] .= '</div><br style="clear: both;" />';
+  $t['content'] .= '<br style="clear: both;" />';
   $t['content'] .= '<h3>Quick Links</h3>';
   $t['content'] .= '<ul class="links"><li><a href="https://www.google.com/analytics/web/?hl=en&pli=1#report/visitors-overview/a38300402w66904103p68823002/">Google Analytics</a></li>';
   $t['content'] .= '<li><a href="https://github.com/chi-feng/uqgroup-website">GitHub Repository</a></li></ul>';

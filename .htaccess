@@ -5,7 +5,7 @@ RewriteEngine On
 # Include in the next line all folders to exclude
 RewriteCond %{REQUEST_URI}  !(admin|js|css) [NC]
 
-RewriteCond %{REQUEST_URI} !\.(gif|jpg|png)$
+RewriteCond %{REQUEST_URI} !\.(gif|jpg|png|js)$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . index.php
