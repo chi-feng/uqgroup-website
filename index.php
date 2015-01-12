@@ -17,7 +17,6 @@ if (!file_exists("pages/$request.php")) {
 $template = Template::getInstance();
 $template->header = 'includes/header.php';
 $template->footer = 'includes/footer.php';
-$template->title = $pages[$page]['title'];;
 
 ob_start();
 include("pages/$request.php");

@@ -3,5 +3,4 @@ Disallow: /images/
 Disallow: /js/ 
 Disallow: /json/ 
 Disallow: /css/ 
-Disallow: /font/ 
 Disallow: /pages/ 
