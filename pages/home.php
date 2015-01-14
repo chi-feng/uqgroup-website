@@ -28,7 +28,7 @@ show_featured_articles(); ?>
 </div>
 
 <div class="see-all">
-  <a href="publications">See all publications</a>
+  <a href="/publications/articles">See all publications</a>
 </div>
 
 <script type="text/javascript" src="js/jquery.simplemodal.js"></script>

@@ -22,7 +22,7 @@
         <ul class="links">
         <li><a href="https://wikis.mit.edu/confluence/display/uqlab/Home"><i class="icon-lock"></i> Lab Wiki </a></li>
         <li><a href="https://wikis.mit.edu/confluence/display/uqgroup/Home"><i class="icon-lock"></i> Reading Group Wiki</a></li>
-        <li><a href="/admin"><i class="icon-lock"></i> Website Administration</a></li>
+        <li><a href="/admin/index.php"><i class="icon-lock"></i> Website Administration</a></li>
         </ul>
       </div>
     </div>    
