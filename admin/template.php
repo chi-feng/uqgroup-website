@@ -38,6 +38,7 @@ global $t;
     <ul>
     <li><a href="/admin/index.php?view_people">View People</a></li>
     <li><a href="/admin/index.php?create_person">Create Person</a></li>
+    <li><a href="/admin/index.php?sort_people">Sort People</a></li>
     </ul>
   </li>
   <li><a href="/admin/index.php?view_articles">Articles</a>

@@ -116,11 +116,11 @@ function render_article($index, $article) {
       if (strpos($article['arxiv'], 'http') === false) {
         $link = 'http://arxiv.org/abs/' . $article['arxiv'];
       }
-      $fulltext .= '<a class="btn" href="'.$link.'">View on arXiv.org <img class="float-right" src="images/open-access.png" height="20" alt="open-access" /></a>';
+      $fulltext .= '<a class="btn" href="'.$link.'">View on arXiv.org <img class="float-right" src="/images/open-access.png" height="20" alt="open-access" /></a>';
       $fulltext .= '<code class="block">'.htmlspecialchars($link).'</code><br />';
     }
   } else {
-    $fulltext .= '<a class="btn" href="'.$article['fulltext'].'">View on arXiv.org <img class="float-right" src="images/open-access.png" height="20" alt="open-access" /></a>';
+    $fulltext .= '<a class="btn" href="'.$article['fulltext'].'">View on arXiv.org <img class="float-right" src="/images/open-access.png" height="20" alt="open-access" /></a>';
     $fulltext .= '<code class="block">'.htmlspecialchars($article['fulltext']).'</code><br />';    
   }
 

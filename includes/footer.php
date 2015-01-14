@@ -38,7 +38,7 @@
       <p>Class of 1942 Associate Professor <br /> of Aeronautics and Astronautics</p>
       <p><i class="icon-envelope"></i> ymarz (at) mit.edu</p>
       <p><i class="icon-phone"></i> (617) 253-1337</p>
-      <p><i class="icon-map-marker"></i> 77 Massachusetts Ave, Room <a href="http://whereis.mit.edu/?go=37" target="_blank">37</a>-451<br />
+      <p><i class="icon-map-marker"></i> <a href="http://whereis.mit.edu/?go=37" target="_blank">77 Massachusetts Ave, Room 37-451</a><br />
        <i>&nbsp;</i> Cambridge, MA 02139
       </p>
     </div>
@@ -63,10 +63,10 @@
   <div id="footer-bottom" class="clearfix">
     <div class="center-width">
     <div class="designed-by">
-      Design by <a href="http://chifeng.scripts.mit.edu/">Chi Feng</a>
+      Designed by <a href="http://chifeng.scripts.mit.edu/">Chi Feng</a>
     </div>
     <div class="copyright">
-      Copyright &copy;2013, MIT Uncertainty Quantification Group.  
+      Copyright &copy;<?php echo date('Y'); ?>, MIT Uncertainty Quantification Group.  
     </div>
     </div>
   </div>

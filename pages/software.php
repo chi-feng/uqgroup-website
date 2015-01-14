@@ -13,3 +13,20 @@ $template->tab = 'Software';
 <h3>NOWPAC (Nonlinear Optimization With Path-Augmented Constraints)</h3>
 <p>NOWPAC is a software package for derivative-free nonlinear constrained local optimization. The code is based on a trust region framework using surrogates of minimum Frobenius norm type for the objective function and the constraints. The code does not require gradient information and is designed to work with only black-box evaluations of the objective function and the constraints. In addition to the optimization procedure, NOWPAC provides a noise detection tool which identifies inaccurate black-box evaluations that might corrupt the optimal result or prevent the optimization procedure from making further progress.</p>
 <p><a class="btn" href="https://bitbucket.org/fmaugust/nowpac">Download from BitBucket</a></p>
+
+
+<h4>Related Publications</h4>
+
+<div class="articles">
+<?php
+$articles = json_decode(file_get_contents('json/articles.json'), true);
+show_articles(array(29)); ?>
+</div>
+
+<!-- include to interact with publication display -->
+<script type="text/javascript" src="js/jquery.simplemodal.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    articlesAttachHover();
+});
+</script>

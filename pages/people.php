@@ -2,9 +2,11 @@
 $template = Template::getInstance();
 $template->title = 'People';
 $template->tab = 'People';
+$template->sidebar = false;
 
 $people = json_decode(file_get_contents('json/people.json'), true);
 
+// helper function for deciding whether to hide a section
 function count_people($type) {
   global $people;
   $count = 0;
@@ -16,37 +18,50 @@ function count_people($type) {
   return $count;
 }
 
+// outputs an itemized list of people based on type
+// visitors and UROP students get special treatment 
 function people_filter($type) {
   echo '<ul class="'.$type.' clearfix">';
   global $people;
+  $count = 0;
   if ($type == 'visitor') {
     foreach($people as $person) {
-      if ($person['type'] == $type) 
-        echo '<li class="person"><img src="/images/people/'.$person['url'].'.png" alt="'.$person['name'].'" title="'.$person['name'].'" />
+      if ($person['type'] == $type) {
+        echo '<li class="person person-'.$type.'"><img src="/images/people/'.$person['url'].'.png" alt="'.$person['name'].'" title="'.$person['name'].'" />
           <span class="name">'.$person['name'].'</span>
           <span class="info small">'.$person['institution'].'</span>
           </li>';
+        if (++$count % 2 == 0)
+          echo '<br style="clear:both;" />';
+      }
     }
   } elseif ($type == 'urop') {
     foreach($people as $person) {
-      if ($person['type'] == $type) 
-        echo '<li class="person"><img src="/images/people/'.$person['url'].'.png" alt="'.$person['name'].'" title="'.$person['name'].'" />
+      if ($person['type'] == $type) {
+        echo '<li class="person person-'.$type.'"><img src="/images/people/'.$person['url'].'.png" alt="'.$person['name'].'" title="'.$person['name'].'" />
           <span class="name">'.$person['name'].'</span>
           <span class="info"><a href="/people/'.$person['url'].'">bio</a></span>
           </li>';
+        if (++$count % 2 == 0)
+          echo '<br style="clear:both;" />';
+      }
     }
   } else {
     foreach($people as $person) {
-      if ($person['type'] == $type) 
-        echo '<li class="person"><img src="/images/people/'.$person['url'].'.png" alt="'.$person['name'].'" title="'.$person['name'].'" />
+      if ($person['type'] == $type) {
+        echo '<li class="person person-'.$type.'"><img src="/images/people/'.$person['url'].'.png" alt="'.$person['name'].'" title="'.$person['name'].'" />
           <span class="name">'.$person['name'].'</span>
           <div class="bio" id="'.$person['url'].'"><p>'.$person['bio'].'</p></div>
           </li>';
+        if (++$count % 2 == 0)
+          echo '<br style="clear:both;" />';
+      }
     }
   }
   echo '</ul>';
 }
 
+// outputs an itemized list of alumni based on type
 function list_alumni($type) {
   global $people;
   echo '<ul class="list">';
@@ -104,8 +119,4 @@ function list_alumni($type) {
   <h3>Undergraduate Alumni</h3>
     <?php list_alumni('undergrad-alumn'); ?>
   </div>
-
 </div>
-<script type="text/javascript" src="/js/jquery.simplemodal.js"></script>
-<script type="text/javascript">
-</script>

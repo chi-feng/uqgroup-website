@@ -33,19 +33,20 @@
       <?php 
 
       $tabs = array(
-        array("Home", "/home"),
-        array("People", "/people"),
-        array("Publications", "/publications/articles"),
-        array("Research", "/research"),
-        array("Software", "/software"),
-        array("Teaching", "/teaching"),
-        array("Outings", "/outings")
+        array('Home', '/home'),
+        array('People', '/people'),
+        array('Publications', '/publications/articles'),
+        array('Research', '/research'),
+        array('Software', '/software'),
+        array('Teaching', '/teaching'),
+        array('Outings', '/outings')
       );
       
       foreach ($tabs as $tab) {
         $url = $tab[1];
         $name = $tab[0];
         $active = $this->tab == $name ? ' class="active"' : '';
+        if ($name == 'Home') $name = '<i class="icon-home"></i>';
         printf("<li><a href=\"%s\"%s>%s</a></li>\n", $url, $active, $name);
       }
       ?>

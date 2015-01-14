@@ -66,16 +66,25 @@ if (isset($_GET['edit_person'])) {
 if (isset($_POST['update_person'])) {
   $person = new Person('post');
   $person->update('id', $_REQUEST['id']);
+  $person = new Person(array());
+  $person->sort('descending');
   header('Location: index.php?view_people');
 }
 if (isset($_POST['insert_person'])) {
   $person = new Person('post');
   $person->insert_front();
+  $person = new Person(array());
+  $person->sort('descending');
   header('Location: index.php?view_people');
 }
 if (isset($_REQUEST['delete_person'])) {
   $person = new Person(array());
   $person->delete('id', $_REQUEST['id']);
+  header('Location: index.php?view_people');
+}
+if (isset($_REQUEST['sort_people'])) { 
+  $person = new Person(array());
+  $person->sort('descending');
   header('Location: index.php?view_people');
 }
 

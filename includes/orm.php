@@ -229,6 +229,29 @@ class Object {
         }
         $return .= '</select>';
         break;
+        case 'person_type':
+        $return .= '<select name="'.$name.'" class="select-'.$name.'">';
+        $values = array(
+          'pi' => 'PI',
+          'postdoc' => 'Postdoc',
+          'visitor' => 'Visitor',
+          'phd' => 'Ph.D.',
+          'sm' => 'SM',
+          'undergrad' => 'UROP',
+          'postdoc-alumn' => 'Alumnus - Postdoc',
+          'visitor-alumn' => 'Alumnus - Visitor',
+          'grad-alumn' => 'Alumnus - Graduate',
+          'undergrad-alumn' => 'Alumnus - UROP'
+        );
+        foreach ($values as $val=>$label) {
+          if ($val == $this->data[$name]) {
+            $return .= '<option value="'.$val.'" selected="selected">'.$label.'</option>';
+          } else {
+            $return .= '<option value="'.$val.'">'.$label.'</option>';
+          }
+        }
+        $return .= '</select>';
+        break;
         case 'date':
         $return .= '<input type="text" name="'.$name.'" class="input-date input-'.$name.'" value="'.$this->data[$name].'" />';
         break;
@@ -355,7 +378,7 @@ class Announcement extends Object {
     $this->sort_by = 'id';
     $this->list_field = array('content', 'date');
     parent::__construct($arg1, $arg2);
-  }  
+  }
 }
 
 class Person extends Object {
@@ -365,15 +388,55 @@ class Person extends Object {
     $this->fields = array(
       'id' => array('label' => 'ID', 'type' => 'hidden'), 
       'name' => array('label' => 'Name', 'type' => 'text'), 
-      'type' => array('label' => 'Type', 'type' => 'text'),
-      'email' => array('label' => 'Athena ID', 'type' => 'text'), 
-      'url' => array('label' => 'Shortname', 'type' => 'text'), 
+      'type' => array('label' => 'Type', 'type' => 'person_type'),
+      'email' => array('label' => 'Email', 'type' => 'text'), 
+      'url' => array('label' => 'Photo URL', 'type' => 'text'), 
       'bio' => array('label' => 'Bio', 'type' => 'textarea')
     );
     $this->sort_by = 'name';
     $this->list_field = array('name', 'type');
     parent::__construct($arg1, $arg2);
   }
+
+  public function sort($direction) {
+    $arr = json_decode(file_get_contents($this->json_path), true);
+    usort($arr, array($this, 'sort_people'));
+    $json = format_json(json_encode($arr));
+    file_put_contents($this->json_path, $json);
+  }
+
+  public function sort_people($a, $b) {
+
+    $rank = array(
+      'pi' => 1,
+      'postdoc' => 2,
+      'visitor' => 3,
+      'phd' => 4,
+      'sm' => 5,
+      'undergrad' => 6,
+      'postdoc-alumn' => 7,
+      'visitor-alumn' => 8,
+      'grad-alumn' => 9,
+      'undergrad-alumn' => 10
+    );
+
+    $a_score = $rank[$a['type']];
+    $b_score = $rank[$b['type']];
+
+    if ($a_score > $b_score) {
+      return true;
+    } else if ($a_score < $b_score) {
+      return false;
+    } else {
+      $a_tok = explode(' ', $a['name']);
+      $a_lname = $a_tok[1];
+      $b_tok = explode(' ', $b['name']);
+      $b_lname = $b_tok[1];
+      return $a_lname > $b_lname;
+    }
+
+  }
+
 }
 
 class Article extends Object {

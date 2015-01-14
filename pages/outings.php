@@ -1,7 +1,7 @@
 <?php
 $template = Template::getInstance();
-$template->title = 'Teaching';
-$template->tab = 'Teaching';
+$template->title = 'Outings';
+$template->tab = 'Outings';
 ?>
 
 <h2>Group Outings</h2>
