@@ -339,6 +339,18 @@ transition: all 0.13s ease;
   box-shadow: 0 0.2em 0.6em -0.1em rgba(0,0,0,0.4); 
 }
 
+
+#content .gallery img:hover {
+-webkit-transform:scale(1.05);
+transform:scale(1.05);
+  box-shadow: 0 0.2em 2em -0.1em rgba(0,0,0,0.8); 
+  z-index: 15;
+}
+#content .gallery img {
+-webkit-transition: all 0.2s ease;
+transition: all 0.2s ease;
+}
+
 /* home page */
 #content ul.core { width: 110%; }
 
