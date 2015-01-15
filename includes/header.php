@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>UQGroup - <?=$this->title;?></title> 
-  <link href="/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="/css/style.css?20150115" rel="stylesheet" type="text/css" media="screen" />
   <link href="/css/font-awesome.css"  rel="stylesheet" type="text/css" />
   <link href='//fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
