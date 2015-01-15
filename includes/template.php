@@ -18,15 +18,25 @@ class Template {
     return self::$instance;
   }
 
+  // location of header.php
   public $header;
+
+  // location of footer.php
   public $footer;
+  
+  // page title
   public $title;
+
+  // page content
   public $content;
+
+  // toggle sidebar (boolean)
   public $sidebar;
+
+  // name of active tab
   public $tab;
 
   public function render() {
-    global $articles,$conferences,$pages,$tabs,$announcements,$events,$links,$people;
     include $this->header;
     echo $this->content;
     include $this->footer;

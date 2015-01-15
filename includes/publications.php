@@ -1,7 +1,6 @@
 <?php
 
-require_once('includes/common.php');
-
+// render featured articles
 function show_featured_articles() {
   global $articles;
   $index = 0;
@@ -12,16 +11,18 @@ function show_featured_articles() {
   }
 }
 
-function show_articles($arr) {
+// render a list of articles by id
+function show_articles($article_ids) {
   global $articles;
   $index = 0;
   foreach ($articles as $article) {
-    if (in_array(intval($article['order']), $arr)) {
+    if (in_array(intval($article['order']), $article_ids)) {
       echo render_article($index++, $article);
     }
   }
 }
 
+// get a list of all article authors
 function get_article_authors() {
   global $articles;
   $hashmap = array();
@@ -38,6 +39,7 @@ function get_article_authors() {
   return $authors;
 }
 
+// get a list of all journals
 function get_article_journals() {
   global $articles;
   $hashmap = array();
@@ -52,11 +54,13 @@ function get_article_journals() {
   return $journals;
 }
 
+// render short representation of an article
 function render_article_short($article) {
   $html = sprintf('%s, &ldquo;%s.&rdquo; %s <strong>%s</strong> %s (%s)', implode(', ', $article['authors']), $article['title'], $article['journal'], $article['volume'], $article['pages'], $article['year']);
   return $html; 
 }
 
+// render short representation of an article given the article's order id
 function show_article_short($order_id) {
   global $articles;
   foreach($articles as $article) {
@@ -67,18 +71,21 @@ function show_article_short($order_id) {
   }
 }
 
+// render an article
 function render_article($index, $article) {
+  
   $article_id = "article-$index";
   
   $authors = array();
   foreach($article['authors'] as $author) {
-    $authors[] = "<span class=\"author\">$author</span>\n";
+    $authors[] = "<span class=\"author\">$author</span>";
   }
-  $authors = "<div class=\"authors\">\n" . implode('', $authors) . "</div>\n";
+  $authors = "<div class=\"authors\">\n" . implode(', ', $authors) . "</div>\n";
   
   $title = '<div class="title"><a href="' . $article['fulltext'] . '">' . $article['title'] . '</a></div>'."\n";
-  $pages = (isset($article['pages']) && !empty($article['pages'])) ? ' pp. ' . $article['pages'] : '';
-  $journal = '<div class="journal">' . $article['journal'] . ' <strong>' . $article['volume'] . '</strong>' . $pages . ' (' . $article['year'] . ')</div>'. "\n";
+  
+  $journal_pages = (isset($article['pages']) && !empty($article['pages'])) ? ' pp. ' . $article['pages'] : '';
+  $journal = '<div class="journal">' . $article['journal'] . ' <strong>' . $article['volume'] . '</strong>' . $journal_pages . ' (' . $article['year'] . ')</div>'. "\n";
   
   $bibtex_raw = array(
     '@article {', 
@@ -102,6 +109,7 @@ function render_article($index, $article) {
   $buttons = "<div class=\"article-buttons\">\n$buttons\n</div>\n";
   
   $keywords = (isset($article['keywords']) ? '<div class="keywords"><strong>Keywords: </strong>' . $artice['keywords'] .'</div>' : '');
+  
   $thumbnail_src = (isset($article['thumbnail']) && !empty($article['thumbnail'])) ? '/images/publications/' . $article['thumbnail'] : '/images/publications/none.png';
   $thumbnail = '<a href="' . $article['fulltext'] . '"><img class="thumbnail" src="'. $thumbnail_src .'" /></a>' . "\n";
 

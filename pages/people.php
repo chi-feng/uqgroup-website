@@ -67,7 +67,8 @@ function list_alumni($type) {
   echo '<ul class="list">';
   foreach($people as $person) {
     if ($person['type'] == $type) {
-      echo '<li><strong>' . $person['name'] .'</strong> (' . $person['bio'] . ')</li>';
+      $affiliation = (!empty($person['bio'])) ? ' (' . $person['bio'] . ')': '';
+      echo '<li><strong>' . $person['name'] .'</strong>'.$affiliation.'</li>';
     }
   }
   echo '</ul>';

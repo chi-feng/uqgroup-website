@@ -183,7 +183,7 @@ div.archive p .icon-calendar { display: block; float: right; }
 
 #publication-switcher{margin-bottom:0.6em;}
 #publication-switcher h3 { font-family: "Arimo", sans-serif; }
-#publication-switcher h3{background:#bbb;box-shadow:inset 0px 1.2em 3em -1.2em rgba(255,255,255,1);border:1px solid #999;width:33.3333%;height:2.5em;padding:0.7em;font-size:90%;border-right:1px solid #ccc;border-left:1px solid #999;text-shadow:0 1px 1px #fff;margin:0;text-align:center;display:inline-block;float:left;cursor:pointer;}
+#publication-switcher h3{background:#bbb;box-shadow:inset 0px 1.2em 3em -1.2em rgba(255,255,255,1);border:1px solid #999;width:33.3333%;height:2.5em;padding:0.7em;font-size:90%;border-right:1px solid #ccc;border-left:1px solid #999;text-shadow:0 1px 1px #fff;margin:0;text-align:center;display:inline-block;float:left;}
 #publication-switcher h3 a { color:#333;font-weight:bold; }
 #publication-switcher h3:first-child{border-top-left-radius:0.2em;border-bottom-left-radius:0.2em;}
 #publication-switcher h3:last-child{border-top-right-radius:0.2em;border-bottom-right-radius:0.2em;border-right:1px solid #999;}

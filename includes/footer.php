@@ -13,7 +13,7 @@
         }
       }
       ?>
-      <p><a href="/archive">More announcements</a></p>
+      <p><a href="/announcements">More announcements</a></p>
       </div>
     </div>
     <div class="sidebar-box">
